@@ -357,7 +357,7 @@ def build_heads(pyramid, ih, iw, num_classes, base_anchors, is_training=False, g
         tf.add_to_collection('__TRANSPOSED__', m)
         m = slim.conv2d(m, num_classes, [1, 1], stride=1, padding='VALID', activation_fn=None)
         #adaugat de mine:
-        m = tf.sigmoid(m,"mask_sigmoid")
+        #m = tf.sigmoid(m,"mask_sigmoid")
         # add a mask, given the predicted boxes and classes
         outputs['mask'] = {'mask':m, 'cls': classes, 'score': scores}
           
