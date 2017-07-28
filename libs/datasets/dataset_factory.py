@@ -13,7 +13,7 @@ def get_dataset(dataset_name, split_name, dataset_dir,
         im_batch=1, is_training=False, file_pattern=None, reader=None):
     """"""
     if file_pattern is None:
-        file_pattern = dataset_name + '_' + split_name + '*.tfrecord' 
+        file_pattern = '*.tfrecord' 
 
     tfrecords = glob.glob(dataset_dir + '/records/' + file_pattern)
     image, ih, iw, gt_boxes, gt_masks, num_instances, img_id = coco.read(tfrecords)

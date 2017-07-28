@@ -277,7 +277,7 @@ def train():
                               [input_image] + [final_box] + [final_cls] + [final_prob] + [final_gt_cls] + [gt] + [tmp_0] + [tmp_1] + [tmp_2] + [tmp_3] + [tmp_4]+[final_mask]+[gt_masks])
 
         duration_time = time.time() - start_time
-        if step % 100 == 0: 
+        if step % 3 == 0: 
             print ( """iter %d: image-id:%07d, time:%.3f(sec), regular_loss: %.6f, """
                     """total-loss %.4f(%.4f, %.4f, %.6f, %.4f, %.4f), """
                     """instances: %d, """
