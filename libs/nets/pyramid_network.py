@@ -355,7 +355,9 @@ def build_heads(pyramid, ih, iw, num_classes, base_anchors, is_training=False, g
         # to 28 x 28
         m = slim.conv2d_transpose(m, 256, 2, stride=2, padding='VALID', activation_fn=tf.nn.relu)
         tf.add_to_collection('__TRANSPOSED__', m)
-        m = slim.conv2d(m, num_classes, [1, 1], stride=1, padding='VALID', activation_fn=None)
+
+        number_of_parts = 16
+        m = slim.conv2d(m, number_of_parts, [1, 1], stride=1, padding='VALID', activation_fn=None)
         #adaugat de mine:
         #m = tf.sigmoid(m,"mask_sigmoid")
         # add a mask, given the predicted boxes and classes
