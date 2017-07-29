@@ -59,6 +59,60 @@ def loadData2():
     mask = masks[o,...]# this is for drawing the ground truth in the network
     return gt_boxes,masks,mask
 
+body_parts_dict = {
+    'head':0,
+    'lear':1,
+    'rear':2,
+    'mouth':3,
+    'hair':4,
+    'nose':5,
+    'leye':6,
+    'reye':7,
+    'lebrow':8,
+    'rebrow':9,
+    'torso':10,
+    'neck':11,
+    'luarm':12,
+    'llarm':13,
+    'rlarm':14,
+    'ruarm':15,
+    'rhand':16
+}
+
+def loadData3():#human body parts
+    annotation = sio.loadmat('2008_003228.mat')
+    #annotation = annotation['anno'][0]['objects'][0]['parts'][0][0]['mask'][0]
+
+
+    # sa zicem ca am doua clase, dar cea de a doua nu o sa apara niciodata
+    masks = np.zeros((17,375,500),dtype=np.uint8)
+    gt_boxes = np.zeros((3,5),dtype=np.float32)
+    for i in range(4):
+        obj = annotation['anno'][0]['objects'][0][0][i]
+        if (obj['class']=='person'):
+            parts = obj['parts'][0]
+            contour_mask = np.zeros((375,500),dtype=np.uint8)
+            for part in parts:
+                contour_mask = contour_mask | part['mask']
+                name = part['part_name'].astype(str)[0]
+                m = body_parts_dict[name]
+                masks[m,...] = part['mask']
+            B = np.argwhere(contour_mask==1)
+            (y1, x1), (y2, x2) = B.min(0), B.max(0)
+            gt_boxes[i,0]=x1
+            gt_boxes[i,1]=y1
+            gt_boxes[i,2]=x2
+            gt_boxes[i,3]=y2
+            gt_boxes[i,4] = 0 # clasa 0 inseamna human
+
+            #contour_mask = cv2.cvtColor(contour_mask*255,cv2.COLOR_GRAY2BGR)
+            #contour_mask =cv2.rectangle(contour_mask,(x1, y1), (x2, y2),(255,255,0),2)
+            #cv2.imshow("image",contour_mask)
+            #cv2.waitKey(3000)
+
+    mask = masks[i,...]# this is for drawing the ground truth in the network
+    return gt_boxes,masks,mask
+
 def _int64_feature(values):
   if not isinstance(values, (tuple, list)):
     values = [values]
@@ -87,12 +141,12 @@ record_filename = "out.tfrecord"
 with tf.python_io.TFRecordWriter(record_filename, options=options) as tfrecord_writer:
     for x in range (100):
         img_id = x
-        img_name = '2008_000652.jpg'
-        height, width = 213,320
+        img_name = '2008_003228.jpg'
+        height, width = 375,500
         img = np.array(Image.open(img_name))
         img = img.astype(np.uint8)
         img_raw = img.tostring()
-        gt_boxes, masks,mask = loadData2()
+        gt_boxes, masks,mask = loadData3()
         mask_raw = mask.tostring()
 
         example = _to_tfexample_coco_raw(
