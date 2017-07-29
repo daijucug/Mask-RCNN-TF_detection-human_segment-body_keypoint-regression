@@ -356,7 +356,7 @@ def build_heads(pyramid, ih, iw, num_classes, base_anchors, is_training=False, g
         m = slim.conv2d_transpose(m, 256, 2, stride=2, padding='VALID', activation_fn=tf.nn.relu)
         tf.add_to_collection('__TRANSPOSED__', m)
 
-        number_of_parts = 16
+        number_of_parts = 17
         m = slim.conv2d(m, number_of_parts, [1, 1], stride=1, padding='VALID', activation_fn=None)
         #adaugat de mine:
         #m = tf.sigmoid(m,"mask_sigmoid")
@@ -521,7 +521,7 @@ def build_losses(pyramid, outputs, gt_boxes, gt_masks,
         # mask_shape = tf.shape(masks)
         # masks = tf.reshape(masks, (mask_shape[0], mask_shape[1],
         #                            mask_shape[2], tf.cast(mask_shape[3]/2, tf.int32), 2))
-        num_of_parts = 16
+        num_of_parts = 17
         labels, mask_targets, mask_inside_weights = \
           mask_encoder(gt_masks, gt_boxes, ordered_rois, num_of_parts, 28, 28, scope='MaskEncoder')
         labels, masks, mask_targets, mask_inside_weights = \
