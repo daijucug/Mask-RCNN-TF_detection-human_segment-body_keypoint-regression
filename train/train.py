@@ -235,6 +235,8 @@ def train():
     
     gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.95)
     sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
+    from tensorflow.python import debug as tf_debug
+    sess = tf_debug.LocalCLIDebugWrapperSession(sess)
     init_op = tf.group(
             tf.global_variables_initializer(),
             tf.local_variables_initializer()
