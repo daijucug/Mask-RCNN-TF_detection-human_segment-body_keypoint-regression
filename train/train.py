@@ -263,6 +263,9 @@ def train():
     tf.train.start_queue_runners(sess=sess, coord=coord)
     saver = tf.train.Saver(max_to_keep=20)
 
+    print ('delaaaaaaaaaaaaaaaaaay')
+    import time
+    time.sleep(15)
     for step in range(FLAGS.max_iters):
         
         start_time = time.time()
