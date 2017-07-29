@@ -521,8 +521,9 @@ def build_losses(pyramid, outputs, gt_boxes, gt_masks,
         # mask_shape = tf.shape(masks)
         # masks = tf.reshape(masks, (mask_shape[0], mask_shape[1],
         #                            mask_shape[2], tf.cast(mask_shape[3]/2, tf.int32), 2))
+        num_of_parts = 16
         labels, mask_targets, mask_inside_weights = \
-          mask_encoder(gt_masks, gt_boxes, ordered_rois, num_classes, 28, 28, scope='MaskEncoder')
+          mask_encoder(gt_masks, gt_boxes, ordered_rois, num_of_parts, 28, 28, scope='MaskEncoder')
         labels, masks, mask_targets, mask_inside_weights = \
                 _filter_negative_samples(tf.reshape(labels, [-1]), [
                     tf.reshape(labels, [-1]),
