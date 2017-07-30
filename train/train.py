@@ -263,9 +263,9 @@ def train():
     tf.train.start_queue_runners(sess=sess, coord=coord)
     saver = tf.train.Saver(max_to_keep=20)
 
-    print ('delaaaaaaaaaaaaaaaaaay')
-    import time
-    time.sleep(15)
+    #print ('delaaaaaaaaaaaaaaaaaay')
+    #import time
+    #time.sleep(15)
     for step in range(FLAGS.max_iters):
         
         start_time = time.time()
@@ -308,12 +308,13 @@ def train():
             #          label=np.asarray(gtnp[:,4], dtype=np.uint8),\
             #          final_mask=gt_masksnp,\
             #          )
-            #np.save('/home/czurini/Alex/image'+str(step)+'.npy',np.uint8((np.array(input_imagenp[0])/2.0+0.5)*255.0))
-            #np.save('/home/czurini/Alex/bbox'+str(step)+'.npy',final_boxnp)
-            #np.save('/home/czurini/Alex/label'+str(step)+'.npy',final_clsnp)
-            #np.save('/home/czurini/Alex/prob'+str(step)+'.npy',final_probnp)
-            #np.save('/home/czurini/Alex/gt_label'+str(step)+'.npy',np.argmax(np.asarray(final_gt_clsnp),axis=1))
-            #np.save('/home/czurini/Alex/final_mask'+str(step)+'.npy',final_masknp)
+            np.save('/home/czurini/Alex/image'+str(step)+'.npy',np.uint8((np.array(input_imagenp[0])/2.0+0.5)*255.0))
+            np.save('/home/czurini/Alex/bbox'+str(step)+'.npy',final_boxnp)
+            np.save('/home/czurini/Alex/label'+str(step)+'.npy',final_clsnp)
+            np.save('/home/czurini/Alex/prob'+str(step)+'.npy',final_probnp)
+            np.save('/home/czurini/Alex/gt_label'+str(step)+'.npy',np.argmax(np.asarray(final_gt_clsnp),axis=1))
+            np.save('/home/czurini/Alex/final_mask'+str(step)+'.npy',final_masknp)
+            np.save('/home/czurini/Alex/gt_mask'+str(step)+'.npy',gt_masksnp)
             # draw_bbox_better(step,\
             #                  np.uint8((np.array(input_imagenp[0])/2.0+0.5)*255.0),\
             #                  name='colored',\

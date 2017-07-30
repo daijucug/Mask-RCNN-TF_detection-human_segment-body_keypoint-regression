@@ -17,8 +17,8 @@ def draw_img(step, image, name='', image_height=1, image_width=1, rois=None):
     return source_img.save(FLAGS.train_dir + 'test_' + name + '_' +  str(step) +'.jpg', 'JPEG')
 
 
-colors= np.load('colors.npy')
-#colors = np.random.randint(180, size=(80, 3))
+#colors= np.load('colors.npy')
+colors = np.random.randint(180, size=(80, 3))
 
 def draw_segmentation_parts(step, image, name='', image_height=1, image_width=1, bbox=None, label=None, gt_label=None, prob=None,final_mask=None):
     import cv2
@@ -42,18 +42,18 @@ def draw_segmentation_parts(step, image, name='', image_height=1, image_width=1,
 
         for key in sorted_keys:
             bo, lab,gt_lab,_,mask,col= dictinary[key]
-            random_color_gauss =np.random.randint(0,180) #for different boxes
+            #random_color_gauss =np.random.randint(0,180) #for different boxes
 
             argmax = np.argmax(mask,axis=2)
             for x in range(int(bo[0]),int(bo[2])):
                 for y in range(int(bo[1]),int(bo[3])):
                     xm = x - int(bo[0])
                     ym = y - int(bo[1])
-                    if(mask[ym,xm,argmax[ym,xm]]/255>0.4):
-                        hsv[y,x,0] =random_color_gauss
-                        hsv[y,x,1] = 255
-            cv2.imshow("asdasd",cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR))
-            cv2.waitKey(5000)
+                    #if(mask[ym,xm,argmax[ym,xm]]/255>0.5):
+                    hsv[y,x,0] =colors[argmax[ym,xm]][0]
+                    hsv[y,x,1] = 255
+            #cv2.imshow("asdasd",cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR))
+            #cv2.waitKey(5000)
         hsv = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
         i=0
         for key in sorted_keys:
