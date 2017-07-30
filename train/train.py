@@ -335,10 +335,12 @@ def train():
             print ("labels")
             # print (cat_id_to_cls_name(np.unique(np.argmax(np.asarray(final_gt_clsnp),axis=1)))[1:])
             # print (cat_id_to_cls_name(np.unique(np.asarray(gt_boxesnp, dtype=np.uint8)[:,4])))
-            print (cat_id_to_cls_name(np.unique(np.argmax(np.asarray(tmp_3np),axis=1)))[1:])
+            print (cat_id_to_cls_name(np.unique(np.argmax(np.asarray(tmp_3np),axis=1))))
             #print (cat_id_to_cls_name(np.unique(np.argmax(np.asarray(gt_boxesnp)[:,4],axis=1))))
             print ("classes")
             print (cat_id_to_cls_name(np.unique(np.argmax(np.array(tmp_4np),axis=1))))
+            print (final_boxnp)
+            print (gtnp)
             # print (np.asanyarray(tmp_3np))
 
             #print ("ordered rois")

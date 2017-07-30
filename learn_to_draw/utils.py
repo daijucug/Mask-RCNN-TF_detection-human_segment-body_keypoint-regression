@@ -20,6 +20,53 @@ def draw_img(step, image, name='', image_height=1, image_width=1, rois=None):
 colors= np.load('colors.npy')
 #colors = np.random.randint(180, size=(80, 3))
 
+def draw_segmentation_parts(step, image, name='', image_height=1, image_width=1, bbox=None, label=None, gt_label=None, prob=None,final_mask=None):
+    import cv2
+    hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+    if bbox is not None:
+        dictinary = {}
+        for i, box in enumerate(bbox):
+            width = int(box[2])-int(box[0])
+            height = int(box[3])-int(box[1])
+            if (prob[i,label[i]] > 0.5) and width >0 and height >0 :
+                area = float((box[2]-box[0])*(box[3]-box[1]))
+                while area in dictinary:
+                    area+=1
+                mask = final_mask[i]
+                mask_resized = np.zeros((height,width,17),dtype=np.float32)
+                for x in range(17):
+                    mask_resized[...,x] = scipy.misc.imresize(mask[...,x],(height,width))
+                dictinary[round(area,4)]=(box,label[i],gt_label[i],prob[i,label[i]],mask_resized,colors[label[i],:])
+
+        sorted_keys = sorted(dictinary.iterkeys(),reverse=True)
+
+        for key in sorted_keys:
+            bo, lab,gt_lab,_,mask,col= dictinary[key]
+            random_color_gauss =np.random.randint(0,180) #for different boxes
+
+            argmax = np.argmax(mask,axis=2)
+            for x in range(int(bo[0]),int(bo[2])):
+                for y in range(int(bo[1]),int(bo[3])):
+                    xm = x - int(bo[0])
+                    ym = y - int(bo[1])
+                    if(mask[ym,xm,argmax[ym,xm]]/255>0.4):
+                        hsv[y,x,0] =random_color_gauss
+                        hsv[y,x,1] = 255
+            cv2.imshow("asdasd",cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR))
+            cv2.waitKey(5000)
+        hsv = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
+        i=0
+        for key in sorted_keys:
+            bo, lab,gt_lab,_,_,col= dictinary[key]
+            if lab != gt_lab:
+                c = (0,0,255)
+            else:
+                c = (255,0,0)
+            bo, lab,gt_lab,_,_,col= dictinary[key]
+            hsv = cv2.rectangle(hsv,(int(bo[0]),int(bo[1])),(int(bo[2]),int(bo[3])),c,3)
+            i=i+1
+
+    cv2.imwrite('data/test' + name + '_' +  str(step) +'.jpg',hsv)
 
 def draw_bbox_better(step, image, name='', image_height=1, image_width=1, bbox=None, label=None, gt_label=None, prob=None,final_mask=None):
     import cv2
@@ -72,10 +119,10 @@ def draw_bbox_better(step, image, name='', image_height=1, image_width=1, bbox=N
                     #pr = big_mask[y,x,max_indices[y,x]]/255
                     #hsv[y,x,0] = hsv[y,x,0]* (1.0-pr) + col[0] * (pr)
 
-                    if big_mask[y,x,max_indices[y,x]]/255 > 0.2:
+                    if big_mask[y,x,max_indices[y,x]]/255 > 0.4:
                         #hsv[y,x,0] = 135 #* big_mask[y,x,max_indices[y,x]]/255
                         hsv[y,x,0] = col[0]
-                        #hsv[y,x,0] = random_color_gauss
+                        hsv[y,x,0] = random_color_gauss
                         hsv[y,x,1] = 255
                     #hsv[y,x,2] = 0.5
 
@@ -84,8 +131,8 @@ def draw_bbox_better(step, image, name='', image_height=1, image_width=1, bbox=N
 
                     #hsv[y,x,0]=color[0]
                     #hsv[y,x,1]=hsv[y,x,1]*0.9
-            # cv2.imshow("asdasd",cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR))
-            # cv2.waitKey(5000)
+            cv2.imshow("asdasd",cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR))
+            cv2.waitKey(5000)
 
 
 
@@ -100,7 +147,7 @@ def draw_bbox_better(step, image, name='', image_height=1, image_width=1, bbox=N
             bo, lab,gt_lab,_,_,col= dictinary[key]
             text = cat_id_to_cls_name(lab)
             hsv = cv2.rectangle(hsv,(int(bo[0]),int(bo[1])),(int(bo[2]),int(bo[3])),c,3)
-            hsv = cv2.putText(hsv,text+' '+str(i),(2+int(bo[0]),2+int(bo[1])), cv2.FONT_HERSHEY_SIMPLEX,0.5, color =(255,255,255))
+            #hsv = cv2.putText(hsv,text+' '+str(i),(2+int(bo[0]),2+int(bo[1])), cv2.FONT_HERSHEY_SIMPLEX,0.5, color =(255,255,255))
             i=i+1
 
     #cv2.imwrite('test_' + name + '_' +  str(step) +'.jpg',image)

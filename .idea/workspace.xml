@@ -2,7 +2,313 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="419503ab-2db7-4a80-b317-0762a7bf1f3c" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/bbox.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/colors.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox1000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox1100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox1200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox1300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox1400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox1500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox1600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox1700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox1800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox1900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox2000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox2100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox2200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox2300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox2400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox2500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox2600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox2700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox2800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox2900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox3000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox3100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox3200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox3300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox3400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox3500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox3600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox3700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox3800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox3900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox4000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox4100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask1000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask1100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask1200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask1300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask1400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask1500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask1600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask1700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask1800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask1900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask2000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask2100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask2200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask2300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask2400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask2500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask2600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask2700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask2800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask2900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask3000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask3100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask3200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask3300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask3400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask3500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask3600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask3700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask3800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask3900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask4000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask4100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label1000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label1100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label1200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label1300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label1400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label1500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label1600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label1700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label1800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label1900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label2000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label2100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label2200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label2300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label2400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label2500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label2600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label2700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label2800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label2900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label3000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label3100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label3200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label3300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label3400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label3500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label3600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label3700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label3800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label3900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label4000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label4100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image1000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image1100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image1200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image1300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image1400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image1500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image1600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image1700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image1800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image1900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image2000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image2100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image2200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image2300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image2400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image2500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image2600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image2700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image2800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image2900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image3000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image3100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image3200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image3300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image3400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image3500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image3600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image3700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image3800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image3900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image4000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image4100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label1000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label1100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label1200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label1300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label1400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label1500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label1600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label1700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label1800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label1900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label2000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label2100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label2200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label2300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label2400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label2500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label2600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label2700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label2800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label2900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label3000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label3100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label3200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label3300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label3400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label3500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label3600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label3700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label3800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label3900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label4000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label4100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob1000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob1100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob1200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob1300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob1400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob1500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob1600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob1700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob1800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob1900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob2000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob2100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob2200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob2300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob2400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob2500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob2600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob2700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob2800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob2900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob3000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob3100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob3200.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob3300.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob3400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob3500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob3600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob3700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob3800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob3900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob400.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob4000.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob4100.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob500.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob600.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob700.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob800.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob900.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/test_range.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testhelo_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg0_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg1000_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg100_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg1100_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg1200_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg1300_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg1400_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg1500_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg1600_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg1700_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg1800_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg1900_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg2000_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg200_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg2100_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg2200_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg2300_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg2400_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg2500_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg2600_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg2700_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg2800_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg2900_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg3000_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg300_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg3100_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg3200_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg3300_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg3400_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg3500_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg3600_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg3700_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg3800_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg3900_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg4000_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg400_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg500_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg600_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg700_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg800_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg900_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/final_mask.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/gt_label.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/image.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/label.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/prob.npy" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox0.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/bbox0.npy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask0.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/final_mask0.npy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label0.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/gt_label0.npy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/image0.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/image0.npy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/label0.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/label0.npy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob0.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/prob0.npy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/convert_data/convert_my_data.py" afterPath="$PROJECT_DIR$/convert_data/convert_my_data.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/convert_data/out.tfrecord" afterPath="$PROJECT_DIR$/convert_data/out.tfrecord" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/utils.py" afterPath="$PROJECT_DIR$/learn_to_draw/utils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/train.py" afterPath="$PROJECT_DIR$/train/train.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,11 +333,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="train.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/train/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1362">
-              <caret line="238" column="5" lean-forward="false" selection-start-line="238" selection-start-column="5" selection-end-line="238" selection-end-column="5" />
+            <state relative-caret-position="520">
+              <caret line="342" column="19" lean-forward="false" selection-start-line="342" selection-start-column="19" selection-end-line="342" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pil_utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/visualization/pil_utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1867">
+              <caret line="132" column="4" lean-forward="false" selection-start-line="132" selection-start-column="4" selection-end-line="132" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="draw.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/learn_to_draw/draw.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/learn_to_draw/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="864">
+              <caret line="292" column="0" lean-forward="false" selection-start-line="292" selection-start-column="0" selection-end-line="292" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -41,7 +379,7 @@
         <entry file="file://$PROJECT_DIR$/libs/datasets/dataset_factory.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -61,7 +399,7 @@
         <entry file="file://$PROJECT_DIR$/convert_data/read_my_data.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="379">
-              <caret line="41" column="38" lean-forward="true" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
+              <caret line="41" column="38" lean-forward="false" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -69,22 +407,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="convert_my_data.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="convert_my_data.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/convert_data/convert_my_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="138" column="20" lean-forward="true" selection-start-line="138" selection-start-column="20" selection-end-line="138" selection-end-column="20" />
+            <state relative-caret-position="331">
+              <caret line="135" column="20" lean-forward="true" selection-start-line="135" selection-start-column="20" selection-end-line="135" selection-end-column="20" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2008_003228.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/convert_data/2008_003228.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
           </provider>
         </entry>
       </file>
@@ -92,17 +423,7 @@
         <entry file="file://$PROJECT_DIR$/libs/nets/pyramid_network.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3433">
-              <caret line="355" column="28" lean-forward="true" selection-start-line="355" selection-start-column="28" selection-end-line="355" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wrapper.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libs/layers/wrapper.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="56" column="53" lean-forward="false" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="53" />
+              <caret line="355" column="28" lean-forward="false" selection-start-line="355" selection-start-column="28" selection-end-line="355" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -124,8 +445,9 @@
         <option value="$PROJECT_DIR$/convert_data/read_my_data.py" />
         <option value="$PROJECT_DIR$/libs/datasets/coco.py" />
         <option value="$PROJECT_DIR$/libs/nets/pyramid_network.py" />
-        <option value="$PROJECT_DIR$/train/train.py" />
+        <option value="$PROJECT_DIR$/learn_to_draw/utils.py" />
         <option value="$PROJECT_DIR$/convert_data/convert_my_data.py" />
+        <option value="$PROJECT_DIR$/train/train.py" />
       </list>
     </option>
   </component>
@@ -173,6 +495,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="train" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MaskRCNN_body" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MaskRCNN_body" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="learn_to_draw" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -440,6 +776,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -450,7 +787,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -528,14 +864,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/download_and_convert_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -552,7 +880,7 @@
     <entry file="file://$PROJECT_DIR$/libs/nets/pyramid_network.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3433">
-          <caret line="355" column="28" lean-forward="true" selection-start-line="355" selection-start-column="28" selection-end-line="355" selection-end-column="28" />
+          <caret line="355" column="28" lean-forward="false" selection-start-line="355" selection-start-column="28" selection-end-line="355" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -560,15 +888,7 @@
     <entry file="file://$PROJECT_DIR$/libs/datasets/dataset_factory.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1362">
-          <caret line="238" column="5" lean-forward="false" selection-start-line="238" selection-start-column="5" selection-end-line="238" selection-end-column="5" />
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -584,20 +904,62 @@
     <entry file="file://$PROJECT_DIR$/convert_data/read_my_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
-          <caret line="41" column="38" lean-forward="true" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
+          <caret line="41" column="38" lean-forward="false" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/learn_to_draw/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="292" column="0" lean-forward="false" selection-start-line="292" selection-start-column="0" selection-end-line="292" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/convert_data/convert_my_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="138" column="20" lean-forward="true" selection-start-line="138" selection-start-column="20" selection-end-line="138" selection-end-column="20" />
+        <state relative-caret-position="331">
+          <caret line="135" column="20" lean-forward="true" selection-start-line="135" selection-start-column="20" selection-end-line="135" selection-end-column="20" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/download_and_convert_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learn_to_draw/draw.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/visualization/pil_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1867">
+          <caret line="132" column="4" lean-forward="false" selection-start-line="132" selection-start-column="4" selection-end-line="132" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="342" column="19" lean-forward="false" selection-start-line="342" selection-start-column="19" selection-end-line="342" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>

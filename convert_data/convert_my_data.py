@@ -103,7 +103,7 @@ def loadData3():#human body parts
             gt_boxes[i,1]=y1
             gt_boxes[i,2]=x2
             gt_boxes[i,3]=y2
-            gt_boxes[i,4] = 0 # clasa 0 inseamna human
+            gt_boxes[i,4] = 1 # clasa 1 inseamna human
 
             #contour_mask = cv2.cvtColor(contour_mask*255,cv2.COLOR_GRAY2BGR)
             #contour_mask =cv2.rectangle(contour_mask,(x1, y1), (x2, y2),(255,255,0),2)
@@ -137,7 +137,7 @@ def _to_tfexample_coco_raw(image_id, image_data, label_data,
   }))
 
 options = tf.python_io.TFRecordOptions(TFRecordCompressionType.ZLIB)
-record_filename = "../data/coco/tfrecords/out.tfrecord"
+record_filename = "out.tfrecord"
 with tf.python_io.TFRecordWriter(record_filename, options=options) as tfrecord_writer:
     for x in range (100):
         img_id = x
