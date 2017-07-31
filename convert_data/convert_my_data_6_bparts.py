@@ -42,13 +42,14 @@ def loadData3(H,W):#human body parts
     # sa zicem ca am doua clase, dar cea de a doua nu o sa apara niciodata
     #masks_instances = np.zeros((6,H,W),dtype=np.uint8)
     masks_instances = []
-    masks_for_person = np.zeros((6,H,W),dtype=np.uint8)
+
     persons = [o for o in annotation['anno'][0]['objects'][0][0] if o['class']=='person']
     gt_boxes = []
     for i in range(len(persons)):
         p = persons[i]
         pa = p['parts']
         parts = pa[0]
+        masks_for_person = np.zeros((6,H,W),dtype=np.uint8)
         #parts = persons[i]['parts'][0]
         for part in parts:
             part_name = part['part_name'].astype(str)[0]
@@ -59,18 +60,33 @@ def loadData3(H,W):#human body parts
             #cv2.imshow("mask",mask*255)
             #cv2.waitKey(100)
             kernel = np.ones((5,5),np.uint8)
-            mask = cv2.dilate(mask,kernel,iterations = 2)
+            mask = cv2.dilate(mask,kernel,iterations = 3)
             #cv2.imshow("mask",mask*255)
             #cv2.waitKey(1000)
             _,contours,hierarchy = cv2.findContours(mask, 1, 2)
             if len(contours) ==0:
                 continue
-            x,y,w,h = cv2.boundingRect(contours[0])
+
+            x1=100000
+            y1=100000
+            x2=-10000
+            y2=-10000
+            for contour in contours:
+                x,y,w,h = cv2.boundingRect(contour)
+                xw,yh = x+w,y+h
+                if x <x1:
+                    x1 = x
+                if y <y1:
+                    y1 = y
+                if xw > x2:
+                    x2=xw
+                if yh >y2:
+                    y2=yh
             mask = cv2.cvtColor(mask*255,cv2.COLOR_GRAY2BGR)
-            #mask = cv2.rectangle(mask,(x,y),(x+w,y+h),(255,255,0),2)
-            #cv2.imshow("mask",mask)
-            #cv2.waitKey(100)
-            gt_boxes.append([x,y,x+w,y+h,j])
+            mask = cv2.rectangle(mask,(x1,y1),(x2,y2),(255,255,0),2)
+            # cv2.imshow("mask",mask)
+            # cv2.waitKey(1000)
+            gt_boxes.append([x1,y1,x2,y2,j])
             masks_instances.append(masks_for_person[j,...].copy())
 
     if len(gt_boxes) ==0:
@@ -118,6 +134,12 @@ with tf.python_io.TFRecordWriter(record_filename, options=options) as tfrecord_w
             img = np.array(Image.open('/home/alex/PycharmProjects/MaskRCNN_body/convert_data/data/JPEGImages/'+img_name+'.jpg'))
             annotation = sio.loadmat('data/Annotations_Part/'+img_name+'.mat')
 
+
+            image = cv2.imread('/home/alex/PycharmProjects/MaskRCNN_body/convert_data/data/JPEGImages/'+img_name+'.jpg')
+            # cv2.imshow("iamge",image)
+            # cv2.waitKey(1000)
+
+
             height, width = img.shape[0],img.shape[1]
             img = img.astype(np.uint8)
             img_raw = img.tostring()
@@ -133,13 +155,13 @@ with tf.python_io.TFRecordWriter(record_filename, options=options) as tfrecord_w
                   height, width, gt_boxes.shape[0],
                   gt_boxes.tostring(), masks.tostring())
             tfrecord_writer.write(example.SerializeToString())
-            image = cv2.imread('/home/alex/PycharmProjects/MaskRCNN_body/convert_data/data/JPEGImages/'+img_name+'.jpg')
-            for x in range(gt_boxes.shape[0]):
-                c = np.random.randint(0,255,(3))
 
-                image = cv2.rectangle(image,(gt_boxes[x,0],gt_boxes[x,1]),(gt_boxes[x,2],gt_boxes[x,3]),(c[0],c[1],c[2]),2)
-            cv2.imshow("iamge",image)
-            cv2.waitKey(3000)
+            # for x in range(gt_boxes.shape[0]):
+            #     c = np.random.randint(0,255,(3))
+            #
+            #     image = cv2.rectangle(image,(gt_boxes[x,0],gt_boxes[x,1]),(gt_boxes[x,2],gt_boxes[x,3]),(c[0],c[1],c[2]),2)
+            # cv2.imshow("iamge",image)
+            # cv2.waitKey(1000)
         except BaseException as error:
             #logging.error(traceback.format_exc())
             print error
