@@ -308,13 +308,13 @@ def train():
             #          label=np.asarray(gtnp[:,4], dtype=np.uint8),\
             #          final_mask=gt_masksnp,\
             #          )
-            np.save('/home/czurini/Alex/image'+str(step)+'.npy',np.uint8((np.array(input_imagenp[0])/2.0+0.5)*255.0))
-            np.save('/home/czurini/Alex/bbox'+str(step)+'.npy',final_boxnp)
-            np.save('/home/czurini/Alex/label'+str(step)+'.npy',final_clsnp)
-            np.save('/home/czurini/Alex/prob'+str(step)+'.npy',final_probnp)
-            np.save('/home/czurini/Alex/gt_label'+str(step)+'.npy',np.argmax(np.asarray(final_gt_clsnp),axis=1))
-            np.save('/home/czurini/Alex/final_mask'+str(step)+'.npy',final_masknp)
-            np.save('/home/czurini/Alex/gt_mask'+str(step)+'.npy',gt_masksnp)
+            # np.save('/home/czurini/Alex/image'+str(step)+'.npy',np.uint8((np.array(input_imagenp[0])/2.0+0.5)*255.0))
+            # np.save('/home/czurini/Alex/bbox'+str(step)+'.npy',final_boxnp)
+            # np.save('/home/czurini/Alex/label'+str(step)+'.npy',final_clsnp)
+            # np.save('/home/czurini/Alex/prob'+str(step)+'.npy',final_probnp)
+            # np.save('/home/czurini/Alex/gt_label'+str(step)+'.npy',np.argmax(np.asarray(final_gt_clsnp),axis=1))
+            # np.save('/home/czurini/Alex/final_mask'+str(step)+'.npy',final_masknp)
+            # np.save('/home/czurini/Alex/gt_mask'+str(step)+'.npy',gt_masksnp)
             # draw_bbox_better(step,\
             #                  np.uint8((np.array(input_imagenp[0])/2.0+0.5)*255.0),\
             #                  name='colored',\
@@ -358,12 +358,12 @@ def train():
                 print (gt_boxesnp)
                 raise
           
-        if step % 3000 == 0:
+        if step % 10000 == 0:
             summary_str = sess.run(summary_op)
             summary_writer.add_summary(summary_str, step)
             summary_writer.flush()
 
-        if (step % 3000 == 0 or step + 1 == FLAGS.max_iters) and step != 0:
+        if (step % 10000 == 0 or step + 1 == FLAGS.max_iters) and step != 0:
             checkpoint_path = os.path.join(FLAGS.train_dir, 
                                            FLAGS.dataset_name + '_' + FLAGS.network + '_model.ckpt')
             saver.save(sess, checkpoint_path, global_step=step)

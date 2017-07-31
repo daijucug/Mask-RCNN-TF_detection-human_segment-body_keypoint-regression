@@ -94,15 +94,17 @@ def draw_bbox_better(step, image, name='', image_height=1, image_width=1, bbox=N
     if bbox is not None:
         dictinary = {}
         for i, box in enumerate(bbox):
-            if (prob[i,label[i]] > 0.5) and (label[i] > 0):
+            width = int(box[2])-int(box[0])
+            height = int(box[3])-int(box[1])
+            if (prob[i,label[i]] > 0.9) and width*height >1000:
                 area = float((box[2]-box[0])*(box[3]-box[1]))
                 while area in dictinary:
                     area+=1
-                width = int(box[2])-int(box[0])
-                height = int(box[3])-int(box[1])
+
                 mask = final_mask[i]
                 mask = mask[...,label[i]]
                 mask = scipy.misc.imresize(mask,(height,width))
+
 
                 dictinary[round(area,4)]=(box,label[i],gt_label[i],prob[i,label[i]],mask,colors[label[i],:])
         sorted_keys = sorted(dictinary.iterkeys(),reverse=True)
@@ -119,21 +121,24 @@ def draw_bbox_better(step, image, name='', image_height=1, image_width=1, bbox=N
         max_indices = np.argmax(big_mask,axis=2)
         #cv2.imshow("asdasd",cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR))
         #cv2.waitKey(5000)
-        for key in sorted_keys:
-            bo, lab,gt_lab,_,_,col= dictinary[key]
+        for key,i in zip(sorted_keys,range(len(sorted_keys))):
+            bo, lab,gt_lab,_,mask,col= dictinary[key]
+            print mask.shape
 
             random_color_gauss =np.random.randint(0,180) #for different boxes
             for x in range(int(bo[0]),int(bo[2])):
                 for y in range(int(bo[1]),int(bo[3])):
-                    _,_,_,_,_,col_arg_max = dictinary.values()[max_indices[y,x]]
+                    #_,_,_,_,_,col_arg_max = dictinary.values()[max_indices[y,x]]
                     #print col
                     #print (image[y,x,0] )
                     #image[y,x,...] = col * big_mask[y,x,max_indices[y,x]]
 
                     #pr = big_mask[y,x,max_indices[y,x]]/255
                     #hsv[y,x,0] = hsv[y,x,0]* (1.0-pr) + col[0] * (pr)
-
-                    if big_mask[y,x,max_indices[y,x]]/255 > 0.4:
+                    xm = x-(int(bo[0]))
+                    ym = y-(int(bo[1]))
+                    #print (mask[ym,xm])
+                    if mask[ym,xm]/255.0 > 0.5:
                         #hsv[y,x,0] = 135 #* big_mask[y,x,max_indices[y,x]]/255
                         hsv[y,x,0] = col[0]
                         hsv[y,x,0] = random_color_gauss
@@ -145,10 +150,11 @@ def draw_bbox_better(step, image, name='', image_height=1, image_width=1, bbox=N
 
                     #hsv[y,x,0]=color[0]
                     #hsv[y,x,1]=hsv[y,x,1]*0.9
-            cv2.imshow("asdasd",cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR))
-            cv2.waitKey(5000)
-
-
+        #     cv2.imshow("asdasd",cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR))
+        #     cv2.imshow("mask"+str(i),mask)
+        #     cv2.waitKey(500)
+        #
+        # cv2.waitKey(1000000)
 
         hsv = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
         i=0

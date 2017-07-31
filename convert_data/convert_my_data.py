@@ -146,7 +146,9 @@ with tf.python_io.TFRecordWriter(record_filename, options=options) as tfrecord_w
         img = np.array(Image.open(img_name))
         img = img.astype(np.uint8)
         img_raw = img.tostring()
-        gt_boxes, masks,mask = loadData3()
+        persons_exist, gt_boxes, masks,mask = loadData3()
+        if not persons_exist:
+            continue
         mask_raw = mask.tostring()
 
         example = _to_tfexample_coco_raw(
