@@ -317,7 +317,7 @@ def train():
             # np.save('/home/czurini/Alex/gt_mask'+str(step)+'.npy',gt_masksnp)
             # draw_bbox_better(step,\
             #                  np.uint8((np.array(input_imagenp[0])/2.0+0.5)*255.0),\
-            #                  name='colored',\
+            #                  name='colored',\a
             #                  bbox=final_boxnp,\
             #                  label=final_clsnp,\
             #                  prob=final_probnp,\

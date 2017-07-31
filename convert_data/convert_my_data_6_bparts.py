@@ -133,15 +133,17 @@ with tf.python_io.TFRecordWriter(record_filename, options=options) as tfrecord_w
                   height, width, gt_boxes.shape[0],
                   gt_boxes.tostring(), masks.tostring())
             tfrecord_writer.write(example.SerializeToString())
+            image = cv2.imread('/home/alex/PycharmProjects/MaskRCNN_body/convert_data/data/JPEGImages/'+img_name+'.jpg')
+            for x in range(gt_boxes.shape[0]):
+                c = np.random.randint(0,255,(3))
+
+                image = cv2.rectangle(image,(gt_boxes[x,0],gt_boxes[x,1]),(gt_boxes[x,2],gt_boxes[x,3]),(c[0],c[1],c[2]),2)
+            cv2.imshow("iamge",image)
+            cv2.waitKey(3000)
         except BaseException as error:
             #logging.error(traceback.format_exc())
             print error
             #print img_name+' annotation does not exit'
 
-        # image = cv2.imread(img_name)
-        # for x in range(gt_boxes.shape[0]):
-        #     c = np.random.randint(0,255,(3))
-        #     image = cv2.rectangle(image,(gt_boxes[x,0],gt_boxes[x,1]),(gt_boxes[x,2],gt_boxes[x,3]),(c[0],c[1],c[2]),2)
-        # cv2.imshow("iamge",image)
-        # cv2.waitKey(3000)
+
     tfrecord_writer.close()
