@@ -190,7 +190,7 @@ def train():
     logits, end_points, pyramid_map = network.get_network(FLAGS.network, image,
             weight_decay=FLAGS.weight_decay, is_training=True)
     outputs = pyramid_network.build(end_points, im_shape[1], im_shape[2], pyramid_map,
-            num_classes=6,
+            num_classes=7,
             base_anchors=9,
             is_training=True,
             gt_boxes=gt_boxes, gt_masks=gt_masks,
