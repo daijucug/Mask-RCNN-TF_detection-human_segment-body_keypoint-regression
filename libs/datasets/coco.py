@@ -128,7 +128,7 @@ def read(tfrecords_filename):
   gt_masks = tf.decode_raw(features['label/gt_masks'], tf.uint8)
   gt_masks = tf.cast(gt_masks, tf.int32)
   print (ih,iw)
-  gt_masks = tf.reshape(gt_masks, [17, ih, iw])
+  gt_masks = tf.reshape(gt_masks, [num_instances, ih, iw])
   ####################################################################be careful here. before 17 at the line above there was num_instances
 
   

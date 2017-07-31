@@ -38,7 +38,8 @@ def loadData3(H,W):#human body parts
 
 
     # sa zicem ca am doua clase, dar cea de a doua nu o sa apara niciodata
-    masks = np.zeros((6,H,W),dtype=np.uint8)
+    #masks_instances = np.zeros((6,H,W),dtype=np.uint8)
+    masks_instances = []
     masks_for_person = np.zeros((6,H,W),dtype=np.uint8)
     persons = [o for o in annotation['anno'][0]['objects'][0][0] if o['class']=='person']
     gt_boxes = []
@@ -63,12 +64,14 @@ def loadData3(H,W):#human body parts
             #cv2.imshow("mask",mask)
             #cv2.waitKey(100)
             gt_boxes.append([x,y,x+w,y+h,j])
-        masks = np.logical_or(masks,masks_for_person)
+            masks_instances.append(masks_for_person[j,...].copy())
 
+    masks_instances = np.array(masks_instances,dtype=np.float32)
     gt_boxes = np.array(gt_boxes,dtype=np.float32)
 
-    mask = masks[i,...]# this is for drawing the ground truth in the network
-    return gt_boxes,masks,mask
+
+    mask = masks_instances[0,...]# this is for drawing the ground truth in the network
+    return gt_boxes,masks_instances,mask
 
 def _int64_feature(values):
   if not isinstance(values, (tuple, list)):

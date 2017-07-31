@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="419503ab-2db7-4a80-b317-0762a7bf1f3c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/convert_data/convert_my_data_5_bparts.py" afterPath="$PROJECT_DIR$/convert_data/convert_my_data_5_bparts.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/convert_data/out.tfrecord" afterPath="$PROJECT_DIR$/convert_data/out.tfrecord" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/nets/pyramid_network.py" afterPath="$PROJECT_DIR$/libs/nets/pyramid_network.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/train.py" afterPath="$PROJECT_DIR$/train/train.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/convert_data/convert_my_data_5_bparts.py" afterPath="$PROJECT_DIR$/convert_data/convert_my_data_6_bparts.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/convert_data/out_5_body_parts.tfrecord" afterPath="$PROJECT_DIR$/convert_data/out_5_body_parts.tfrecord" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/datasets/coco.py" afterPath="$PROJECT_DIR$/libs/datasets/coco.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,8 +56,28 @@
       <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="191" column="33" lean-forward="false" selection-start-line="191" selection-start-column="33" selection-end-line="191" selection-end-column="33" />
+            <state relative-caret-position="-35">
+              <caret line="170" column="22" lean-forward="false" selection-start-line="170" selection-start-column="22" selection-end-line="170" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dataset_factory.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/datasets/dataset_factory.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="18" column="70" lean-forward="false" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="coco.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/datasets/coco.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="444">
+              <caret line="130" column="48" lean-forward="false" selection-start-line="130" selection-start-column="48" selection-end-line="130" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -68,8 +86,8 @@
       <file leaf-file-name="pyramid_network.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/libs/nets/pyramid_network.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="410" column="11" lean-forward="false" selection-start-line="410" selection-start-column="11" selection-end-line="410" selection-end-column="11" />
+            <state relative-caret-position="3921">
+              <caret line="523" column="20" lean-forward="false" selection-start-line="523" selection-start-column="8" selection-end-line="523" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -87,11 +105,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="convert_my_data_5_bparts.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/convert_data/convert_my_data_5_bparts.py">
+      <file leaf-file-name="convert_my_data_6_bparts.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/convert_data/convert_my_data_6_bparts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="122" column="27" lean-forward="false" selection-start-line="122" selection-start-column="27" selection-end-line="122" selection-end-column="27" />
+            <state relative-caret-position="-619">
+              <caret line="72" column="26" lean-forward="false" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -118,6 +136,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>build</find>
+      <find>masks</find>
       <find>28</find>
     </findStrings>
   </component>
@@ -128,7 +147,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/convert_data/read_my_data.py" />
-        <option value="$PROJECT_DIR$/libs/datasets/coco.py" />
         <option value="$PROJECT_DIR$/learn_to_draw/visualize_mask_and_gt.py" />
         <option value="$PROJECT_DIR$/learn_to_draw/draw.py" />
         <option value="$PROJECT_DIR$/learn_to_draw/utils.py" />
@@ -137,6 +155,8 @@
         <option value="$PROJECT_DIR$/convert_data/convert_my_data_5_bparts.py" />
         <option value="$PROJECT_DIR$/train/train.py" />
         <option value="$PROJECT_DIR$/libs/nets/pyramid_network.py" />
+        <option value="$PROJECT_DIR$/libs/datasets/coco.py" />
+        <option value="$PROJECT_DIR$/convert_data/convert_my_data_6_bparts.py" />
       </list>
     </option>
   </component>
@@ -346,7 +366,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="MaskRCNN_body" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/convert_data/convert_my_data_5_bparts.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/convert_data/convert_my_data_6_bparts.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -621,6 +641,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -628,6 +649,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1590">
           <caret line="114" column="36" lean-forward="false" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -732,20 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/datasets/coco.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="114" column="36" lean-forward="false" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/datasets/dataset_factory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/learn_to_draw/2008_003228.mat">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -805,10 +813,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/convert_data/convert_my_data_5_bparts.py">
+    <entry file="file://$PROJECT_DIR$/convert_data/convert_my_data_6_bparts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="122" column="27" lean-forward="false" selection-start-line="122" selection-start-column="27" selection-end-line="122" selection-end-column="27" />
+        <state relative-caret-position="-619">
+          <caret line="72" column="26" lean-forward="false" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
@@ -817,16 +825,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/train/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="191" column="33" lean-forward="false" selection-start-line="191" selection-start-column="33" selection-end-line="191" selection-end-column="33" />
+        <state relative-caret-position="-35">
+          <caret line="170" column="22" lean-forward="false" selection-start-line="170" selection-start-column="22" selection-end-line="170" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/datasets/dataset_factory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="18" column="70" lean-forward="false" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/datasets/coco.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="130" column="48" lean-forward="false" selection-start-line="130" selection-start-column="48" selection-end-line="130" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/nets/pyramid_network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="410" column="11" lean-forward="false" selection-start-line="410" selection-start-column="11" selection-end-line="410" selection-end-column="11" />
+        <state relative-caret-position="3921">
+          <caret line="523" column="20" lean-forward="false" selection-start-line="523" selection-start-column="8" selection-end-line="523" selection-end-column="20" />
           <folding />
         </state>
       </provider>
