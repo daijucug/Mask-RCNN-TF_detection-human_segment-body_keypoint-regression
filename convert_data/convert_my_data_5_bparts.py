@@ -5,33 +5,6 @@ from PIL import Image
 import scipy.io as sio
 import cv2
 
-
-
-def loadData():
-    annotation = sio.loadmat('2008_000652.mat')
-    annotation = annotation['anno'][0]['objects'][0]['parts'][0][0]['mask'][0]
-
-    masks = np.zeros((18,213,320),dtype=np.uint8)########################this is float32
-    gt_boxes = np.zeros((18,5),dtype=np.float32)
-    classes = np.zeros((18,1),dtype=np.float32)
-    for i in range(0,18):
-        mask = annotation[i]###############################*255
-        masks[i,...] = mask
-        mask = mask.copy()
-        cv2.imshow("mask",mask*255)
-        cv2.waitKey(1000)
-        _,contours,hierarchy = cv2.findContours(mask, 1, 2)
-        x,y,w,h = cv2.boundingRect(contours[0])
-        gt_boxes[i,0]=x
-        gt_boxes[i,1]=y
-        gt_boxes[i,2]=x+w
-        gt_boxes[i,3]=y+h
-        gt_boxes[i,4] = i
-
-
-    mask = masks[i,...]# this is for drawing the ground truth in the network
-    return gt_boxes,masks,mask
-
 body_parts_dict = {
     'head':0,
     'lear':0,
@@ -56,39 +29,43 @@ body_parts_dict = {
     'lfoot':4,
     'rlleg':5,
     'ruleg':5,
-    'rfoot':6
+    'rfoot':5
 }
 
-def loadData3():#human body parts
-    annotation = sio.loadmat('2008_003228.mat')
+def loadData3(H,W):#human body parts
+    annotation = sio.loadmat('2008_000510.mat')
     #annotation = annotation['anno'][0]['objects'][0]['parts'][0][0]['mask'][0]
 
 
     # sa zicem ca am doua clase, dar cea de a doua nu o sa apara niciodata
-    masks = np.zeros((17,375,500),dtype=np.uint8)
-    gt_boxes = np.zeros((3,5),dtype=np.float32)
-    for i in range(4):
-        obj = annotation['anno'][0]['objects'][0][0][i]
-        if (obj['class']=='person'):
-            parts = obj['parts'][0]
-            contour_mask = np.zeros((375,500),dtype=np.uint8)
-            for part in parts:
-                contour_mask = contour_mask | part['mask']
-                name = part['part_name'].astype(str)[0]
-                m = body_parts_dict[name]
-                masks[m,...] = part['mask']
-            B = np.argwhere(contour_mask==1)
-            (y1, x1), (y2, x2) = B.min(0), B.max(0)
-            gt_boxes[i,0]=x1
-            gt_boxes[i,1]=y1
-            gt_boxes[i,2]=x2
-            gt_boxes[i,3]=y2
-            gt_boxes[i,4] = 1 # clasa 1 inseamna human
+    masks = np.zeros((6,H,W),dtype=np.uint8)
+    masks_for_person = np.zeros((6,H,W),dtype=np.uint8)
+    persons = [o for o in annotation['anno'][0]['objects'][0][0] if o['class']=='person']
+    gt_boxes = []
+    for i in range(len(persons)):
+        parts = persons[i]['parts'][0]
+        for part in parts:
+            part_name = part['part_name'].astype(str)[0]
+            index = body_parts_dict[part_name]
+            masks_for_person[index,...] = np.logical_or(masks_for_person[index,...], part['mask'])
+        for j in range(6):
+            mask = masks_for_person[j,...].copy()
+            #cv2.imshow("mask",mask*255)
+            #cv2.waitKey(100)
+            kernel = np.ones((5,5),np.uint8)
+            mask = cv2.dilate(mask,kernel,iterations = 2)
+            #cv2.imshow("mask",mask*255)
+            #cv2.waitKey(100)
+            _,contours,hierarchy = cv2.findContours(mask, 1, 2)
+            x,y,w,h = cv2.boundingRect(contours[0])
+            mask = cv2.cvtColor(mask*255,cv2.COLOR_GRAY2BGR)
+            mask = cv2.rectangle(mask,(x,y),(x+w,y+h),(255,255,0),2)
+            #cv2.imshow("mask",mask)
+            #cv2.waitKey(100)
+            gt_boxes.append([x,y,x+w,y+h,j])
+        masks = np.logical_or(masks,masks_for_person)
 
-            #contour_mask = cv2.cvtColor(contour_mask*255,cv2.COLOR_GRAY2BGR)
-            #contour_mask =cv2.rectangle(contour_mask,(x1, y1), (x2, y2),(255,255,0),2)
-            #cv2.imshow("image",contour_mask)
-            #cv2.waitKey(3000)
+    gt_boxes = np.array(gt_boxes,dtype=np.float32)
 
     mask = masks[i,...]# this is for drawing the ground truth in the network
     return gt_boxes,masks,mask
@@ -117,16 +94,16 @@ def _to_tfexample_coco_raw(image_id, image_data, label_data,
   }))
 
 options = tf.python_io.TFRecordOptions(TFRecordCompressionType.ZLIB)
-record_filename = "out.tfrecord"
+record_filename = "out_5_body_parts.tfrecord"
 with tf.python_io.TFRecordWriter(record_filename, options=options) as tfrecord_writer:
     for x in range (100):
         img_id = x
-        img_name = '2008_003228.jpg'
-        height, width = 375,500
+        img_name = '2008_000510.jpg'
+        height, width = 333,500
         img = np.array(Image.open(img_name))
         img = img.astype(np.uint8)
         img_raw = img.tostring()
-        gt_boxes, masks,mask = loadData()
+        gt_boxes, masks,mask = loadData3(height, width)
         mask_raw = mask.tostring()
 
         example = _to_tfexample_coco_raw(
@@ -135,6 +112,13 @@ with tf.python_io.TFRecordWriter(record_filename, options=options) as tfrecord_w
               mask_raw,
               height, width, gt_boxes.shape[0],
               gt_boxes.tostring(), masks.tostring())
-
         tfrecord_writer.write(example.SerializeToString())
+
+
+        # image = cv2.imread(img_name)
+        # for x in range(gt_boxes.shape[0]):
+        #     c = np.random.randint(0,255,(3))
+        #     image = cv2.rectangle(image,(gt_boxes[x,0],gt_boxes[x,1]),(gt_boxes[x,2],gt_boxes[x,3]),(c[0],c[1],c[2]),2)
+        # cv2.imshow("iamge",image)
+        # cv2.waitKey(3000)
     tfrecord_writer.close()

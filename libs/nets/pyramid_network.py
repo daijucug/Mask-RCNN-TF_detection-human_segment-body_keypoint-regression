@@ -342,7 +342,7 @@ def build_heads(pyramid, ih, iw, num_classes, base_anchors, is_training=False, g
             splitted_rois = assigned_rois[i-2]
             batch_inds = assigned_batch_inds[i-2]
             cropped = ROIAlign(pyramid[p], splitted_rois, batch_inds, stride=2**i,
-                               pooled_height=56, pooled_width=56)
+                               pooled_height=14, pooled_width=14)
             cropped_rois.append(cropped)
             ordered_rois.append(splitted_rois)
           cropped_rois = tf.concat(values=cropped_rois, axis=0)
@@ -352,11 +352,11 @@ def build_heads(pyramid, ih, iw, num_classes, base_anchors, is_training=False, g
         m = cropped_rois
         for _ in range(4):
             m = slim.conv2d(m, 256, [3, 3], stride=1, padding='SAME', activation_fn=tf.nn.relu)
-        # to 28 x 28////to 112x112
+        # to 28 x 28
         m = slim.conv2d_transpose(m, 256, 2, stride=2, padding='VALID', activation_fn=tf.nn.relu)
         tf.add_to_collection('__TRANSPOSED__', m)
 
-        number_of_parts = 17
+        number_of_parts = 6
         m = slim.conv2d(m, number_of_parts, [1, 1], stride=1, padding='VALID', activation_fn=None)
         #adaugat de mine:
         #m = tf.sigmoid(m,"mask_sigmoid")
@@ -521,11 +521,9 @@ def build_losses(pyramid, outputs, gt_boxes, gt_masks,
         # mask_shape = tf.shape(masks)
         # masks = tf.reshape(masks, (mask_shape[0], mask_shape[1],
         #                            mask_shape[2], tf.cast(mask_shape[3]/2, tf.int32), 2))
-        num_of_parts = 17
-        # labels, mask_targets, mask_inside_weights = \
-        #   mask_encoder(gt_masks, gt_boxes, ordered_rois, num_of_parts, 28, 28, scope='MaskEncoder')
+        num_of_parts = 6
         labels, mask_targets, mask_inside_weights = \
-          mask_encoder(gt_masks, gt_boxes, ordered_rois, num_of_parts, 112, 112, scope='MaskEncoder')
+          mask_encoder(gt_masks, gt_boxes, ordered_rois, num_of_parts, 28, 28, scope='MaskEncoder')
         labels, masks, mask_targets, mask_inside_weights = \
                 _filter_negative_samples(tf.reshape(labels, [-1]), [
                     tf.reshape(labels, [-1]),

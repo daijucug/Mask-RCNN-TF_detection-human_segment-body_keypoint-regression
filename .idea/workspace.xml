@@ -2,49 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="419503ab-2db7-4a80-b317-0762a7bf1f3c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox12.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox15.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox6.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox9.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask12.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask15.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask6.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask9.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label12.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label15.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label6.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label9.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image12.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image15.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image6.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/image9.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label12.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label15.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label6.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/label9.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob12.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob15.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob6.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob9.npy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg0_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg12_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg3_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg6_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/data/testseg9_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/learn_to_draw/visualize_mask_and_gt.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox0.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/bbox0.npy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox3.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/bbox3.npy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask0.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/final_mask0.npy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask3.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/final_mask3.npy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/image0.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/image0.npy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/image3.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/image3.npy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob0.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/prob0.npy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob3.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/prob3.npy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/draw.py" afterPath="$PROJECT_DIR$/learn_to_draw/draw.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/utils.py" afterPath="$PROJECT_DIR$/learn_to_draw/utils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/convert_data/convert_my_data_5_bparts.py" afterPath="$PROJECT_DIR$/convert_data/convert_my_data_5_bparts.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/convert_data/out.tfrecord" afterPath="$PROJECT_DIR$/convert_data/out.tfrecord" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/nets/pyramid_network.py" afterPath="$PROJECT_DIR$/libs/nets/pyramid_network.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/train.py" afterPath="$PROJECT_DIR$/train/train.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -96,8 +58,8 @@
       <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
-              <caret line="191" column="32" lean-forward="false" selection-start-line="191" selection-start-column="32" selection-end-line="191" selection-end-column="32" />
+            <state relative-caret-position="205">
+              <caret line="191" column="33" lean-forward="false" selection-start-line="191" selection-start-column="33" selection-end-line="191" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -106,8 +68,8 @@
       <file leaf-file-name="pyramid_network.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/libs/nets/pyramid_network.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="602">
-              <caret line="527" column="79" lean-forward="false" selection-start-line="527" selection-start-column="79" selection-end-line="527" selection-end-column="79" />
+            <state relative-caret-position="379">
+              <caret line="410" column="11" lean-forward="false" selection-start-line="410" selection-start-column="11" selection-end-line="410" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -116,12 +78,31 @@
       <file leaf-file-name="convert_my_data.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/convert_data/convert_my_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1305">
-              <caret line="87" column="4" lean-forward="false" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="49" />
+            <state relative-caret-position="306">
+              <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="convert_my_data_5_bparts.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/convert_data/convert_my_data_5_bparts.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="122" column="27" lean-forward="false" selection-start-line="122" selection-start-column="27" selection-end-line="122" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2008_000510.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/convert_data/2008_000510.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -137,6 +118,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>build</find>
+      <find>28</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -147,11 +129,13 @@
       <list>
         <option value="$PROJECT_DIR$/convert_data/read_my_data.py" />
         <option value="$PROJECT_DIR$/libs/datasets/coco.py" />
-        <option value="$PROJECT_DIR$/convert_data/convert_my_data.py" />
-        <option value="$PROJECT_DIR$/train/train.py" />
         <option value="$PROJECT_DIR$/learn_to_draw/visualize_mask_and_gt.py" />
         <option value="$PROJECT_DIR$/learn_to_draw/draw.py" />
         <option value="$PROJECT_DIR$/learn_to_draw/utils.py" />
+        <option value="$PROJECT_DIR$/convert_data/convert_my_data.py" />
+        <option value="$PROJECT_DIR$/convert_data/convert_my_data2.py" />
+        <option value="$PROJECT_DIR$/convert_data/convert_my_data_5_bparts.py" />
+        <option value="$PROJECT_DIR$/train/train.py" />
         <option value="$PROJECT_DIR$/libs/nets/pyramid_network.py" />
       </list>
     </option>
@@ -277,11 +261,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/learn_to_draw" />
       <recent name="$PROJECT_DIR$/convert_data" />
+      <recent name="$PROJECT_DIR$/learn_to_draw" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.draw">
+  <component name="RunManager" selected="Python.convert_my_data2">
     <configuration default="false" name="read_my_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -346,6 +330,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="MaskRCNN_body" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/learn_to_draw/visualize_mask_and_gt.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="convert_my_data2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/convert_data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="MaskRCNN_body" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/convert_data/convert_my_data_5_bparts.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -497,18 +498,20 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.read_my_data" />
       <item index="1" class="java.lang.String" itemvalue="Python.convert_my_data" />
       <item index="2" class="java.lang.String" itemvalue="Python.draw" />
       <item index="3" class="java.lang.String" itemvalue="Python.visualize_mask_and_gt" />
+      <item index="4" class="java.lang.String" itemvalue="Python.convert_my_data2" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.draw" />
-        <item index="1" class="java.lang.String" itemvalue="Python.visualize_mask_and_gt" />
-        <item index="2" class="java.lang.String" itemvalue="Python.convert_my_data" />
-        <item index="3" class="java.lang.String" itemvalue="Python.read_my_data" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.convert_my_data2" />
+        <item index="1" class="java.lang.String" itemvalue="Python.convert_my_data" />
+        <item index="2" class="java.lang.String" itemvalue="Python.draw" />
+        <item index="3" class="java.lang.String" itemvalue="Python.visualize_mask_and_gt" />
+        <item index="4" class="java.lang.String" itemvalue="Python.read_my_data" />
       </list>
     </recent_temporary>
   </component>
@@ -519,20 +522,20 @@
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22489083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33739838" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39939025" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33739838" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39939025" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -556,7 +559,7 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -771,16 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/convert_data/convert_my_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1305">
-          <caret line="87" column="4" lean-forward="false" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/download_and_convert_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -789,18 +782,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/convert_data/2008_000510.mat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/convert_data/2008_000510.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/convert_data/convert_my_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/convert_data/convert_my_data_5_bparts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="122" column="27" lean-forward="false" selection-start-line="122" selection-start-column="27" selection-end-line="122" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/train/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="191" column="32" lean-forward="false" selection-start-line="191" selection-start-column="32" selection-end-line="191" selection-end-column="32" />
+        <state relative-caret-position="205">
+          <caret line="191" column="33" lean-forward="false" selection-start-line="191" selection-start-column="33" selection-end-line="191" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/nets/pyramid_network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="527" column="79" lean-forward="false" selection-start-line="527" selection-start-column="79" selection-end-line="527" selection-end-column="79" />
+        <state relative-caret-position="379">
+          <caret line="410" column="11" lean-forward="false" selection-start-line="410" selection-start-column="11" selection-end-line="410" selection-end-column="11" />
           <folding />
         </state>
       </provider>
