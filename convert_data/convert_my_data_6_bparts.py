@@ -109,7 +109,7 @@ def _to_tfexample_coco_raw(image_id, image_data, label_data,
 annotation = sio.loadmat('/home/alex/PycharmProjects/MaskRCNN_body/convert_data/data/Annotations_Part/2008_000002.mat')
 
 options = tf.python_io.TFRecordOptions(TFRecordCompressionType.ZLIB)
-record_filename = "out_5_body_parts.tfrecord"
+record_filename = "data/out_5_body_parts.tfrecord"
 with tf.python_io.TFRecordWriter(record_filename, options=options) as tfrecord_writer:
     for x in range (930,6086):
         try:

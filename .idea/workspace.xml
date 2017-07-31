@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="419503ab-2db7-4a80-b317-0762a7bf1f3c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox0.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/bbox0.npy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/bbox3.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/bbox3.npy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask0.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/final_mask0.npy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/final_mask3.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/final_mask3.npy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label0.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/gt_label0.npy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_label3.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/gt_label3.npy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_mask0.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/gt_mask0.npy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/gt_mask3.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/gt_mask3.npy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/image0.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/image0.npy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/image3.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/image3.npy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/label0.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/label0.npy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/label3.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/label3.npy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob0.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/prob0.npy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/data/prob3.npy" afterPath="$PROJECT_DIR$/learn_to_draw/data/prob3.npy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/convert_data/convert_my_data.py" afterPath="$PROJECT_DIR$/convert_data/convert_my_data.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/convert_data/out_5_body_parts.tfrecord" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/convert_data/convert_my_data_6_bparts.py" afterPath="$PROJECT_DIR$/convert_data/convert_my_data_6_bparts.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/convert_data/out.tfrecord" afterPath="$PROJECT_DIR$/convert_data/out.tfrecord" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/convert_data/out_5_body_parts.tfrecord" afterPath="$PROJECT_DIR$/convert_data/out_5_body_parts.tfrecord" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/draw.py" afterPath="$PROJECT_DIR$/learn_to_draw/draw.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/utils.py" afterPath="$PROJECT_DIR$/learn_to_draw/utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/train.py" afterPath="$PROJECT_DIR$/train/train.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,10 +30,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/learn_to_draw/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
+            <state relative-caret-position="391">
               <caret line="152" column="14" lean-forward="false" selection-start-line="152" selection-start-column="14" selection-end-line="156" selection-end-column="30" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -103,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="convert_my_data_6_bparts.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="convert_my_data_6_bparts.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/convert_data/convert_my_data_6_bparts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="485">
-              <caret line="137" column="12" lean-forward="false" selection-start-line="137" selection-start-column="12" selection-end-line="137" selection-end-column="12" />
+            <state relative-caret-position="232">
+              <caret line="111" column="24" lean-forward="false" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -167,8 +146,8 @@
         <option value="$PROJECT_DIR$/learn_to_draw/draw.py" />
         <option value="$PROJECT_DIR$/train/train.py" />
         <option value="$PROJECT_DIR$/convert_data/convert_my_data.py" />
-        <option value="$PROJECT_DIR$/convert_data/convert_my_data_6_bparts.py" />
         <option value="$PROJECT_DIR$/learn_to_draw/utils.py" />
+        <option value="$PROJECT_DIR$/convert_data/convert_my_data_6_bparts.py" />
       </list>
     </option>
   </component>
@@ -310,6 +289,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Human-Body-Part-Detector/seg_network_tensorflow" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/convert_data/data" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/convert_data" />
       <recent name="$PROJECT_DIR$/learn_to_draw" />
@@ -570,9 +552,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22489083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22489083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33739838" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -905,16 +887,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/convert_data/convert_my_data_6_bparts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="137" column="12" lean-forward="false" selection-start-line="137" selection-start-column="12" selection-end-line="137" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/learn_to_draw/draw.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -927,10 +899,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/learn_to_draw/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
+        <state relative-caret-position="391">
           <caret line="152" column="14" lean-forward="false" selection-start-line="152" selection-start-column="14" selection-end-line="156" selection-end-column="30" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/convert_data/convert_my_data_6_bparts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="111" column="24" lean-forward="false" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
