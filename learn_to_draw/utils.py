@@ -2,6 +2,7 @@ import numpy as np
 import tensorflow as tf
 from PIL import Image, ImageFont, ImageDraw, ImageEnhance
 import scipy.misc
+import cv2
 
 FLAGS = tf.app.flags.FLAGS
 _DEBUG = False
@@ -20,8 +21,21 @@ def draw_img(step, image, name='', image_height=1, image_width=1, rois=None):
 #colors= np.load('colors.npy')
 colors = np.random.randint(180, size=(80, 3))
 
+def visualize_mask_gt(bbox,final_mask,gt_mask,label,prob):
+    for i, box in enumerate(bbox):
+        width = int(box[2])-int(box[0])
+        height = int(box[3])-int(box[1])
+        if (prob[i,label[i]] > 0.5) and width >0 and height >0 :
+            for x in range(17):
+                final_m = cv2.resize(cv2.cvtColor(np.array(final_mask[i,...,x]*255,dtype=np.uint8),cv2.COLOR_GRAY2BGR),(100,100))
+                cv2.imshow("pred",final_m)
+                cv2.waitKey(1000)
+                gt_m = cv2.cvtColor(np.array(gt_mask[x,...]*255,dtype=np.uint8),cv2.COLOR_GRAY2BGR)
+                cv2.imshow("gtttttt",gt_m)
+                cv2.waitKey(1000)
+
 def draw_segmentation_parts(step, image, name='', image_height=1, image_width=1, bbox=None, label=None, gt_label=None, prob=None,final_mask=None):
-    import cv2
+
     hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
     if bbox is not None:
         dictinary = {}
