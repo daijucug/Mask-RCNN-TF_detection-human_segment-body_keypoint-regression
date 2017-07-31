@@ -66,7 +66,7 @@ def loadData3(H,W):#human body parts
             gt_boxes.append([x,y,x+w,y+h,j])
             masks_instances.append(masks_for_person[j,...].copy())
 
-    masks_instances = np.array(masks_instances,dtype=np.float32)
+    masks_instances = np.array(masks_instances,dtype=np.uint8)
     gt_boxes = np.array(gt_boxes,dtype=np.float32)
 
 
