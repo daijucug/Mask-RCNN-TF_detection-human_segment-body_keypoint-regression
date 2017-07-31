@@ -54,8 +54,8 @@
       <file leaf-file-name="pyramid_network.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/libs/nets/pyramid_network.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="311" column="70" lean-forward="false" selection-start-line="311" selection-start-column="70" selection-end-line="311" selection-end-column="70" />
+            <state relative-caret-position="395">
+              <caret line="316" column="40" lean-forward="true" selection-start-line="316" selection-start-column="40" selection-end-line="316" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -998,8 +998,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/nets/pyramid_network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="311" column="70" lean-forward="false" selection-start-line="311" selection-start-column="70" selection-end-line="311" selection-end-column="70" />
+        <state relative-caret-position="395">
+          <caret line="316" column="40" lean-forward="true" selection-start-line="316" selection-start-column="40" selection-end-line="316" selection-end-column="40" />
           <folding />
         </state>
       </provider>

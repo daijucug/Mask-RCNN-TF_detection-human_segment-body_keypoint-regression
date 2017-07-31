@@ -314,7 +314,7 @@ def build_heads(pyramid, ih, iw, num_classes, base_anchors, is_training=False, g
         refine = slim.dropout(refine, keep_prob=0.75, is_training=is_training)
         cls2 = slim.fully_connected(refine, num_classes, activation_fn=None, 
                 weights_initializer=tf.truncated_normal_initializer(stddev=0.05))
-        print (my_sigmoid)
+        print ("my_sigmoid" + my_sigmoid)
         box = slim.fully_connected(refine, num_classes*4, activation_fn=my_sigmoid, 
                 weights_initializer=tf.truncated_normal_initializer(stddev=0.05))
 
