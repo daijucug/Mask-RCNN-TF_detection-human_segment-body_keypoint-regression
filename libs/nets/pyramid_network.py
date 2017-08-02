@@ -314,7 +314,7 @@ def build_heads(pyramid, ih, iw, num_classes, base_anchors, is_training=False, g
         refine = slim.dropout(refine, keep_prob=0.75, is_training=is_training)
         cls2 = slim.fully_connected(refine, num_classes, activation_fn=None, 
                 weights_initializer=tf.truncated_normal_initializer(stddev=0.05))
-        print ("my_sigmoid" + str(my_sigmoid))
+        #print ("my_sigmoid" + str(my_sigmoid))
         box = slim.fully_connected(refine, num_classes*4, activation_fn=my_sigmoid, 
                 weights_initializer=tf.truncated_normal_initializer(stddev=0.05))
 
@@ -368,9 +368,9 @@ def build_heads(pyramid, ih, iw, num_classes, base_anchors, is_training=False, g
 
 def build_losses(pyramid, outputs, gt_boxes, gt_masks,
                  num_classes, base_anchors,
-                 rpn_box_lw =1.0, rpn_cls_lw = 1.0,
-                 refined_box_lw=1.0, refined_cls_lw=1.0,
-                 mask_lw=1.0):
+                 rpn_box_lw =1.0, rpn_cls_lw = 1.0,#actually 0.2, 0.2 all these are sent from train.py line
+                 refined_box_lw=1.0, refined_cls_lw=1.0, #actually 1.0,0.2
+                 mask_lw=1.0):#actually 0.1
   """Building 3-way output losses, totally 5 losses
   Params:
   ------
@@ -497,7 +497,7 @@ def build_losses(pyramid, outputs, gt_boxes, gt_masks,
         refined_box_loss = bbox_inside_weights * _smooth_l1_dist(boxes, bbox_targets)
         refined_box_loss = tf.reshape(refined_box_loss, [-1, 4])
         refined_box_loss = tf.reduce_sum(refined_box_loss, axis=1)
-        refined_box_loss = refined_box_lw * tf.reduce_mean(refined_box_loss) # * frac_
+        refined_box_loss = refined_box_lw * tf.reduce_mean(refined_box_loss) # 1.0
         tf.add_to_collection(tf.GraphKeys.LOSSES, refined_box_loss)
         refined_box_losses.append(refined_box_loss)
 
@@ -548,6 +548,8 @@ def build_losses(pyramid, outputs, gt_boxes, gt_masks,
         mask_loss = mask_lw * tf.nn.sigmoid_cross_entropy_with_logits(labels=mask_targets, logits=masks) 
         mask_loss = tf.reduce_mean(mask_loss) 
         mask_loss = tf.cond(tf.greater(tf.size(labels), 0), lambda: mask_loss, lambda: tf.constant(0.0))
+        #if the size of labels is greater than zero, then return the mask loss otherwise return 0
+        #basically if thhere are no gt_boxes in the image, the mask_loss i think is still different than 0
         tf.add_to_collection(tf.GraphKeys.LOSSES, mask_loss)
         mask_losses.append(mask_loss)
 
@@ -580,7 +582,7 @@ def build(end_points, image_height, image_width, pyramid_map,
         is_training,
         gt_boxes,
         gt_masks, 
-        loss_weights=[0.5, 0.5, 1.0, 0.5, 0.1]):
+        loss_weights=[0.5, 0.5, 1.0, 0.5, 0.1]):##[0.2, 0.2, 1.0, 0.2, 1.0] from parameter
     
     pyramid = build_pyramid(pyramid_map, end_points)
 

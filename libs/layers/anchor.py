@@ -200,7 +200,7 @@ def _unmap(data, count, inds, fill=0):
     ret[inds, :] = data
   return ret
   
-def _compute_targets(ex_rois, gt_rois):
+def _compute_targets(ex_rois, gt_rois):#anchors, gt_boxes[gt_assignment, :]
   """Compute bounding-box regression targets for an image."""
 
   assert ex_rois.shape[0] == gt_rois.shape[0]

@@ -96,7 +96,7 @@ def draw_bbox_better(step, image, name='', image_height=1, image_width=1, bbox=N
         for i, box in enumerate(bbox):
             width = int(box[2])-int(box[0])
             height = int(box[3])-int(box[1])
-            if (prob[i,label[i]] > 0.9) and width*height >1000:
+            if (prob[i,label[i]] > 0.97) and width*height >1000 and label[i]!=0:
                 area = float((box[2]-box[0])*(box[3]-box[1]))
                 while area in dictinary:
                     area+=1
@@ -141,7 +141,7 @@ def draw_bbox_better(step, image, name='', image_height=1, image_width=1, bbox=N
                     if mask[ym,xm]/255.0 > 0.5:
                         #hsv[y,x,0] = 135 #* big_mask[y,x,max_indices[y,x]]/255
                         hsv[y,x,0] = col[0]
-                        hsv[y,x,0] = random_color_gauss
+                        #hsv[y,x,0] = random_color_gauss
                         hsv[y,x,1] = 255
                     #hsv[y,x,2] = 0.5
 
@@ -166,7 +166,7 @@ def draw_bbox_better(step, image, name='', image_height=1, image_width=1, bbox=N
                 c = (255,0,0)
             bo, lab,gt_lab,_,_,col= dictinary[key]
             text = cat_id_to_cls_name(lab)
-            hsv = cv2.rectangle(hsv,(int(bo[0]),int(bo[1])),(int(bo[2]),int(bo[3])),c,3)
+            #hsv = cv2.rectangle(hsv,(int(bo[0]),int(bo[1])),(int(bo[2]),int(bo[3])),c,3)
             #hsv = cv2.putText(hsv,text+' '+str(i),(2+int(bo[0]),2+int(bo[1])), cv2.FONT_HERSHEY_SIMPLEX,0.5, color =(255,255,255))
             i=i+1
 

@@ -49,13 +49,13 @@ def loadData3(H,W):#human body parts
         p = persons[i]
         pa = p['parts']
         parts = pa[0]
-        masks_for_person = np.zeros((6,H,W),dtype=np.uint8)
+        masks_for_person = np.zeros((7,H,W),dtype=np.uint8)
         #parts = persons[i]['parts'][0]
         for part in parts:
             part_name = part['part_name'].astype(str)[0]
-            index = body_parts_dict[part_name] -1
+            index = body_parts_dict[part_name]
             masks_for_person[index,...] = np.logical_or(masks_for_person[index,...], part['mask'])
-        for j in range(6):
+        for j in range(1,7):
             mask = masks_for_person[j,...].copy()
             #cv2.imshow("mask",mask*255)
             #cv2.waitKey(100)

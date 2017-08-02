@@ -40,7 +40,7 @@ def bbox_transform(ex_rois, gt_rois):
         (targets_dx, targets_dy, targets_dw, targets_dh)).transpose()
     return targets
 
-def bbox_transform_inv(boxes, deltas):
+def bbox_transform_inv(boxes, deltas):# from file roi.py line  116 the shapes are: boxes=(R, 4), [x1, y1, x2, y2] deltas=(R, Kx4)
     if boxes.shape[0] == 0:
         return np.zeros((0, deltas.shape[1]), dtype=deltas.dtype)
 
