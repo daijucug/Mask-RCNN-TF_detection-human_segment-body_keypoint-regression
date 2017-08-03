@@ -612,10 +612,10 @@ def build(end_points, image_height, image_width, pyramid_map,
     outputs['pred_masks'] = pred_masks
 
     # image and gt visualization
-    visualize_input(gt_boxes, end_points["input"], tf.expand_dims(gt_masks, axis=3))
+    #visualize_input(gt_boxes, end_points["input"], tf.expand_dims(gt_masks, axis=3))
 
     # rpn visualization
-    visualize_bb(end_points["input"], outputs['roi']["box"], name="rpn_bb_visualization")
+    #visualize_bb(end_points["input"], outputs['roi']["box"], name="rpn_bb_visualization")
 
     # final network visualization
     first_mask = outputs['mask']['mask'][:1]
