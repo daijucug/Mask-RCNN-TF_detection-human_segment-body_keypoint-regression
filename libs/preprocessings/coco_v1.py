@@ -43,7 +43,8 @@ def preprocess_for_training(image, gt_boxes, gt_masks):
     image = tf.image.resize_bilinear(image, [new_ih, new_iw], align_corners=False)
     image = tf.squeeze(image, axis=[0])
 
-    gt_masks = tf.expand_dims(gt_masks, -1)
+    #gt_masks = tf.expand_dims(gt_masks, -1)
+    #if uncomment the above error:ValueError: Shape must be rank 4 but is rank 5 for 'ResizeNearestNeighbor' (op: 'ResizeNearestNeighbor') with input shapes: [?,?,?,7,1], [2].
     gt_masks = tf.cast(gt_masks, tf.float32)
     gt_masks = tf.image.resize_nearest_neighbor(gt_masks, [new_ih, new_iw], align_corners=False)
     gt_masks = tf.cast(gt_masks, tf.int32)

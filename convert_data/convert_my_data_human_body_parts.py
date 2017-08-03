@@ -114,44 +114,45 @@ record_filename = "data/out_human_and_body_parts.tfrecord"
 with tf.python_io.TFRecordWriter(record_filename, options=options) as tfrecord_writer:
     # for x in range (930,6086):
     for x in range (510,511):
-        try:
-            img_id = x
-            img_name = '2008_%06d' % (x,)
-            img = np.array(Image.open('/home/alex/PycharmProjects/MaskRCNN_body/convert_data/data/JPEGImages/'+img_name+'.jpg'))
-            annotation = sio.loadmat('data/Annotations_Part/'+img_name+'.mat')
+        for i in range(100):
+            try:
+                img_id = x
+                img_name = '2008_%06d' % (x,)
+                img = np.array(Image.open('/home/alex/PycharmProjects/MaskRCNN_body/convert_data/data/JPEGImages/'+img_name+'.jpg'))
+                annotation = sio.loadmat('data/Annotations_Part/'+img_name+'.mat')
 
 
-            image = cv2.imread('/home/alex/PycharmProjects/MaskRCNN_body/convert_data/data/JPEGImages/'+img_name+'.jpg')
-            # cv2.imshow("iamge",image)
-            # cv2.waitKey(1000)
+                image = cv2.imread('/home/alex/PycharmProjects/MaskRCNN_body/convert_data/data/JPEGImages/'+img_name+'.jpg')
+                # cv2.imshow("iamge",image)
+                # cv2.waitKey(1000)
 
 
-            height, width = img.shape[0],img.shape[1]
-            img = img.astype(np.uint8)
-            img_raw = img.tostring()
-            persons_exist, gt_boxes, masks,mask = loadData3(height, width)
-            if not persons_exist:
-                continue
-            mask_raw = mask.tostring()
+                height, width = img.shape[0],img.shape[1]
+                img = img.astype(np.uint8)
+                img_raw = img.tostring()
+                persons_exist, gt_boxes, masks,mask = loadData3(height, width)
+                if not persons_exist:
+                    continue
+                mask_raw = mask.tostring()
 
-            example = _to_tfexample_coco_raw(
-                  img_id,
-                  img_raw,
-                  mask_raw,
-                  height, width, gt_boxes.shape[0],
-                  gt_boxes.tostring(), masks.tostring())
-            tfrecord_writer.write(example.SerializeToString())
+                example = _to_tfexample_coco_raw(
+                      img_id,
+                      img_raw,
+                      mask_raw,
+                      height, width, gt_boxes.shape[0],
+                      gt_boxes.tostring(), masks.tostring())
+                tfrecord_writer.write(example.SerializeToString())
 
-            # for x in range(gt_boxes.shape[0]):
-            #     c = np.random.randint(0,255,(3))
-            #
-            #     image = cv2.rectangle(image,(gt_boxes[x,0],gt_boxes[x,1]),(gt_boxes[x,2],gt_boxes[x,3]),(c[0],c[1],c[2]),2)
-            # cv2.imshow("iamge",image)
-            # cv2.waitKey(1000)
-        except BaseException as error:
-            #logging.error(traceback.format_exc())
-            print error
-            #print img_name+' annotation does not exit'
+                # for x in range(gt_boxes.shape[0]):
+                #     c = np.random.randint(0,255,(3))
+                #
+                #     image = cv2.rectangle(image,(gt_boxes[x,0],gt_boxes[x,1]),(gt_boxes[x,2],gt_boxes[x,3]),(c[0],c[1],c[2]),2)
+                # cv2.imshow("iamge",image)
+                # cv2.waitKey(1000)
+            except BaseException as error:
+                #logging.error(traceback.format_exc())
+                print error
+                #print img_name+' annotation does not exit'
 
 
     tfrecord_writer.close()

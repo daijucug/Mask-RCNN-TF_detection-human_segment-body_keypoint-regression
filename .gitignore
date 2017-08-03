@@ -1,4 +1,5 @@
 data/pretrained_models/
 output/mask_rcnn/
 convert_data/data/
+learn_to_draw/data/
 
