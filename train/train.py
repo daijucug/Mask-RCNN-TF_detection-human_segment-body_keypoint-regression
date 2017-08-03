@@ -251,7 +251,9 @@ def train():
 
     ## restore
     restore(sess)
-
+    import time
+    time.sleep(4)
+    print ("aftter restore")
     ## main loop
     coord = tf.train.Coordinator()
     threads = []
@@ -259,7 +261,9 @@ def train():
     for qr in tf.get_collection(tf.GraphKeys.QUEUE_RUNNERS):
         threads.extend(qr.create_threads(sess, coord=coord, daemon=True,
                                          start=True))
-
+    print ("started the threads")
+    import time
+    time.sleep(4)
     tf.train.start_queue_runners(sess=sess, coord=coord)
     saver = tf.train.Saver(max_to_keep=20)
 
