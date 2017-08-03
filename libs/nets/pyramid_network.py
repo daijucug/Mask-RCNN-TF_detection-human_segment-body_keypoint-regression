@@ -343,7 +343,7 @@ def build_heads(pyramid, ih, iw, num_classes, base_anchors, is_training=False, g
             splitted_rois = assigned_rois[i-2]
             batch_inds = assigned_batch_inds[i-2]
             cropped = ROIAlign(pyramid[p], splitted_rois, batch_inds, stride=2**i,
-                               pooled_height=14, pooled_width=14)
+                               pooled_height=56, pooled_width=56)
             cropped_rois.append(cropped)
             ordered_rois.append(splitted_rois)
           cropped_rois = tf.concat(values=cropped_rois, axis=0)
@@ -522,9 +522,9 @@ def build_losses(pyramid, outputs, gt_boxes, gt_masks,
         # mask_shape = tf.shape(masks)
         # masks = tf.reshape(masks, (mask_shape[0], mask_shape[1],
         #                            mask_shape[2], tf.cast(mask_shape[3]/2, tf.int32), 2))
-        num_of_parts = 7
+        number_of_parts = 7
         labels, mask_targets, mask_inside_weights = \
-          mask_encoder(gt_masks, gt_boxes, ordered_rois, num_of_parts, 28, 28, scope='MaskEncoder')
+          mask_encoder(gt_masks, gt_boxes, ordered_rois, number_of_parts, 112, 112, scope='MaskEncoder')
         labels, masks, mask_targets, mask_inside_weights = \
                 _filter_negative_samples(tf.reshape(labels, [-1]), [
                     tf.reshape(labels, [-1]),
@@ -545,7 +545,7 @@ def build_losses(pyramid, outputs, gt_boxes, gt_masks,
         # mask_binary_loss = mask_lw * tf.losses.softmax_cross_entropy(mask_targets, masks)
         # NOTE: w/o competition between classes. 
         mask_targets = tf.cast(mask_targets, tf.float32)
-        mask_loss = mask_lw * tf.nn.sigmoid_cross_entropy_with_logits(labels=mask_targets, logits=masks) 
+        mask_loss = mask_lw * tf.nn.softmax_cross_entropy_with_logits(labels=mask_targets, logits=masks)
         mask_loss = tf.reduce_mean(mask_loss) 
         mask_loss = tf.cond(tf.greater(tf.size(labels), 0), lambda: mask_loss, lambda: tf.constant(0.0))
         #if the size of labels is greater than zero, then return the mask loss otherwise return 0

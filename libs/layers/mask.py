@@ -18,6 +18,7 @@ def encode(gt_masks, gt_boxes, rois, num_classes, mask_height, mask_width):
   Params
   ------
   gt_masks: image_height x image_width {0, 1} matrix, of shape (G, imh, imw)
+  #actually modified by me, gt_mask is of shape (G,imh,imw,7)
   gt_boxes: ground-truth boxes of shape (G, 5), each raw is [x1, y1, x2, y2, class]
   rois:     the bounding boxes of shape (N, 4),
   ## scores:   scores of shape (N, 1)
@@ -70,11 +71,12 @@ def encode(gt_masks, gt_boxes, rois, num_classes, mask_height, mask_width):
       # TODO: speed bottleneck?
       for i in keep_inds:
         roi = rois[i, :4]
-        cropped = gt_masks[gt_assignment[i], int(roi[1]):int(roi[3])+1, int(roi[0]):int(roi[2])+1]
-        cropped = cv2.resize(cropped, (mask_width, mask_height), interpolation=cv2.INTER_NEAREST)
-        
-        mask_targets[i, :, :, int(labels[i])] = cropped
-        mask_inside_weights[i, :, :, int(labels[i])] = 1
+
+        for x in range(7):
+            cropped = gt_masks[gt_assignment[i], int(roi[1]):int(roi[3])+1, int(roi[0]):int(roi[2])+1,x]
+            cropped = cv2.resize(cropped, (mask_width, mask_height), interpolation=cv2.INTER_NEAREST)
+            mask_targets[i, :, :, x] = cropped
+            mask_inside_weights[i, :, :, x] = 1
   else:
       # there is no gt
       labels = np.zeros((total_masks, ), np.float32)
