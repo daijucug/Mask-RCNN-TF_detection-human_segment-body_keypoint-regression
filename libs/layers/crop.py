@@ -4,7 +4,7 @@ from __future__ import print_function
 
 import tensorflow as tf
 
-def crop(images, boxes, batch_inds, stride = 1, pooled_height = 7, pooled_width = 7, scope='ROIAlign'):
+def crop(images, boxes, batch_inds, stride = 1, pooled_height = 56, pooled_width = 56, scope='ROIAlign'):
   """Cropping areas of features into fixed size
   Params:
   --------
