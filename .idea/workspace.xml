@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="419503ab-2db7-4a80-b317-0762a7bf1f3c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/configs/config_v1.py" afterPath="$PROJECT_DIR$/libs/configs/config_v1.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/nets/pyramid_network.py" afterPath="$PROJECT_DIR$/libs/nets/pyramid_network.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,14 +20,14 @@
       <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
+            <state relative-caret-position="101">
               <caret line="265" column="0" lean-forward="true" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config_v1.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config_v1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/configs/config_v1.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-802">
@@ -37,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pyramid_network.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pyramid_network.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/libs/nets/pyramid_network.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="637">
-              <caret line="313" column="58" lean-forward="false" selection-start-line="313" selection-start-column="58" selection-end-line="313" selection-end-column="58" />
+            <state relative-caret-position="277">
+              <caret line="458" column="43" lean-forward="true" selection-start-line="458" selection-start-column="43" selection-end-line="458" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -179,12 +179,12 @@
         <option value="$PROJECT_DIR$/convert_data/convert_my_data_6_bparts.py" />
         <option value="$PROJECT_DIR$/convert_data/read_my_data_human_body_parts.py" />
         <option value="$PROJECT_DIR$/libs/layers/mask.py" />
-        <option value="$PROJECT_DIR$/libs/nets/pyramid_network.py" />
         <option value="$PROJECT_DIR$/convert_data/convert_my_data_human_body_parts.py" />
         <option value="$PROJECT_DIR$/libs/preprocessings/coco_v1.py" />
         <option value="$PROJECT_DIR$/learn_to_draw/draw.py" />
         <option value="$PROJECT_DIR$/train/train.py" />
         <option value="$PROJECT_DIR$/libs/configs/config_v1.py" />
+        <option value="$PROJECT_DIR$/libs/nets/pyramid_network.py" />
       </list>
     </option>
   </component>
@@ -1074,26 +1074,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/nets/pyramid_network.py">
+    <entry file="file://$PROJECT_DIR$/libs/configs/config_v1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="313" column="58" lean-forward="false" selection-start-line="313" selection-start-column="58" selection-end-line="313" selection-end-column="58" />
+        <state relative-caret-position="-802">
+          <caret line="44" column="49" lean-forward="false" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/train/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
+        <state relative-caret-position="101">
           <caret line="265" column="0" lean-forward="true" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/configs/config_v1.py">
+    <entry file="file://$PROJECT_DIR$/libs/nets/pyramid_network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-802">
-          <caret line="44" column="49" lean-forward="false" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
+        <state relative-caret-position="277">
+          <caret line="458" column="43" lean-forward="true" selection-start-line="458" selection-start-column="43" selection-end-line="458" selection-end-column="43" />
           <folding />
         </state>
       </provider>
