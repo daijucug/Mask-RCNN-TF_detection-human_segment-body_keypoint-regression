@@ -48,7 +48,7 @@ def preprocess_for_training(image, gt_boxes, gt_masks):
     gt_masks = tf.cast(gt_masks, tf.float32)
     gt_masks = tf.image.resize_nearest_neighbor(gt_masks, [new_ih, new_iw], align_corners=False)
     gt_masks = tf.cast(gt_masks, tf.int32)
-    gt_masks = tf.squeeze(gt_masks, axis=[-1])
+    #gt_masks = tf.squeeze(gt_masks, axis=[-1])
 
     scale_ratio = tf.to_float(new_ih) / tf.to_float(ih)
     gt_boxes = preprocess_utils.resize_gt_boxes(gt_boxes, scale_ratio)

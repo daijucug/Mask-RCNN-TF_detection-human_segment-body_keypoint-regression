@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="419503ab-2db7-4a80-b317-0762a7bf1f3c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/convert_data/convert_my_data_human_body_parts.py" afterPath="$PROJECT_DIR$/convert_data/convert_my_data_human_body_parts.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/preprocessings/coco_v1.py" afterPath="$PROJECT_DIR$/libs/preprocessings/coco_v1.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -104,21 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dataset_factory.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libs/datasets/dataset_factory.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="20" column="53" lean-forward="false" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="coco_v1.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/libs/preprocessings/coco_v1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="57" column="94" lean-forward="true" selection-start-line="57" selection-start-column="94" selection-end-line="57" selection-end-column="94" />
+            <state relative-caret-position="405">
+              <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -1094,8 +1084,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/preprocessings/coco_v1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="57" column="94" lean-forward="true" selection-start-line="57" selection-start-column="94" selection-end-line="57" selection-end-column="94" />
+        <state relative-caret-position="405">
+          <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
           <folding />
         </state>
       </provider>
