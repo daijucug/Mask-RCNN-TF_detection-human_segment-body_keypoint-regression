@@ -370,7 +370,7 @@ def build_losses(pyramid, outputs, gt_boxes, gt_masks,
                  num_classes, base_anchors,
                  rpn_box_lw =1.0, rpn_cls_lw = 1.0,#actually 0.2, 0.2 all these are sent from train.py line
                  refined_box_lw=1.0, refined_cls_lw=1.0, #actually 1.0,0.2
-                 mask_lw=1.0):#actually 0.1
+                 mask_lw=1.0):#actually 1.0
   """Building 3-way output losses, totally 5 losses
   Params:
   ------
@@ -545,7 +545,7 @@ def build_losses(pyramid, outputs, gt_boxes, gt_masks,
         # mask_binary_loss = mask_lw * tf.losses.softmax_cross_entropy(mask_targets, masks)
         # NOTE: w/o competition between classes. 
         mask_targets = tf.cast(mask_targets, tf.float32)
-        mask_loss = mask_lw * tf.nn.sigmoid_cross_entropy_with_logits(labels=mask_targets, logits=masks)
+        mask_loss = mask_lw * tf.nn.softmax_cross_entropy_with_logits(labels=mask_targets, logits=masks)
         mask_loss = tf.reduce_mean(mask_loss) 
         mask_loss = tf.cond(tf.greater(tf.size(labels), 0), lambda: mask_loss, lambda: tf.constant(0.0))
         #if the size of labels is greater than zero, then return the mask loss otherwise return 0
