@@ -275,23 +275,26 @@ def train():
         rpn_box_loss, rpn_cls_loss, refined_box_loss, refined_cls_loss, mask_loss, \
         gt_boxesnp, \
         rpn_batch_pos, rpn_batch, refine_batch_pos, refine_batch, mask_batch_pos, mask_batch, \
-        input_imagenp, final_boxnp, final_clsnp, final_probnp, final_gt_clsnp, gtnp, tmp_0np, tmp_1np, tmp_2np, tmp_3np, tmp_4np,final_masknp,gt_masksnp= \
+        input_imagenp, final_boxnp, final_clsnp, final_probnp, final_gt_clsnp, gtnp, tmp_0np, tmp_1np, tmp_2np, tmp_3np, tmp_4np,final_masknp,gt_masksnp,\
+        ihnp, iwnp= \
                      sess.run([update_op, total_loss, regular_loss, img_id] + 
                               losses + 
                               [gt_boxes] + 
                               batch_info + 
-                              [input_image] + [final_box] + [final_cls] + [final_prob] + [final_gt_cls] + [gt] + [tmp_0] + [tmp_1] + [tmp_2] + [tmp_3] + [tmp_4]+[final_mask]+[gt_masks])
+                              [input_image] + [final_box] + [final_cls] + [final_prob] + [final_gt_cls] + [gt] + [tmp_0] + [tmp_1] + [tmp_2] + [tmp_3] + [tmp_4]+[final_mask]+[gt_masks]+[ih]+[iw])
 
         duration_time = time.time() - start_time
         if step % 3 == 0: 
             print ( """iter %d: image-id:%07d, time:%.3f(sec), regular_loss: %.6f, """
                     """total-loss %.4f(%.4f, %.4f, %.6f, %.4f, %.4f), """
                     """instances: %d, """
-                    """batch:(%d|%d, %d|%d, %d|%d)""" 
+                    """batch:(%d|%d, %d|%d, %d|%d)"""
+                    """iw ih:(%d,%d)"""
                    % (step, img_id_str, duration_time, reg_lossnp, 
                       tot_loss, rpn_box_loss, rpn_cls_loss, refined_box_loss, refined_cls_loss, mask_loss,
                       gt_boxesnp.shape[0], 
-                      rpn_batch_pos, rpn_batch, refine_batch_pos, refine_batch, mask_batch_pos, mask_batch))
+                      rpn_batch_pos, rpn_batch, refine_batch_pos, refine_batch, mask_batch_pos, mask_batch,
+                      iwnp,ihnp))
 
             # draw_bbox(step,\
             #          np.uint8((np.array(input_imagenp[0])/2.0+0.5)*255.0),\
@@ -335,6 +338,7 @@ def train():
 
             
             print ("labels")
+
             # print (cat_id_to_cls_name(np.unique(np.argmax(np.asarray(final_gt_clsnp),axis=1)))[1:])
             # print (cat_id_to_cls_name(np.unique(np.asarray(gt_boxesnp, dtype=np.uint8)[:,4])))
             print (cat_id_to_cls_name(np.unique(np.argmax(np.asarray(tmp_3np),axis=1))))
