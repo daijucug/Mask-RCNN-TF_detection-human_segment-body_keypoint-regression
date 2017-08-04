@@ -280,8 +280,8 @@ def build_heads(pyramid, ih, iw, num_classes, base_anchors, is_training=False, g
         for i in range(5, 3, -1):
             print(i)
             p = 'P%d'%i
-            splitted_rois = assigned_rois[i-2]
-            batch_inds = assigned_batch_inds[i-2]
+            splitted_rois = assigned_rois[i-4]
+            batch_inds = assigned_batch_inds[i-4]
             cropped, boxes_in_crop = ROIAlign_(pyramid[p], splitted_rois, batch_inds, ih, iw, stride=2**i,
                                pooled_height=56, pooled_width=56)
             # cropped = ROIAlign(pyramid[p], splitted_rois, batch_inds, stride=2**i,
@@ -342,8 +342,8 @@ def build_heads(pyramid, ih, iw, num_classes, base_anchors, is_training=False, g
           #       assign_boxes(rois, [rois, batch_inds], [2, 3, 4, 5])
           for i in range(5, 3, -1):
             p = 'P%d'%i
-            splitted_rois = assigned_rois[i-2]
-            batch_inds = assigned_batch_inds[i-2]
+            splitted_rois = assigned_rois[i-4]
+            batch_inds = assigned_batch_inds[i-4]
             cropped = ROIAlign(pyramid[p], splitted_rois, batch_inds, stride=2**i,
                                pooled_height=56, pooled_width=56)
             cropped_rois.append(cropped)
