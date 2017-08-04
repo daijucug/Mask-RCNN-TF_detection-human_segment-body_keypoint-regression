@@ -83,7 +83,7 @@ def encode(gt_masks, gt_boxes, rois, num_classes, mask_height, mask_width):
       labels[:] = -1
       mask_targets = np.zeros((total_masks, mask_height, mask_width, num_classes), dtype=np.int32)
       mask_inside_weights = np.zeros((total_masks, mask_height, mask_height, num_classes), dtype=np.float32)
-  np.save("/home/Alex/mask_targets.npy",mask_targets)
+  np.save("/home/czurini/Alex/mask_targets.npy",mask_targets)
   return labels, mask_targets, mask_inside_weights
 
 def decode(mask_targets, rois, classes, ih, iw):
