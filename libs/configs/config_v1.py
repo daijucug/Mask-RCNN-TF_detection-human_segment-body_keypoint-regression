@@ -130,7 +130,7 @@ tf.app.flags.DEFINE_string(
     'Specifies how the learning rate is decayed. One of "fixed", "exponential",'
     ' or "polynomial"')
 
-tf.app.flags.DEFINE_float('learning_rate', 0.00002,
+tf.app.flags.DEFINE_float('learning_rate', 0.02,
                           'Initial learning rate.')
 
 tf.app.flags.DEFINE_float(
