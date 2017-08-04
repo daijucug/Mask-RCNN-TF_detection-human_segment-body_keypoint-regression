@@ -173,6 +173,65 @@ def draw_bbox_better(step, image, name='', image_height=1, image_width=1, bbox=N
     #cv2.imwrite('test_' + name + '_' +  str(step) +'.jpg',image)
     cv2.imwrite('data/test' + name + '_' +  str(step) +'.jpg',hsv)
 
+def draw_human_body_parts(step, image, name='', image_height=1, image_width=1, bbox=None, label=None, gt_label=None, prob=None,final_mask=None):
+    import cv2
+    hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+    if bbox is not None:
+        dictinary = {}
+        for i, box in enumerate(bbox):
+            width = int(box[2])-int(box[0])
+            height = int(box[3])-int(box[1])
+            l=label[i]
+            p = prob[i,label[i]]
+            if (prob[i,label[i]] > 0.5) and width*height >1000 and label[i]!=0:
+                area = float((box[2]-box[0])*(box[3]-box[1]))
+                while area in dictinary:
+                    area+=1
+
+                mask = final_mask[i]
+                masks = np.zeros((height,width,7))
+                for x in range(7):
+                    maska = mask[...,x]
+                    maska = scipy.misc.imresize(maska,(height,width))
+                    masks[...,x] = maska
+                dictinary[round(area,4)]=(box,label[i],gt_label[i],prob[i,label[i]],masks,colors[label[i],:])
+        sorted_keys = sorted(dictinary.iterkeys(),reverse=True)
+
+        for key,i in zip(sorted_keys,range(len(sorted_keys))):
+            bo, lab,gt_lab,_,mask,col= dictinary[key]
+            print mask.shape
+
+            for x in range(7):
+                maskaaa = mask[...,x].astype(np.uint8)
+
+                cv2.imshow("mask",maskaaa)
+                cv2.waitKey(3000)
+            max_indices = np.argmax(mask,axis=2)
+
+            random_color_gauss =np.random.randint(0,180) #for different boxes
+            for x in range(int(bo[0]),int(bo[2])):
+                for y in range(int(bo[1]),int(bo[3])):
+                    xm = x-(int(bo[0]))
+                    ym = y-(int(bo[1]))
+                    if mask[ym,xm,max_indices[ym,xm]]/255.0 > 0.5:
+                        hsv[y,x,0] = colors[max_indices[ym,xm]][0]
+                        hsv[y,x,1] = 255
+
+        hsv = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
+        i=0
+        for key in sorted_keys:
+            bo, lab,gt_lab,_,_,col= dictinary[key]
+            if lab != gt_lab:
+                c = (0,0,255)
+            else:
+                c = (255,0,0)
+            bo, lab,gt_lab,_,_,col= dictinary[key]
+            text = cat_id_to_cls_name(lab)
+            i=i+1
+            hsv = cv2.rectangle(hsv,(int(bo[0]),int(bo[1])),(int(bo[2]),int(bo[3])),c,3)
+            hsv = cv2.putText(hsv,text+' '+str(i),(2+int(bo[0]),2+int(bo[1])), cv2.FONT_HERSHEY_SIMPLEX,0.5, color =(255,255,255))
+    #cv2.imwrite('test_' + name + '_' +  str(step) +'.jpg',image)
+    cv2.imwrite('data/test' + name + '_' +  str(step) +'.jpg',hsv)
 
 
 def draw_bbox_better_v2(step, image, name='', image_height=1, image_width=1, bbox=None, label=None, gt_label=None, prob=None,final_mask=None):
