@@ -241,9 +241,9 @@ def build_heads(pyramid, ih, iw, num_classes, base_anchors, is_training=False, g
 
         ## gather all rois
         # print (outputs['rpn'])
-        rpn_boxes = [tf.reshape(outputs['rpn']['P%d'%p]['box'], [-1, 4]) for p in range(5, 1, -1)]  
-        rpn_clses = [tf.reshape(outputs['rpn']['P%d'%p]['cls'], [-1, 1]) for p in range(5, 1, -1)]  
-        rpn_anchors = [tf.reshape(outputs['rpn']['P%d'%p]['anchor'], [-1, 4]) for p in range(5, 1, -1)]  
+        rpn_boxes = [tf.reshape(outputs['rpn']['P%d'%p]['box'], [-1, 4]) for p in range(5, 3, -1)]
+        rpn_clses = [tf.reshape(outputs['rpn']['P%d'%p]['cls'], [-1, 1]) for p in range(5, 3, -1)]
+        rpn_anchors = [tf.reshape(outputs['rpn']['P%d'%p]['anchor'], [-1, 4]) for p in range(5, 3, -1)]
         rpn_boxes = tf.concat(values=rpn_boxes, axis=0)
         rpn_clses = tf.concat(values=rpn_clses, axis=0)
         rpn_anchors = tf.concat(values=rpn_anchors, axis=0)

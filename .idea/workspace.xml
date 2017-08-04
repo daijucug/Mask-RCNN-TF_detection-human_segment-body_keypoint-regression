@@ -54,8 +54,8 @@
       <file leaf-file-name="pyramid_network.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/libs/nets/pyramid_network.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1194">
-              <caret line="271" column="56" lean-forward="false" selection-start-line="271" selection-start-column="56" selection-end-line="271" selection-end-column="56" />
+            <state relative-caret-position="197">
+              <caret line="245" column="92" lean-forward="false" selection-start-line="245" selection-start-column="87" selection-end-line="245" selection-end-column="92" />
               <folding />
             </state>
           </provider>
@@ -136,7 +136,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mask_lw</find>
       <find>build_losses</find>
       <find>number_of_parts</find>
       <find>outputs['final_boxes']</find>
@@ -166,6 +165,7 @@
       <find>outputs['tmp_3']</find>
       <find>cros</find>
       <find>conv2d</find>
+      <find>range</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -1119,8 +1119,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/nets/pyramid_network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1194">
-          <caret line="271" column="56" lean-forward="false" selection-start-line="271" selection-start-column="56" selection-end-line="271" selection-end-column="56" />
+        <state relative-caret-position="197">
+          <caret line="245" column="92" lean-forward="false" selection-start-line="245" selection-start-column="87" selection-end-line="245" selection-end-column="92" />
           <folding />
         </state>
       </provider>
