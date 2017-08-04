@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="419503ab-2db7-4a80-b317-0762a7bf1f3c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/train.py" afterPath="$PROJECT_DIR$/train/train.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/nets/pyramid_network.py" afterPath="$PROJECT_DIR$/libs/nets/pyramid_network.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,7 +41,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="train.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train/train.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="293">
@@ -51,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pyramid_network.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pyramid_network.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/libs/nets/pyramid_network.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="197">
-              <caret line="404" column="9" lean-forward="false" selection-start-line="404" selection-start-column="4" selection-end-line="404" selection-end-column="9" />
+              <caret line="453" column="53" lean-forward="false" selection-start-line="453" selection-start-column="50" selection-end-line="453" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -136,7 +136,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>number_of_parts</find>
       <find>outputs['final_boxes']</find>
       <find>1024</find>
       <find>fully_connected_2</find>
@@ -166,6 +165,7 @@
       <find>conv2d</find>
       <find>range</find>
       <find>build</find>
+      <find>i-4</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -192,8 +192,8 @@
         <option value="$PROJECT_DIR$/libs/layers/mask.py" />
         <option value="$PROJECT_DIR$/learn_to_draw/visualize_mask_targets.py" />
         <option value="$PROJECT_DIR$/libs/configs/config_v1.py" />
-        <option value="$PROJECT_DIR$/libs/nets/pyramid_network.py" />
         <option value="$PROJECT_DIR$/train/train.py" />
+        <option value="$PROJECT_DIR$/libs/nets/pyramid_network.py" />
       </list>
     </option>
   </component>
@@ -1109,18 +1109,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/nets/pyramid_network.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="404" column="9" lean-forward="false" selection-start-line="404" selection-start-column="4" selection-end-line="404" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/train/train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
           <caret line="197" column="44" lean-forward="false" selection-start-line="197" selection-start-column="44" selection-end-line="197" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/nets/pyramid_network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="453" column="53" lean-forward="false" selection-start-line="453" selection-start-column="50" selection-end-line="453" selection-end-column="53" />
           <folding />
         </state>
       </provider>

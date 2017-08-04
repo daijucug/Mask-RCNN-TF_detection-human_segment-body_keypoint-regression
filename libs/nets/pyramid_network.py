@@ -451,7 +451,7 @@ def build_losses(pyramid, outputs, gt_boxes, gt_masks,
             shape = tf.shape(pyramid[p])
             height, width = shape[1], shape[2]
 
-            splitted_gt_boxes = assigned_gt_boxes[i-2]
+            splitted_gt_boxes = assigned_gt_boxes[i-4]
             
             ### rpn losses
             # 1. encode ground truth
