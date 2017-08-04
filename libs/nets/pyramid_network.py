@@ -366,6 +366,40 @@ def build_heads(pyramid, ih, iw, num_classes, base_anchors, is_training=False, g
           
   return outputs
 
+def loss(logits, labels, num_classes, head=None):
+    """Calculate the loss from the logits and the labels.
+    Args:
+      logits: tensor, float - [batch_size, width, height, num_classes].
+          Use vgg_fcn.upscore as logits.
+      labels: Labels tensor, int32 - [batch_size, width, height, num_classes].
+          The ground truth of your data.
+      head: numpy array - [num_classes]
+          Weighting the loss of each class
+          Optional: Prioritize some classes
+    Returns:
+      loss: Loss tensor of type float.
+    """
+    with tf.name_scope('loss'):
+        logits = tf.reshape(logits, (-1, num_classes))
+        epsilon = tf.constant(value=1e-4)
+        labels = tf.to_float(tf.reshape(labels, (-1, num_classes)))
+
+        softmax = tf.nn.softmax(logits) + epsilon
+
+        if head is not None:
+            cross_entropy = -tf.reduce_sum(tf.multiply(labels * tf.log(softmax),
+                                           head), reduction_indices=[1])
+        else:
+            cross_entropy = -tf.reduce_sum(
+                labels * tf.log(softmax), reduction_indices=[1])
+
+        cross_entropy_mean = tf.reduce_mean(cross_entropy,
+                                            name='xentropy_mean')
+        tf.add_to_collection('losses', cross_entropy_mean)
+
+        loss = tf.add_n(tf.get_collection('losses'), name='total_loss')
+    return loss
+
 def build_losses(pyramid, outputs, gt_boxes, gt_masks,
                  num_classes, base_anchors,
                  rpn_box_lw =1.0, rpn_cls_lw = 1.0,#actually 0.2, 0.2 all these are sent from train.py line
@@ -545,7 +579,8 @@ def build_losses(pyramid, outputs, gt_boxes, gt_masks,
         # mask_binary_loss = mask_lw * tf.losses.softmax_cross_entropy(mask_targets, masks)
         # NOTE: w/o competition between classes. 
         mask_targets = tf.cast(mask_targets, tf.float32)
-        mask_loss = mask_lw * tf.nn.sigmoid_cross_entropy_with_logits(labels=mask_targets, logits=masks)
+        #mask_loss = mask_lw * tf.nn.sigmoid_cross_entropy_with_logits(labels=mask_targets, logits=masks)
+        mask_loss = mask_lw * loss(labels=mask_targets, logits=masks,num_classes=7)
         mask_loss = tf.reduce_mean(mask_loss) 
         mask_loss = tf.cond(tf.greater(tf.size(labels), 0), lambda: mask_loss, lambda: tf.constant(0.0))
         #if the size of labels is greater than zero, then return the mask loss otherwise return 0
