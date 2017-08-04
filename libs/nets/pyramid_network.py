@@ -545,7 +545,7 @@ def build_losses(pyramid, outputs, gt_boxes, gt_masks,
         # mask_binary_loss = mask_lw * tf.losses.softmax_cross_entropy(mask_targets, masks)
         # NOTE: w/o competition between classes. 
         mask_targets = tf.cast(mask_targets, tf.float32)
-        mask_loss = mask_lw * tf.nn.softmax_cross_entropy_with_logits(labels=mask_targets, logits=masks)
+        mask_loss = mask_lw * tf.nn.sigmoid_cross_entropy_with_logits(labels=mask_targets, logits=masks)
         mask_loss = tf.reduce_mean(mask_loss) 
         mask_loss = tf.cond(tf.greater(tf.size(labels), 0), lambda: mask_loss, lambda: tf.constant(0.0))
         #if the size of labels is greater than zero, then return the mask loss otherwise return 0
