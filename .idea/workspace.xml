@@ -45,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/train/train.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="293">
-              <caret line="197" column="49" lean-forward="false" selection-start-line="197" selection-start-column="49" selection-end-line="197" selection-end-column="49" />
+              <caret line="197" column="47" lean-forward="false" selection-start-line="197" selection-start-column="47" selection-end-line="197" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -54,8 +54,18 @@
       <file leaf-file-name="pyramid_network.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/nets/pyramid_network.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-199">
-              <caret line="543" column="33" lean-forward="false" selection-start-line="543" selection-start-column="27" selection-end-line="543" selection-end-column="33" />
+            <state relative-caret-position="1055">
+              <caret line="581" column="9" lean-forward="false" selection-start-line="581" selection-start-column="9" selection-end-line="581" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nn_impl.py" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/nn_impl.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1263">
+              <caret line="99" column="4" lean-forward="false" selection-start-line="99" selection-start-column="4" selection-end-line="99" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -93,21 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mask.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libs/layers/mask.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="69" column="6" lean-forward="true" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="config_v1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/configs/config_v1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="839">
-              <caret line="132" column="49" lean-forward="false" selection-start-line="132" selection-start-column="49" selection-end-line="132" selection-end-column="49" />
+            <state relative-caret-position="175">
+              <caret line="131" column="0" lean-forward="true" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -136,7 +136,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>_compute_targets</find>
       <find>refined_cls_lw</find>
       <find>mask_lw</find>
       <find>build_losses</find>
@@ -166,6 +165,7 @@
       <find>tmp_3</find>
       <find>ih</find>
       <find>outputs['tmp_3']</find>
+      <find>cros</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -191,8 +191,8 @@
         <option value="$PROJECT_DIR$/learn_to_draw/utils.py" />
         <option value="$PROJECT_DIR$/libs/layers/mask.py" />
         <option value="$PROJECT_DIR$/learn_to_draw/visualize_mask_targets.py" />
-        <option value="$PROJECT_DIR$/libs/nets/pyramid_network.py" />
         <option value="$PROJECT_DIR$/libs/configs/config_v1.py" />
+        <option value="$PROJECT_DIR$/libs/nets/pyramid_network.py" />
         <option value="$PROJECT_DIR$/train/train.py" />
       </list>
     </option>
@@ -719,16 +719,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/learn_to_draw/draw.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/learn_to_draw/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1087,14 +1077,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/configs/config_v1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="839">
-          <caret line="132" column="49" lean-forward="false" selection-start-line="132" selection-start-column="49" selection-end-line="132" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libs/layers/wrapper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
@@ -1111,10 +1093,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/libs/configs/config_v1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="131" column="0" lean-forward="true" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/nn_impl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1263">
+          <caret line="99" column="4" lean-forward="false" selection-start-line="99" selection-start-column="4" selection-end-line="99" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/libs/nets/pyramid_network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-199">
-          <caret line="543" column="33" lean-forward="false" selection-start-line="543" selection-start-column="27" selection-end-line="543" selection-end-column="33" />
+        <state relative-caret-position="1055">
+          <caret line="581" column="9" lean-forward="false" selection-start-line="581" selection-start-column="9" selection-end-line="581" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1122,7 +1120,7 @@
     <entry file="file://$PROJECT_DIR$/train/train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
-          <caret line="197" column="49" lean-forward="false" selection-start-line="197" selection-start-column="49" selection-end-line="197" selection-end-column="49" />
+          <caret line="197" column="47" lean-forward="false" selection-start-line="197" selection-start-column="47" selection-end-line="197" selection-end-column="47" />
           <folding />
         </state>
       </provider>
