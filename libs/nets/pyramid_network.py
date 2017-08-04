@@ -351,7 +351,7 @@ def build_heads(pyramid, ih, iw, num_classes, base_anchors, is_training=False, g
           
         ## mask head
         m = cropped_rois
-        for _ in range(4):
+        for _ in range(1):
             m = slim.conv2d(m, 256, [3, 3], stride=1, padding='SAME', activation_fn=tf.nn.relu)
         # to 28 x 28
         m = slim.conv2d_transpose(m, 256, 2, stride=2, padding='VALID', activation_fn=tf.nn.relu)
