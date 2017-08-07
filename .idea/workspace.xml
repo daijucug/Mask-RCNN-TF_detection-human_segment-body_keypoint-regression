@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="419503ab-2db7-4a80-b317-0762a7bf1f3c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/layers/anchor.py" afterPath="$PROJECT_DIR$/libs/layers/anchor.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/train.py" afterPath="$PROJECT_DIR$/train/train.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,8 +44,18 @@
       <file leaf-file-name="train.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/train/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="290" column="49" lean-forward="false" selection-start-line="290" selection-start-column="49" selection-end-line="290" selection-end-column="49" />
+            <state relative-caret-position="437">
+              <caret line="216" column="82" lean-forward="false" selection-start-line="216" selection-start-column="82" selection-end-line="216" selection-end-column="82" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nets_factory.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/nets/nets_factory.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="19" column="42" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -60,21 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nets_factory.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libs/nets/nets_factory.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="31" column="30" lean-forward="false" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="pyramid_network.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/nets/pyramid_network.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="461">
-              <caret line="182" column="48" lean-forward="false" selection-start-line="182" selection-start-column="20" selection-end-line="182" selection-end-column="48" />
+              <caret line="185" column="34" lean-forward="true" selection-start-line="185" selection-start-column="25" selection-end-line="185" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -113,8 +111,8 @@
       <file leaf-file-name="resnet_v1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/nets/resnet_v1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="195" column="33" lean-forward="false" selection-start-line="195" selection-start-column="33" selection-end-line="195" selection-end-column="33" />
+            <state relative-caret-position="461">
+              <caret line="205" column="80" lean-forward="false" selection-start-line="205" selection-start-column="59" selection-end-line="205" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -131,7 +129,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tmp_3np</find>
       <find>tmp_3</find>
       <find>outputs['tmp_3']</find>
       <find>cros</find>
@@ -158,9 +155,10 @@
       <find>__TRANSPOSED__</find>
       <find>ih</find>
       <find>build_heads</find>
-      <find>sess</find>
       <find>end_poin</find>
       <find>end_points</find>
+      <find>end_points_collection</find>
+      <find>sess</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -1039,14 +1037,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/nets/resnet_v1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="195" column="33" lean-forward="false" selection-start-line="195" selection-start-column="33" selection-end-line="195" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/convert_data/2008_000510.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1099,23 +1089,31 @@
     <entry file="file://$PROJECT_DIR$/libs/nets/pyramid_network.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="461">
-          <caret line="182" column="48" lean-forward="false" selection-start-line="182" selection-start-column="20" selection-end-line="182" selection-end-column="48" />
+          <caret line="185" column="34" lean-forward="true" selection-start-line="185" selection-start-column="25" selection-end-line="185" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/nets/resnet_v1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="205" column="80" lean-forward="false" selection-start-line="205" selection-start-column="59" selection-end-line="205" selection-end-column="80" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/nets/nets_factory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="31" column="30" lean-forward="false" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="30" />
+        <state relative-caret-position="216">
+          <caret line="19" column="42" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/train/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="290" column="49" lean-forward="false" selection-start-line="290" selection-start-column="49" selection-end-line="290" selection-end-column="49" />
+        <state relative-caret-position="437">
+          <caret line="216" column="82" lean-forward="false" selection-start-line="216" selection-start-column="82" selection-end-line="216" selection-end-column="82" />
           <folding />
         </state>
       </provider>
