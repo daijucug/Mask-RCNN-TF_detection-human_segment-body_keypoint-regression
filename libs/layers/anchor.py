@@ -160,9 +160,9 @@ def decode(boxes, scores, all_anchors, ih, iw):
     'Anchor layer shape error %d vs %d vs %d' % (scores.shape[0],boxes.shape[0],all_anchors.reshape[0])
   boxes = bbox_transform_inv(all_anchors, boxes)
   classes = np.argmax(scores, axis=1)
-  scores = scores[:, 1]#0 is background 1 is foreground
+  scores = scores[:, 1]#0 is background 1 is foreground. selects the probability of foregorund
   final_boxes = boxes  
-  final_boxes = clip_boxes(final_boxes, (ih, iw))
+  final_boxes = clip_boxes(final_boxes, (ih, iw))# does not reduce the number of rois
   classes = classes.astype(np.int32)
   return final_boxes, classes, scores
 

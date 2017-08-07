@@ -213,6 +213,9 @@ def train():
     gt = outputs['gt']
 
     all_layers_anchors = outputs['rpn']['anchor']
+    feature_map_shape1 = end_points[pyramid_map['C1']]
+    feature_map_shape5 = end_points[pyramid_map['C5']]
+
     
 
     #############################
@@ -280,13 +283,13 @@ def train():
         gt_boxesnp, \
         rpn_batch_pos, rpn_batch, refine_batch_pos, refine_batch, mask_batch_pos, mask_batch, \
         input_imagenp, final_boxnp, final_clsnp, final_probnp, final_gt_clsnp, gtnp, tmp_0np, tmp_1np, tmp_2np, tmp_3np, tmp_4np,final_masknp,gt_masksnp,\
-        ihnp, iwnp, all_layers_anchorsnp = \
+        ihnp, iwnp, all_layers_anchorsnp,feature_map_shape1np,feature_map_shape5np = \
                      sess.run([update_op, total_loss, regular_loss, img_id] + 
                               losses + 
                               [gt_boxes] + 
                               batch_info + 
                               [input_image] + [final_box] + [final_cls] + [final_prob] + [final_gt_cls] + [gt] + [tmp_0] + [tmp_1] + [tmp_2] + [tmp_3] + [tmp_4]+[final_mask]+[gt_masks]+[ih]+[iw]+
-                              [all_layers_anchors])
+                              [all_layers_anchors]+[feature_map_shape1]+[feature_map_shape5])
 
 
         duration_time = time.time() - start_time
