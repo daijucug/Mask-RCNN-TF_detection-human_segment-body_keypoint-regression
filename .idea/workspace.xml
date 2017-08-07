@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="419503ab-2db7-4a80-b317-0762a7bf1f3c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/nets/pyramid_network.py" afterPath="$PROJECT_DIR$/libs/nets/pyramid_network.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/draw.py" afterPath="$PROJECT_DIR$/learn_to_draw/draw.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_to_draw/utils.py" afterPath="$PROJECT_DIR$/learn_to_draw/utils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/train.py" afterPath="$PROJECT_DIR$/train/train.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/train_utils.py" afterPath="$PROJECT_DIR$/train/train_utils.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +23,8 @@
       <file leaf-file-name="draw.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/learn_to_draw/draw.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+            <state relative-caret-position="280">
+              <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -32,8 +35,8 @@
       <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/learn_to_draw/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="673">
-              <caret line="205" column="0" lean-forward="false" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+            <state relative-caret-position="2455">
+              <caret line="217" column="32" lean-forward="false" selection-start-line="217" selection-start-column="32" selection-end-line="217" selection-end-column="32" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -41,44 +44,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="train.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/train/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="197" column="44" lean-forward="false" selection-start-line="197" selection-start-column="44" selection-end-line="197" selection-end-column="44" />
+            <state relative-caret-position="341">
+              <caret line="293" column="68" lean-forward="false" selection-start-line="293" selection-start-column="68" selection-end-line="293" selection-end-column="68" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pyramid_network.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="nets_factory.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/nets/nets_factory.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="31" column="36" lean-forward="false" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pyramid_network.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/nets/pyramid_network.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="453" column="53" lean-forward="false" selection-start-line="453" selection-start-column="50" selection-end-line="453" selection-end-column="53" />
+            <state relative-caret-position="307">
+              <caret line="252" column="32" lean-forward="false" selection-start-line="252" selection-start-column="8" selection-end-line="252" selection-end-column="32" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nn_impl.py" pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/nn_impl.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1263">
-              <caret line="99" column="4" lean-forward="false" selection-start-line="99" selection-start-column="4" selection-end-line="99" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="visualize_mask_targets.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/learn_to_draw/visualize_mask_targets.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -86,8 +77,8 @@
       <file leaf-file-name="wrapper.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/layers/wrapper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            <state relative-caret-position="295">
+              <caret line="37" column="27" lean-forward="false" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -96,31 +87,39 @@
       <file leaf-file-name="anchor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/layers/anchor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="50" column="8" lean-forward="false" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="8" />
+            <state relative-caret-position="71">
+              <caret line="137" column="4" lean-forward="false" selection-start-line="137" selection-start-column="4" selection-end-line="137" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config_v1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libs/configs/config_v1.py">
+      <file leaf-file-name="resnet_v1.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/nets/resnet_v1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="132" column="48" lean-forward="false" selection-start-line="132" selection-start-column="48" selection-end-line="132" selection-end-column="48" />
+            <state relative-caret-position="237">
+              <caret line="195" column="33" lean-forward="false" selection-start-line="195" selection-start-column="33" selection-end-line="195" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="convert_my_data_human_body_parts.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/convert_data/convert_my_data_human_body_parts.py">
+      <file leaf-file-name="resnet_utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/nets/resnet_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-933">
+              <caret line="126" column="4" lean-forward="false" selection-start-line="126" selection-start-column="4" selection-end-line="126" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dataset_factory.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/datasets/dataset_factory.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -136,25 +135,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>outputs['final_boxes']</find>
-      <find>1024</find>
-      <find>fully_connected_2</find>
-      <find>mask</find>
-      <find>pyramid</find>
-      <find>7</find>
-      <find>parts</find>
-      <find>full</find>
-      <find>restored</find>
-      <find>cross</find>
-      <find>_filter_negative_samples</find>
-      <find>num_classes</find>
-      <find>softmax</find>
-      <find>masks</find>
-      <find>56</find>
-      <find>crop</find>
-      <find>ROIAlign_</find>
-      <find>vi</find>
-      <find>28</find>
       <find>check</find>
       <find>rpn_batch_pos</find>
       <find>tmp_3np</find>
@@ -166,6 +146,25 @@
       <find>range</find>
       <find>build</find>
       <find>i-4</find>
+      <find>batch</find>
+      <find>num_epochs_per_decay</find>
+      <find>sync_replicas</find>
+      <find>learning_rate_decay_type</find>
+      <find>create_global_step</find>
+      <find>learning_rate_decay_factor</find>
+      <find>regul</find>
+      <find>GraphKeys</find>
+      <find>regulari</find>
+      <find>regularizer</find>
+      <find>optimizer</find>
+      <find>global_step</find>
+      <find>trainable_scopes</find>
+      <find>update_op</find>
+      <find>__CROPPED__</find>
+      <find>solve</find>
+      <find>__TRANSPOSED__</find>
+      <find>sess</find>
+      <find>build_heads</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -187,13 +186,14 @@
         <option value="$PROJECT_DIR$/convert_data/convert_my_data_human_body_parts.py" />
         <option value="$PROJECT_DIR$/libs/preprocessings/coco_v1.py" />
         <option value="$PROJECT_DIR$/libs/layers/crop.py" />
-        <option value="$PROJECT_DIR$/learn_to_draw/draw.py" />
-        <option value="$PROJECT_DIR$/learn_to_draw/utils.py" />
         <option value="$PROJECT_DIR$/libs/layers/mask.py" />
         <option value="$PROJECT_DIR$/learn_to_draw/visualize_mask_targets.py" />
         <option value="$PROJECT_DIR$/libs/configs/config_v1.py" />
-        <option value="$PROJECT_DIR$/train/train.py" />
         <option value="$PROJECT_DIR$/libs/nets/pyramid_network.py" />
+        <option value="$PROJECT_DIR$/learn_to_draw/utils.py" />
+        <option value="$PROJECT_DIR$/learn_to_draw/draw.py" />
+        <option value="$PROJECT_DIR$/train/train_utils.py" />
+        <option value="$PROJECT_DIR$/train/train.py" />
       </list>
     </option>
   </component>
@@ -375,7 +375,7 @@
       <recent name="$PROJECT_DIR$/learn_to_draw" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.convert_my_data_human_body_parts">
+  <component name="RunManager" selected="Python.draw">
     <configuration default="false" name="draw" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -617,9 +617,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.convert_my_data_human_body_parts" />
-        <item index="1" class="java.lang.String" itemvalue="Python.visualize_mask_targets" />
-        <item index="2" class="java.lang.String" itemvalue="Python.draw" />
+        <item index="0" class="java.lang.String" itemvalue="Python.draw" />
+        <item index="1" class="java.lang.String" itemvalue="Python.convert_my_data_human_body_parts" />
+        <item index="2" class="java.lang.String" itemvalue="Python.visualize_mask_targets" />
         <item index="3" class="java.lang.String" itemvalue="Python.utils" />
         <item index="4" class="java.lang.String" itemvalue="Python.read_my_data_human_body_parts" />
       </list>
@@ -719,48 +719,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/learn_to_draw/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/datasets/dataset_factory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/datasets/coco.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1590">
-          <caret line="114" column="36" lean-forward="false" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/convert_data/read_my_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="38" lean-forward="false" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/convert_data/convert_my_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="90" column="55" lean-forward="true" selection-start-line="90" selection-start-column="55" selection-end-line="90" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libs/nets/pyramid_network.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5025">
@@ -938,30 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/nets/nets_factory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/nets/resnet_v1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="212" column="4" lean-forward="false" selection-start-line="212" selection-start-column="4" selection-end-line="212" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/contrib/layers/python/layers/layers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-846">
-          <caret line="1387" column="4" lean-forward="false" selection-start-line="1387" selection-start-column="4" selection-end-line="1387" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/convert_data/convert_my_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
@@ -1008,14 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/datasets/dataset_factory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="18" column="71" lean-forward="false" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/convert_data/2008_000510.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1034,16 +960,6 @@
         <state relative-caret-position="288">
           <caret line="69" column="6" lean-forward="true" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/learn_to_draw/draw.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1067,22 +983,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/layers/wrapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/layers/anchor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="50" column="8" lean-forward="false" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/nn_impl.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1263">
@@ -1091,36 +991,134 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/learn_to_draw/utils.py">
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/contrib/layers/python/layers/regularizers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="673">
-          <caret line="205" column="0" lean-forward="false" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="81" column="70" lean-forward="true" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/contrib/layers/python/layers/layers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1317">
+          <caret line="389" column="28" lean-forward="true" selection-start-line="389" selection-start-column="13" selection-end-line="389" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/contrib/layers/python/layers/initializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="61" column="4" lean-forward="false" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/contrib/framework/python/ops/variables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="123" column="67" lean-forward="false" selection-start-line="123" selection-start-column="63" selection-end-line="123" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/configs/config_v1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
-          <caret line="132" column="48" lean-forward="false" selection-start-line="132" selection-start-column="48" selection-end-line="132" selection-end-column="48" />
+          <caret line="213" column="21" lean-forward="false" selection-start-line="213" selection-start-column="5" selection-end-line="213" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train/train.py">
+    <entry file="file://$PROJECT_DIR$/train/train_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="197" column="44" lean-forward="false" selection-start-line="197" selection-start-column="44" selection-end-line="197" selection-end-column="44" />
+        <state relative-caret-position="207">
+          <caret line="112" column="27" lean-forward="false" selection-start-line="112" selection-start-column="11" selection-end-line="112" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learn_to_draw/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2455">
+          <caret line="217" column="32" lean-forward="false" selection-start-line="217" selection-start-column="32" selection-end-line="217" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learn_to_draw/draw.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/datasets/dataset_factory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/nets/resnet_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-933">
+          <caret line="126" column="4" lean-forward="false" selection-start-line="126" selection-start-column="4" selection-end-line="126" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/nets/resnet_v1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="195" column="33" lean-forward="false" selection-start-line="195" selection-start-column="33" selection-end-line="195" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/nets/nets_factory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="31" column="36" lean-forward="false" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/layers/wrapper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="37" column="27" lean-forward="false" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/layers/anchor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="137" column="4" lean-forward="false" selection-start-line="137" selection-start-column="4" selection-end-line="137" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/nets/pyramid_network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="453" column="53" lean-forward="false" selection-start-line="453" selection-start-column="50" selection-end-line="453" selection-end-column="53" />
+        <state relative-caret-position="307">
+          <caret line="252" column="32" lean-forward="false" selection-start-line="252" selection-start-column="8" selection-end-line="252" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="293" column="68" lean-forward="false" selection-start-line="293" selection-start-column="68" selection-end-line="293" selection-end-column="68" />
           <folding />
         </state>
       </provider>

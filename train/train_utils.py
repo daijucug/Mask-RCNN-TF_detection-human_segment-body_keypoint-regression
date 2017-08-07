@@ -45,7 +45,7 @@ def _configure_optimizer(learning_rate):
         initial_accumulator_value=FLAGS.ftrl_initial_accumulator_value,
         l1_regularization_strength=FLAGS.ftrl_l1,
         l2_regularization_strength=FLAGS.ftrl_l2)
-  elif FLAGS.optimizer == 'momentum':
+  elif FLAGS.optimizer == 'momentum':##############this is true
     optimizer = tf.train.MomentumOptimizer(
         learning_rate,
         momentum=FLAGS.momentum,
@@ -75,18 +75,21 @@ def _configure_learning_rate(num_samples_per_epoch, global_step):
   Raises:
     ValueError: if
   """
-  decay_steps = int(num_samples_per_epoch / FLAGS.batch_size *
-                    FLAGS.num_epochs_per_decay)
+  decay_steps = int(num_samples_per_epoch / FLAGS.batch_size * #batch size is 1. num_epoch_per_decay is 2
+                    FLAGS.num_epochs_per_decay) #this int will be 165566 for num_samples_per_epoch=82783
   if FLAGS.sync_replicas:
     decay_steps /= FLAGS.replicas_to_aggregate
 
-  if FLAGS.learning_rate_decay_type == 'exponential':
-    return tf.train.exponential_decay(FLAGS.learning_rate,
+  if FLAGS.learning_rate_decay_type == 'exponential': #this is true
+    return tf.train.exponential_decay(FLAGS.learning_rate, #0.0002 for my setup
                                       global_step,
-                                      decay_steps,
-                                      FLAGS.learning_rate_decay_factor,
+                                      decay_steps,#165566 for num_samples_per_epoch=82783
+                                      FLAGS.learning_rate_decay_factor,#0.94
                                       staircase=True,
                                       name='exponential_decay_learning_rate')
+  #0,0002×0,94^(130000÷165566) = 0,000190516
+  #0,0002×0,94^(1÷165566) = 0,0002
+
   elif FLAGS.learning_rate_decay_type == 'fixed':
     return tf.constant(FLAGS.learning_rate, name='fixed_learning_rate')
   elif FLAGS.learning_rate_decay_type == 'polynomial':

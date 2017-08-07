@@ -205,14 +205,17 @@ def draw_human_body_parts(step, image, name='', image_height=1, image_width=1, b
                 maskaaa = mask[...,x].astype(np.uint8)
 
                 cv2.imshow("mask",maskaaa)
-                cv2.waitKey(3000)
+                #cv2.waitKey(3000)
             max_indices = np.argmax(mask,axis=2)
 
             random_color_gauss =np.random.randint(0,180) #for different boxes
             for x in range(int(bo[0]),int(bo[2])):
                 for y in range(int(bo[1]),int(bo[3])):
+
                     xm = x-(int(bo[0]))
                     ym = y-(int(bo[1]))
+                    if(max_indices[ym,xm]==0):
+                        continue
                     if mask[ym,xm,max_indices[ym,xm]]/255.0 > 0.5:
                         hsv[y,x,0] = colors[max_indices[ym,xm]][0]
                         hsv[y,x,1] = 255

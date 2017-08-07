@@ -1,7 +1,7 @@
 import numpy as np
 from utils import draw_bbox_better,draw_bbox,draw_bbox_better_v2,draw_segmentation_parts,visualize_mask_gt,draw_human_body_parts
 
-for x in range(0,30,3):
+for x in range(0,36,3):
     bbox = np.load('data/bbox'+str(x)+'.npy')
     final_mask = np.load('data/final_mask'+str(x)+'.npy')
     gt_label = np.load('data/gt_label'+str(x)+'.npy')

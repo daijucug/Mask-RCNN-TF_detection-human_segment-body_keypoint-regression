@@ -56,6 +56,7 @@ def solve(global_step):
     variables_to_train = _get_variables_to_train()
     # update_op = optimizer.minimize(total_loss)
     gradients = optimizer.compute_gradients(total_loss, var_list=variables_to_train)
+    # they separate these operations of the optimizer because they send only a subset of trainable variables
     grad_updates = optimizer.apply_gradients(gradients, 
             global_step=global_step)
     update_ops.append(grad_updates)
@@ -210,6 +211,8 @@ def train():
     final_gt_cls = outputs['final_boxes']['gt_cls']
     final_mask = outputs['mask']['mask']
     gt = outputs['gt']
+
+    all_layers_anchors = outputs['rpn']['anchor']
     
 
     #############################
@@ -277,15 +280,18 @@ def train():
         gt_boxesnp, \
         rpn_batch_pos, rpn_batch, refine_batch_pos, refine_batch, mask_batch_pos, mask_batch, \
         input_imagenp, final_boxnp, final_clsnp, final_probnp, final_gt_clsnp, gtnp, tmp_0np, tmp_1np, tmp_2np, tmp_3np, tmp_4np,final_masknp,gt_masksnp,\
-        ihnp, iwnp= \
+        ihnp, iwnp, all_layers_anchorsnp = \
                      sess.run([update_op, total_loss, regular_loss, img_id] + 
                               losses + 
                               [gt_boxes] + 
                               batch_info + 
-                              [input_image] + [final_box] + [final_cls] + [final_prob] + [final_gt_cls] + [gt] + [tmp_0] + [tmp_1] + [tmp_2] + [tmp_3] + [tmp_4]+[final_mask]+[gt_masks]+[ih]+[iw])
+                              [input_image] + [final_box] + [final_cls] + [final_prob] + [final_gt_cls] + [gt] + [tmp_0] + [tmp_1] + [tmp_2] + [tmp_3] + [tmp_4]+[final_mask]+[gt_masks]+[ih]+[iw]+
+                              [all_layers_anchors])
+
 
         duration_time = time.time() - start_time
-        if step % 3 == 0: 
+        if step % 3 == 0:
+            print ("shape of anchors is ",all_layers_anchorsnp.shape)
             print ( """iter %d: image-id:%07d, time:%.3f(sec), regular_loss: %.6f, """
                     """total-loss %.4f(%.4f, %.4f, %.6f, %.4f, %.4f), """
                     """instances: %d, """
