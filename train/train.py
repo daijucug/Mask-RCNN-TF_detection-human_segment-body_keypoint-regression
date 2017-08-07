@@ -295,7 +295,8 @@ def train():
 
         duration_time = time.time() - start_time
         if step % 3 == 0:
-            print ("shape of anchors is ",all_layers_anchorsnp.shape)
+            print ("shape of anchors is ",all_layers_anchorsnp.shape)#(27000, 4)
+            print ("shape of C1 and C5 layers is",feature_map_shape1np.shape,"    ",feature_map_shape5np.shape)
             print ( """iter %d: image-id:%07d, time:%.3f(sec), regular_loss: %.6f, """
                     """total-loss %.4f(%.4f, %.4f, %.6f, %.4f, %.4f), """
                     """instances: %d, """
