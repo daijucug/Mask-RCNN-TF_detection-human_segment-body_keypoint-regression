@@ -213,8 +213,9 @@ def train():
     gt = outputs['gt']
 
     all_layers_anchors = outputs['rpn']['anchor']
-    feature_map_shape1 = end_points['resnet_v1_50/conv1/Relu']
-    feature_map_shape5 = end_points['resnet_v1_50/block4/unit_3/bottleneck_v1/Relu']
+    print (end_points)
+    #feature_map_shape1 = end_points['resnet_v1_50/conv1/Relu']
+    #feature_map_shape5 = end_points['resnet_v1_50/block4/unit_3/bottleneck_v1/Relu']
 
     
 
