@@ -182,7 +182,7 @@ def build_pyramid(net_name, end_points, bilinear=True):
       pyramid['P5'] = \
         slim.conv2d(end_points[pyramid_map['C5']], 256, [1, 1], stride=1, scope='C5')
       
-      for c in range(4, 3, -1):
+      for c in range(4, 1, -1):
         s, s_ = pyramid['P%d'%(c+1)], end_points[pyramid_map['C%d' % (c)]]
 
         # s_ = slim.conv2d(s_, 256, [3, 3], stride=1, scope='C%d'%c)
@@ -221,7 +221,7 @@ def build_heads(pyramid, ih, iw, num_classes, base_anchors, is_training=False, g
     with tf.variable_scope('pyramid'):
         # for p in pyramid:
         outputs['rpn'] = {}
-        for i in range(5, 3, -1):
+        for i in range(5, 1, -1):
           p = 'P%d'%i
           stride = 2 ** i
           
@@ -241,9 +241,9 @@ def build_heads(pyramid, ih, iw, num_classes, base_anchors, is_training=False, g
 
         ## gather all rois
         # print (outputs['rpn'])
-        rpn_boxes = [tf.reshape(outputs['rpn']['P%d'%p]['box'], [-1, 4]) for p in range(5, 3, -1)]
-        rpn_clses = [tf.reshape(outputs['rpn']['P%d'%p]['cls'], [-1, 1]) for p in range(5, 3, -1)]
-        rpn_anchors = [tf.reshape(outputs['rpn']['P%d'%p]['anchor'], [-1, 4]) for p in range(5, 3, -1)]
+        rpn_boxes = [tf.reshape(outputs['rpn']['P%d'%p]['box'], [-1, 4]) for p in range(5, 1, -1)]
+        rpn_clses = [tf.reshape(outputs['rpn']['P%d'%p]['cls'], [-1, 1]) for p in range(5, 1, -1)]
+        rpn_anchors = [tf.reshape(outputs['rpn']['P%d'%p]['anchor'], [-1, 4]) for p in range(5, 1, -1)]
         rpn_boxes = tf.concat(values=rpn_boxes, axis=0)
         rpn_clses = tf.concat(values=rpn_clses, axis=0)
         rpn_anchors = tf.concat(values=rpn_anchors, axis=0)
@@ -266,10 +266,9 @@ def build_heads(pyramid, ih, iw, num_classes, base_anchors, is_training=False, g
         outputs['roi'] = {'box': rois, 'score': scores}
 
         ## cropping regions
-        # [assigned_rois, assigned_batch_inds, assigned_layer_inds] = \
-        #         assign_boxes(rois, [rois, batch_inds], [2, 3, 4, 5])
         [assigned_rois, assigned_batch_inds, assigned_layer_inds] = \
-                assign_boxes(rois, [rois, batch_inds], [4, 5])
+                assign_boxes(rois, [rois, batch_inds], [2, 3, 4, 5])
+
 
         outputs['assigned_rois'] = assigned_rois
         outputs['assigned_layer_inds'] = assigned_layer_inds
@@ -277,11 +276,11 @@ def build_heads(pyramid, ih, iw, num_classes, base_anchors, is_training=False, g
         cropped_rois = []
         ordered_rois = []
         pyramid_feature = []
-        for i in range(5, 3, -1):
+        for i in range(5, 1, -1):
             print(i)
             p = 'P%d'%i
-            splitted_rois = assigned_rois[i-4]
-            batch_inds = assigned_batch_inds[i-4]
+            splitted_rois = assigned_rois[i-2]
+            batch_inds = assigned_batch_inds[i-2]
             cropped, boxes_in_crop = ROIAlign_(pyramid[p], splitted_rois, batch_inds, ih, iw, stride=2**i,
                                pooled_height=56, pooled_width=56)
             # cropped = ROIAlign(pyramid[p], splitted_rois, batch_inds, stride=2**i,
@@ -340,10 +339,10 @@ def build_heads(pyramid, ih, iw, num_classes, base_anchors, is_training=False, g
           rois = final_boxes
           # [assigned_rois, assigned_batch_inds, assigned_layer_inds] = \
           #       assign_boxes(rois, [rois, batch_inds], [2, 3, 4, 5])
-          for i in range(5, 3, -1):
+          for i in range(5, 1, -1):
             p = 'P%d'%i
-            splitted_rois = assigned_rois[i-4]
-            batch_inds = assigned_batch_inds[i-4]
+            splitted_rois = assigned_rois[i-2]
+            batch_inds = assigned_batch_inds[i-2]
             cropped = ROIAlign(pyramid[p], splitted_rois, batch_inds, stride=2**i,
                                pooled_height=56, pooled_width=56)
             cropped_rois.append(cropped)
@@ -353,7 +352,7 @@ def build_heads(pyramid, ih, iw, num_classes, base_anchors, is_training=False, g
           
         ## mask head
         m = cropped_rois
-        for _ in range(1):
+        for _ in range(4):
             m = slim.conv2d(m, 256, [3, 3], stride=1, padding='SAME', activation_fn=tf.nn.relu)
         # to 28 x 28
         m = slim.conv2d_transpose(m, 256, 2, stride=2, padding='VALID', activation_fn=tf.nn.relu)
@@ -440,18 +439,17 @@ def build_losses(pyramid, outputs, gt_boxes, gt_masks,
       with tf.variable_scope('pyramid'):
 
         ## assigning gt_boxes
-        # [assigned_gt_boxes, assigned_layer_inds] = assign_boxes(gt_boxes, [gt_boxes], [2, 3, 4, 5])
-        [assigned_gt_boxes, assigned_layer_inds] = assign_boxes(gt_boxes, [gt_boxes], [4, 5])
+        [assigned_gt_boxes, assigned_layer_inds] = assign_boxes(gt_boxes, [gt_boxes], [2, 3, 4, 5])
 
         ## build losses for PFN
 
-        for i in range(5, 3, -1):
+        for i in range(5, 1, -1):
             p = 'P%d' % i
             stride = 2 ** i
             shape = tf.shape(pyramid[p])
             height, width = shape[1], shape[2]
 
-            splitted_gt_boxes = assigned_gt_boxes[i-4]
+            splitted_gt_boxes = assigned_gt_boxes[i-2]
             
             ### rpn losses
             # 1. encode ground truth

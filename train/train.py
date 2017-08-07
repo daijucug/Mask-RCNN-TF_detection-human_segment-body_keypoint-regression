@@ -213,11 +213,6 @@ def train():
     final_mask = outputs['mask']['mask']
     gt = outputs['gt']
 
-    all_layers_anchors = outputs['rpn']['anchor']
-    #print (end_points)
-    feature_map_shape1 = end_points['resnet_v1_50/conv1']
-    feature_map_shape5 = end_points['resnet_v1_50/block4/unit_3/bottleneck_v1']
-
     
 
     #############################
@@ -264,18 +259,13 @@ def train():
     ## main loop
     coord = tf.train.Coordinator()
     threads = []
-    # print (tf.get_collection(tf.GraphKeys.QUEUE_RUNNERS))
     for qr in tf.get_collection(tf.GraphKeys.QUEUE_RUNNERS):
         threads.extend(qr.create_threads(sess, coord=coord, daemon=True,
                                          start=True))
 
     tf.train.start_queue_runners(sess=sess, coord=coord)
     saver = tf.train.Saver(max_to_keep=20)
-    print ("started the threads")
 
-    #print ('delaaaaaaaaaaaaaaaaaay')
-    #import time
-    #time.sleep(15)
     for step in range(FLAGS.max_iters):
         
         start_time = time.time()
@@ -284,47 +274,24 @@ def train():
         rpn_box_loss, rpn_cls_loss, refined_box_loss, refined_cls_loss, mask_loss, \
         gt_boxesnp, \
         rpn_batch_pos, rpn_batch, refine_batch_pos, refine_batch, mask_batch_pos, mask_batch, \
-        input_imagenp, final_boxnp, final_clsnp, final_probnp, final_gt_clsnp, gtnp, tmp_0np, tmp_1np, tmp_2np, tmp_3np, tmp_4np,final_masknp,gt_masksnp,\
-        ihnp, iwnp, all_layers_anchorsnp,feature_map_shape1np,feature_map_shape5np = \
+        input_imagenp, final_boxnp, final_clsnp, final_probnp, final_gt_clsnp, gtnp, tmp_0np, tmp_1np, tmp_2np, tmp_3np, tmp_4np,final_masknp,gt_masksnp= \
                      sess.run([update_op, total_loss, regular_loss, img_id] + 
                               losses + 
                               [gt_boxes] + 
                               batch_info + 
-                              [input_image] + [final_box] + [final_cls] + [final_prob] + [final_gt_cls] + [gt] + [tmp_0] + [tmp_1] + [tmp_2] + [tmp_3] + [tmp_4]+[final_mask]+[gt_masks]+[ih]+[iw]+
-                              [all_layers_anchors]+[feature_map_shape1]+[feature_map_shape5])
+                              [input_image] + [final_box] + [final_cls] + [final_prob] + [final_gt_cls] + [gt] + [tmp_0] + [tmp_1] + [tmp_2] + [tmp_3] + [tmp_4]+[final_mask]+[gt_masks])
 
 
         duration_time = time.time() - start_time
-        if step % 3 == 0:
-            print ("shape of anchors is ",all_layers_anchorsnp.shape)#(27000, 4)
-            print ("shape of C1 and C5 layers is",feature_map_shape1np.shape,"    ",feature_map_shape5np.shape)
+        if step % 5 == 0:
             print ( """iter %d: image-id:%07d, time:%.3f(sec), regular_loss: %.6f, """
                     """total-loss %.4f(%.4f, %.4f, %.6f, %.4f, %.4f), """
                     """instances: %d, """
                     """batch:(%d|%d, %d|%d, %d|%d)"""
-                    """iw ih:(%d,%d)"""
-                   % (step, img_id_str, duration_time, reg_lossnp, 
+                   % (step, img_id_str, duration_time, reg_lossnp,
                       tot_loss, rpn_box_loss, rpn_cls_loss, refined_box_loss, refined_cls_loss, mask_loss,
                       gt_boxesnp.shape[0], 
-                      rpn_batch_pos, rpn_batch, refine_batch_pos, refine_batch, mask_batch_pos, mask_batch,
-                      iwnp,ihnp))
-
-            # draw_bbox(step,\
-            #          np.uint8((np.array(input_imagenp[0])/2.0+0.5)*255.0),\
-            #          name='est',\
-            #          bbox=final_boxnp,\
-            #          label=final_clsnp,\
-            #          prob=final_probnp,\
-            #          gt_label=np.argmax(np.asarray(final_gt_clsnp),axis=1),\
-            #          final_mask=final_masknp,\
-            #          )
-            # draw_bbox(step,\
-            #          np.uint8((np.array(input_imagenp[0])/2.0+0.5)*255.0),\
-            #          name='gt_mask',\
-            #          bbox=gtnp[:,0:4],\
-            #          label=np.asarray(gtnp[:,4], dtype=np.uint8),\
-            #          final_mask=gt_masksnp,\
-            #          )
+                      rpn_batch_pos, rpn_batch, refine_batch_pos, refine_batch, mask_batch_pos, mask_batch))
             # np.save('/home/czurini/Alex/image'+str(step)+'.npy',np.uint8((np.array(input_imagenp[0])/2.0+0.5)*255.0))
             # np.save('/home/czurini/Alex/bbox'+str(step)+'.npy',final_boxnp)
             # np.save('/home/czurini/Alex/label'+str(step)+'.npy',final_clsnp)
@@ -332,46 +299,13 @@ def train():
             # np.save('/home/czurini/Alex/gt_label'+str(step)+'.npy',np.argmax(np.asarray(final_gt_clsnp),axis=1))
             # np.save('/home/czurini/Alex/final_mask'+str(step)+'.npy',final_masknp)
             # np.save('/home/czurini/Alex/gt_mask'+str(step)+'.npy',gt_masksnp)
-            # draw_bbox_better(step,\
-            #                  np.uint8((np.array(input_imagenp[0])/2.0+0.5)*255.0),\
-            #                  name='colored',\a
-            #                  bbox=final_boxnp,\
-            #                  label=final_clsnp,\
-            #                  prob=final_probnp,\
-            #                  gt_label=np.argmax(np.asarray(final_gt_clsnp),axis=1),\
-            #                  final_mask=final_masknp,\
-            #                  )
 
-            # draw_bbox(step,\
-            #          np.uint8((np.array(input_imagenp[0])/2.0+0.5)*255.0),\
-            #          name='gt',\
-            #          bbox=gtnp[:,0:4],\
-            #          label=np.asarray(gtnp[:,4], dtype=np.uint8),\
-            #          )
-
-            
             print ("labels")
 
-            # print (cat_id_to_cls_name(np.unique(np.argmax(np.asarray(final_gt_clsnp),axis=1)))[1:])
-            # print (cat_id_to_cls_name(np.unique(np.asarray(gt_boxesnp, dtype=np.uint8)[:,4])))
             print (cat_id_to_cls_name(np.unique(np.argmax(np.asarray(tmp_3np),axis=1))))
-            #print (cat_id_to_cls_name(np.unique(np.argmax(np.asarray(gt_boxesnp)[:,4],axis=1))))
             print ("classes")
             print (cat_id_to_cls_name(np.unique(np.argmax(np.array(tmp_4np),axis=1))))
-            print (final_boxnp)
-            print (gtnp)
-            # print (np.asanyarray(tmp_3np))
 
-            #print ("ordered rois")
-            #print (np.asarray(tmp_0np)[0])
-            #print ("pyramid_feature")
-            #print ()
-             #print(np.unique(np.argmax(np.array(final_probnp),axis=1)))
-            #for var, val in zip(tmp_2, tmp_2np):
-            #    print(var.name)  
-            #print(np.argmax(np.array(tmp_0np),axis=1))
-            
-            
             if np.isnan(tot_loss) or np.isinf(tot_loss):
                 print (gt_boxesnp)
                 raise
