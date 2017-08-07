@@ -216,7 +216,7 @@ def draw_human_body_parts(step, image, name='', image_height=1, image_width=1, b
                     ym = y-(int(bo[1]))
                     if(max_indices[ym,xm]==0):
                         continue
-                    if mask[ym,xm,max_indices[ym,xm]]/255.0 > 0.5:
+                    if mask[ym,xm,max_indices[ym,xm]]/255.0 > 0.6:
                         hsv[y,x,0] = colors[max_indices[ym,xm]][0]
                         hsv[y,x,1] = 255
 
