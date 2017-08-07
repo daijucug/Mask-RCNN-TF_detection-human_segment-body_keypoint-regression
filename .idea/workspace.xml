@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="419503ab-2db7-4a80-b317-0762a7bf1f3c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/convert_data/convert_my_data_human_body_parts.py" afterPath="$PROJECT_DIR$/convert_data/convert_my_data_human_body_parts.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/configs/config_v1.py" afterPath="$PROJECT_DIR$/libs/configs/config_v1.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/nets/pyramid_network.py" afterPath="$PROJECT_DIR$/libs/nets/pyramid_network.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/train.py" afterPath="$PROJECT_DIR$/train/train.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/boxes/anchor.py" afterPath="$PROJECT_DIR$/libs/boxes/anchor.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,7 +47,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="convert_my_data_human_body_parts.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="convert_my_data_human_body_parts.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/convert_data/convert_my_data_human_body_parts.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="393">
@@ -75,7 +72,7 @@
       <file leaf-file-name="roi.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/layers/roi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
+            <state relative-caret-position="-43">
               <caret line="140" column="23" lean-forward="false" selection-start-line="140" selection-start-column="23" selection-end-line="140" selection-end-column="23" />
               <folding />
             </state>
@@ -85,7 +82,7 @@
       <file leaf-file-name="config_v1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/configs/config_v1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
+            <state relative-caret-position="1584">
               <caret line="186" column="27" lean-forward="true" selection-start-line="186" selection-start-column="27" selection-end-line="186" selection-end-column="27" />
               <folding />
             </state>
@@ -95,8 +92,18 @@
       <file leaf-file-name="anchor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/layers/anchor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1176">
+            <state relative-caret-position="120">
               <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="anchor.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/libs/boxes/anchor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="24" column="3" lean-forward="false" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -149,10 +156,10 @@
       <find>rois_per_image</find>
       <find>fg_roi_fraction</find>
       <find>bbox_targets</find>
-      <find>_unmap</find>
       <find>_filter_negative_samples</find>
-      <find>640</find>
       <find>sess</find>
+      <find>640</find>
+      <find>_unmap</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -174,7 +181,6 @@
         <option value="$PROJECT_DIR$/learn_to_draw/draw.py" />
         <option value="$PROJECT_DIR$/train/train_utils.py" />
         <option value="$PROJECT_DIR$/learn_to_draw/utils.py" />
-        <option value="$PROJECT_DIR$/libs/boxes/anchor.py" />
         <option value="$PROJECT_DIR$/libs/layers/anchor.py" />
         <option value="$PROJECT_DIR$/libs/preprocessings/coco_v1.py" />
         <option value="$PROJECT_DIR$/libs/layers/sample.py" />
@@ -185,6 +191,7 @@
         <option value="$PROJECT_DIR$/train/train.py" />
         <option value="$PROJECT_DIR$/libs/nets/pyramid_network.py" />
         <option value="$PROJECT_DIR$/convert_data/convert_my_data_human_body_parts.py" />
+        <option value="$PROJECT_DIR$/libs/boxes/anchor.py" />
       </list>
     </option>
   </component>
@@ -1039,14 +1046,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/boxes/anchor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-810">
-          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libs/layers/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1079,30 +1078,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/layers/roi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="140" column="23" lean-forward="false" selection-start-line="140" selection-start-column="23" selection-end-line="140" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/layers/anchor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1176">
-          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/configs/config_v1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="186" column="27" lean-forward="true" selection-start-line="186" selection-start-column="27" selection-end-line="186" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/train/train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1363">
@@ -1126,6 +1101,38 @@
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/configs/config_v1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1584">
+          <caret line="186" column="27" lean-forward="true" selection-start-line="186" selection-start-column="27" selection-end-line="186" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/layers/roi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-43">
+          <caret line="140" column="23" lean-forward="false" selection-start-line="140" selection-start-column="23" selection-end-line="140" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/layers/anchor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/boxes/anchor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="24" column="3" lean-forward="false" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>

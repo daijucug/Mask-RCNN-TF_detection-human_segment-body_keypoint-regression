@@ -22,7 +22,7 @@ def anchors_plane(height, width, stride = 1.0,
   # base = kwargs.setdefault('base', 16)
   anc = anchors(scales, ratios, base)
   all_anchors = cython_anchor.anchors_plane(height, width, stride, anc)
-  print (all_anchors.shape)
+  #print (all_anchors.shape)
   return all_anchors
 
 # Written by Ross Girshick and Sean Bell
