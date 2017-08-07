@@ -18,7 +18,7 @@ def crop(images, boxes, batch_inds, stride = 1, pooled_height = 56, pooled_width
   """
   with tf.name_scope(scope):
     #
-    boxes = boxes / (stride + 0.0)
+    boxes = boxes / (stride + 0.0)#stride = 32, 16, 8, 4. we need to do that in order to get the crop of feature layer
     boxes = tf.reshape(boxes, [-1, 4])
 
     # normalize the boxes and swap x y dimensions
@@ -26,7 +26,7 @@ def crop(images, boxes, batch_inds, stride = 1, pooled_height = 56, pooled_width
     boxes = tf.reshape(boxes, [-1, 2]) # to (x, y)
     xs = boxes[:, 0] 
     ys = boxes[:, 1]
-    xs = xs / tf.cast(shape[2], tf.float32)
+    xs = xs / tf.cast(shape[2], tf.float32)#######WHYYYY???? because the crop_and resize function needs the values in normalized fucking form
     ys = ys / tf.cast(shape[1], tf.float32)
     boxes = tf.concat([ys[:, tf.newaxis], xs[:, tf.newaxis]], axis=1)
     boxes = tf.reshape(boxes, [-1, 4])  # to (y1, x1, y2, x2)
@@ -45,7 +45,7 @@ def crop(images, boxes, batch_inds, stride = 1, pooled_height = 56, pooled_width
       batch_inds = tf.cast(batch_inds, tf.int32)
     assert_op = tf.Assert(tf.greater(tf.size(images), 0), [images, batch_inds])
     with tf.control_dependencies([assert_op, images, batch_inds]):
-        return  tf.image.crop_and_resize(images, boxes, batch_inds,
+        return  tf.image.crop_and_resize(images, boxes, batch_inds,###
                                          [pooled_height, pooled_width],
                                          method='bilinear',
                                          name='Crop')
@@ -64,15 +64,15 @@ def crop_(images, boxes, batch_inds, ih, iw, stride = 1, pooled_height = 7, pool
   """
   with tf.name_scope(scope):
     #
-    boxes = boxes / (stride + 0.0)
+    boxes = boxes / (stride + 0.0)#stride = 32, 16, 8, 4. we need to do that in order to get the crop of feature layer
     boxes = tf.reshape(boxes, [-1, 4])
 
     # normalize the boxes and swap x y dimensions
-    shape = tf.shape(images)
+    shape = tf.shape(images)#W/stride, H/stride
     boxes = tf.reshape(boxes, [-1, 2]) # to (x, y)
     xs = boxes[:, 0] 
     ys = boxes[:, 1]
-    xs = xs / tf.cast(shape[2], tf.float32)
+    xs = xs / tf.cast(shape[2], tf.float32)#######WHYYYY???? because the crop_and resize function needs the values in normalized fucking form
     ys = ys / tf.cast(shape[1], tf.float32)
     boxes = tf.concat([ys[:, tf.newaxis], xs[:, tf.newaxis]], axis=1)
     boxes = tf.reshape(boxes, [-1, 4])  # to (y1, x1, y2, x2)

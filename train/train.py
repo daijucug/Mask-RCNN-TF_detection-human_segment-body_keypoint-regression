@@ -174,6 +174,7 @@ def train():
                              FLAGS.dataset_dir, 
                              FLAGS.im_batch,
                              is_training=True)
+    ####o chestie importanta e ca le face resize la a.i. o latura sa nu fie mai mica de 640 pixeli
 
     data_queue = tf.RandomShuffleQueue(capacity=32, min_after_dequeue=16,
             dtypes=(

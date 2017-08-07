@@ -38,7 +38,7 @@ def preprocess_for_training(image, gt_boxes, gt_masks):
                     lambda: (image, gt_boxes, gt_masks))
 
     ## min size resizing
-    new_ih, new_iw = preprocess_utils._smallest_size_at_least(ih, iw, cfg.FLAGS.image_min_size)
+    new_ih, new_iw = preprocess_utils._smallest_size_at_least(ih, iw, cfg.FLAGS.image_min_size)#FLAGS.image_min_size = 640(min edge)
     image = tf.expand_dims(image, 0)
     image = tf.image.resize_bilinear(image, [new_ih, new_iw], align_corners=False)
     image = tf.squeeze(image, axis=[0])

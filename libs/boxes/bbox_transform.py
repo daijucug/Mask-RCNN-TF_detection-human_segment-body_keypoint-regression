@@ -31,7 +31,7 @@ def bbox_transform(ex_rois, gt_rois):
 
     # warnings.catch_warnings()
     # warnings.filterwarnings('error')
-    targets_dx = 10.0 * (gt_ctr_x - ex_ctr_x) / ex_widths
+    targets_dx = 10.0 * (gt_ctr_x - ex_ctr_x) / ex_widths #####he multiplied these probably to have bigger numbers
     targets_dy = 10.0 * (gt_ctr_y - ex_ctr_y) / ex_heights
     targets_dw = 5.0 * np.log(gt_widths / ex_widths)
     targets_dh = 5.0 * np.log(gt_heights / ex_heights)
@@ -51,7 +51,7 @@ def bbox_transform_inv(boxes, deltas):# from file roi.py line  116 the shapes ar
     ctr_x = boxes[:, 0] + 0.5 * widths
     ctr_y = boxes[:, 1] + 0.5 * heights
 
-    dx = deltas[:, 0::4] * 0.1
+    dx = deltas[:, 0::4] * 0.1 #####he divided here as to cancel the multiplication at 34
     dy = deltas[:, 1::4] * 0.1
     dw = deltas[:, 2::4] * 0.2
     dh = deltas[:, 3::4] * 0.2

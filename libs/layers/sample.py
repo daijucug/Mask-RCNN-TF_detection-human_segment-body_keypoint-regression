@@ -82,7 +82,7 @@ def sample_rpn_outputs(boxes, scores, is_training=False, only_positive=False):
 
 def sample_rpn_outputs_wrt_gt_boxes(boxes, scores, gt_boxes, is_training=False, only_positive=False):
     """sample boxes for refined output"""
-    boxes, scores, batch_inds = sample_rpn_outputs(boxes, scores, is_training, only_positive)
+    boxes, scores, batch_inds = sample_rpn_outputs(boxes, scores, is_training, only_positive)#only_positive is false (default)
     # batch_inds = np.zeros([boxes.shape[0]], dtype=np.int32) # only for one image
     if gt_boxes.size > 0:
         overlaps = cython_bbox.bbox_overlaps(
@@ -115,13 +115,13 @@ def sample_rpn_outputs_wrt_gt_boxes(boxes, scores, gt_boxes, is_training=False, 
             gt_argmax_overlaps = overlaps.argmax(axis=0) # G
             fg_inds = np.union1d(gt_argmax_overlaps, fg_inds)
 
-	fg_rois = int(min(fg_inds.size, cfg.FLAGS.rois_per_image * cfg.FLAGS.fg_roi_fraction))
+	fg_rois = int(min(fg_inds.size, cfg.FLAGS.rois_per_image * cfg.FLAGS.fg_roi_fraction))#rois per image=256. #there should be at MOST 64 fg
       	if fg_inds.size > 0 and fg_rois < fg_inds.size:
        	   fg_inds = np.random.choice(fg_inds, size=fg_rois, replace=False)
       	
 	# TODO: sampling strategy
       	bg_inds = np.where((max_overlaps < cfg.FLAGS.bg_threshold))[0]
-      	bg_rois = max(min(cfg.FLAGS.rois_per_image - fg_rois, fg_rois * 3), 8)#64
+      	bg_rois = max(min(cfg.FLAGS.rois_per_image - fg_rois, fg_rois * 3), 8)#at most 192
       	if bg_inds.size > 0 and bg_rois < bg_inds.size:
            bg_inds = np.random.choice(bg_inds, size=bg_rois, replace=False)
 

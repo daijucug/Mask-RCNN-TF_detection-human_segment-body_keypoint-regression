@@ -50,14 +50,14 @@ def encode(gt_boxes, rois, num_classes):
 
       # sample rois as to 1:3
       fg_inds = np.where(max_overlaps >= cfg.FLAGS.fg_threshold)[0]
-      fg_rois = int(min(fg_inds.size, cfg.FLAGS.rois_per_image * cfg.FLAGS.fg_roi_fraction))
+      fg_rois = int(min(fg_inds.size, cfg.FLAGS.rois_per_image * cfg.FLAGS.fg_roi_fraction))#rois_per_image =256,fg_roi_fraction=0.25
       if fg_inds.size > 0 and fg_rois < fg_inds.size:
         fg_inds = np.random.choice(fg_inds, size=fg_rois, replace=False)
       labels[fg_inds] = gt_boxes[gt_assignment[fg_inds], 4] 
       
       # TODO: sampling strategy
       bg_inds = np.where((max_overlaps < cfg.FLAGS.bg_threshold))[0]
-      bg_rois = max(min(cfg.FLAGS.rois_per_image - fg_rois, fg_rois * 3), 64)
+      bg_rois = max(min(cfg.FLAGS.rois_per_image - fg_rois, fg_rois * 3), 64)#rois_per_image =256
       if bg_inds.size > 0 and bg_rois < bg_inds.size:
         bg_inds = np.random.choice(bg_inds, size=bg_rois, replace=False)
       labels[bg_inds] = 0
