@@ -231,18 +231,20 @@ def draw_human_body_parts(step, image, name='', image_height=1, image_width=1, b
             cv2.drawContours(hsv_body, [bigContour], 0, (0,255,0), 3)
 
             for x in [1,2,3,5]:
-                contours,_ = cv2.findContours(mask[...,x].copy().astype(np.uint8), 1, 2)
-                bigContour = None
-                area = 0
-                for c in contours:
-                    area2 = cv2.contourArea(c)
-                    if area2 > area:
-                        area = area2
-                        bigContour = c
-                for p in bigContour:
-                    p[0,0] = p[0,0] + int(bo[0])
-                    p[0,1] = p[0,1] + int(bo[1])
-                cv2.drawContours(hsv, [bigContour], 0, (0,255,0), 3)
+                contoursB,_ = cv2.findContours(mask[...,x].copy().astype(np.uint8), 1, 2)
+                bigContourB = None
+                areaB = 0
+                print (contoursB)
+                for cB in contoursB:
+                    area2B = cv2.contourArea(cB)
+                    if area2B > areaB:
+
+                        areaB = area2B
+                        bigContourB = cB
+                for pB in bigContourB:
+                    pB[0,0] = pB[0,0] + int(bo[0])
+                    pB[0,1] = pB[0,1] + int(bo[1])
+                cv2.drawContours(hsv, [bigContourB], 0, (0,255,0), 3)
 
         hsv = cv2.cvtColor(hsv, cv2.COLOR_HSV2RGB)
         hsv_body = cv2.cvtColor(hsv_body, cv2.COLOR_HSV2RGB)
