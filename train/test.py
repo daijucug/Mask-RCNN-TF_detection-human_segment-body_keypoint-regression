@@ -218,7 +218,6 @@ def draw_human_body_parts(step, image, name='', image_height=1, image_width=1, b
                         hsv[y,x,1] = 255
 
             contours,_ = cv2.findContours(mask[...,0].copy().astype(np.uint8), 1, 2)
-            print (mask[...,0].shape())
             bigContour = None
             area = 0
             for c in contours:
@@ -231,23 +230,24 @@ def draw_human_body_parts(step, image, name='', image_height=1, image_width=1, b
                 p[0,1] = p[0,1] + int(bo[1])
             cv2.drawContours(hsv_body, [bigContour], 0, (0,255,0), 3)
 
+            kernel = np.ones((5,5),np.uint8)
             for x in [1,2,3,5]:
-                contoursB,_ = cv2.findContours(mask[...,x].copy().astype(np.uint8), 1, 2)
-                print (mask[...,1].shape())
-                bigContourB = None
-                areaB = 0
-
-                for cB in contoursB:
-                    area2B = cv2.contourArea(cB)
-                    if area2B > areaB:
-                        areaB = area2B
-                        bigContourB = cB
-                if bigContourB is None:continue
-
-                for pB in bigContourB:
-                    pB[0,0] = pB[0,0] + int(bo[0])
-                    pB[0,1] = pB[0,1] + int(bo[1])
-                cv2.drawContours(hsv, bigContourB, 0, (0,255,0), 3)
+                erosion = cv2.erode(mask[...,x].copy().astype(np.uint8),kernel,iterations = 2)
+                dilation = cv2.dilate(erosion,kernel,iterations = 2)
+                contoursB,_ = cv2.findContours(dilation, 1, 2)
+                # bigContourB = None
+                # areaB = 0
+                # for cB in contoursB:
+                #     area2B = cv2.contourArea(cB)
+                #     if area2B > areaB:
+                #         areaB = area2B
+                #         bigContourB = cB
+                # if bigContourB is None:continue
+                for shape in contoursB:
+                    for pB in shape:
+                        pB[0,0] = pB[0,0] + int(bo[0])
+                        pB[0,1] = pB[0,1] + int(bo[1])
+                cv2.drawContours(hsv, [contoursB], 0, (0,255,0), 3)
 
         hsv = cv2.cvtColor(hsv, cv2.COLOR_HSV2RGB)
         hsv_body = cv2.cvtColor(hsv_body, cv2.COLOR_HSV2RGB)
