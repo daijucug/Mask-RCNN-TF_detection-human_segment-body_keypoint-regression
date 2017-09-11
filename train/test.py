@@ -247,7 +247,7 @@ def draw_human_body_parts(step, image, name='', image_height=1, image_width=1, b
                     for pB in shape:
                         pB[0,0] = pB[0,0] + int(bo[0])
                         pB[0,1] = pB[0,1] + int(bo[1])
-                cv2.drawContours(hsv, [contoursB], 0, (0,255,0), 3)
+                cv2.drawContours(hsv, contoursB, 0, (0,255,0), 3)
 
         hsv = cv2.cvtColor(hsv, cv2.COLOR_HSV2RGB)
         hsv_body = cv2.cvtColor(hsv_body, cv2.COLOR_HSV2RGB)
