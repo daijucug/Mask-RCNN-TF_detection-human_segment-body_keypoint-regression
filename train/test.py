@@ -230,11 +230,11 @@ def draw_human_body_parts(step, image, name='', image_height=1, image_width=1, b
                 p[0,1] = p[0,1] + int(bo[1])
             cv2.drawContours(hsv_body, [bigContour], 0, (0,255,0), 3)
 
-            kernel = np.ones((5,5),np.uint8)
+            kernel = np.ones((3,3),np.uint8)
             for x in [1,2,3,5]:
-                erosion = cv2.erode(mask[...,x].copy().astype(np.uint8),kernel,iterations = 2)
-                dilation = cv2.dilate(erosion,kernel,iterations = 2)
-                contoursB,_ = cv2.findContours(dilation, 1, 2)
+                erosion = cv2.erode(mask[...,x].copy().astype(np.uint8),kernel,iterations = 1)
+                dilation = cv2.dilate(erosion,kernel,iterations = 1)
+                contoursB,_ = cv2.findContours(dilation,1,2)
                 # bigContourB = None
                 # areaB = 0
                 # for cB in contoursB:
@@ -247,7 +247,7 @@ def draw_human_body_parts(step, image, name='', image_height=1, image_width=1, b
                     for pB in shape:
                         pB[0,0] = pB[0,0] + int(bo[0])
                         pB[0,1] = pB[0,1] + int(bo[1])
-                cv2.drawContours(hsv, contoursB, 0, (0,255,0), 3)
+                cv2.drawContours(hsv, contoursB, -1, (0,255,0), 3)############   -1 draws all contours
 
         hsv = cv2.cvtColor(hsv, cv2.COLOR_HSV2RGB)
         hsv_body = cv2.cvtColor(hsv_body, cv2.COLOR_HSV2RGB)
