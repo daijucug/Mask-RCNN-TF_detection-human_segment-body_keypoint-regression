@@ -4,6 +4,7 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 import os, sys
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 import time
 import libs.nets.nets_factory as network
 import libs.nets.pyramid_network as pyramid_network
@@ -18,7 +19,7 @@ import scipy.misc
 import cv2
 
 #os.environ["CUDA_VISIBLE_DEVICES"] = '1'
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+
 FLAGS = tf.app.flags.FLAGS
 resnet50 = resnet_v1.resnet_v1_50
 SAVE=False
