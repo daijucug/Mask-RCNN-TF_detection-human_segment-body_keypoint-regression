@@ -1,0 +1,30 @@
+#!/bin/bash
+out=$(sudo ps aux | grep 'python train/train.py' | rev | cut -d ' ' -f 1 | rev | wc -l)
+if [ $out -eq "2" ];
+    then DO_NOTHING=0
+else
+    cd /hdd1/Alex/testMaskRCNN_human_bodyparts/MaskRCNN_body
+    CUDA_VISIBLE_DEVICES=0 python train/train.py
+fi
+
+
+
+CUDA_VISIBLE_DEVICES=0 /usr/bin/python /hdd1/Alex/testMaskRCNN_human_bodyparts/MaskRCNN_body/train/train.py
+
+
+
+ps -ef | grep "/usr/bin/python /hdd1/Alex/testMaskRCNN_human_bodyparts/MaskRCNN_body/train/train.py"
+
+
+if [ $(ps aux | grep 'python train/train.py' | rev | cut -d ' ' -f 1 | rev | wc -l) -eq "2" ];then DO_NOTHING=0; else cd /hdd1/Alex/testMaskRCNN_human_bodyparts/MaskRCNN_body; CUDA_VISIBLE_DEVICES=0 python train/train.py; fi && echo "Hi" >> /hdd1/Alex/alex
+
+
+ls -d */  | grep -v '20170810073040/' | xargs rm #removes all directories that i dont want
+
+du -sh * #list file and dirs sizes
+
+sudo strace -p 19073 -e write -s 200
+
+File: /tmp/crontab.INS7Yg/crontab
+
+#by typing crontab -e
