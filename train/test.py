@@ -235,6 +235,8 @@ def draw_human_body_parts(step, image, name='', image_height=1, image_width=1, b
                 erosion = cv2.erode(mask[...,x].copy().astype(np.uint8),kernel,iterations = 1)
                 dilation = cv2.dilate(erosion,kernel,iterations = 1)
                 contoursB,_ = cv2.findContours(dilation,1,2)
+                if len(contoursB > 2):
+                    break
                 # bigContourB = None
                 # areaB = 0
                 # for cB in contoursB:
