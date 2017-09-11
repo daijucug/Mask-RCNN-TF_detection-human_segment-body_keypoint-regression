@@ -13,3 +13,12 @@ Here are some results from the training set.
 ![demo](media/testseg293_1.jpg)
 ![demo](media/testseg296_1.jpg)
 ![demo](media/testseg305_1.jpg)
+
+The following videos contain the model that does body segmentation (the rest of the parts are not drawn).
+The model output has been modified to have 2 classes for detection (human, non-human) and 7 segmentation classes (full body, head, torso, right hand, left hand, right leg, left leg).
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=kcdhp1rE4Y4" target="_blank"><img src="http://img.youtube.com/vi/kcdhp1rE4Y4/0.jpg" alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=qwtCRHeERCo" target="_blank"><img src="http://img.youtube.com/vi/qwtCRHeERCo/0.jpg" alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
+# Installation
+##TO DO
