@@ -12,7 +12,7 @@ tf.app.flags.DEFINE_string(
     'Directory where checkpoints and event logs are written to.')
 
 tf.app.flags.DEFINE_string(
-    'pretrained_model', '/hdd1/Alex/testMaskRCNN_human_bodyparts/MaskRCNN_body/data/pretrained_models/resnet_v1_50.ckpt',
+    'pretrained_model', 'data/pretrained_models/resnet_v1_50.ckpt',
     'Path to pretrained model')
 
 ##########################
