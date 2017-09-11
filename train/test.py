@@ -230,6 +230,20 @@ def draw_human_body_parts(step, image, name='', image_height=1, image_width=1, b
                 p[0,1] = p[0,1] + int(bo[1])
             cv2.drawContours(hsv_body, [bigContour], 0, (0,255,0), 3)
 
+            for x in [1,2,3,5]:
+                contours,_ = cv2.findContours(mask[...,x].copy().astype(np.uint8), 1, 2)
+                bigContour = None
+                area = 0
+                for c in contours:
+                    area2 = cv2.contourArea(c)
+                    if area2 > area:
+                        area = area2
+                        bigContour = c
+                for p in bigContour:
+                    p[0,0] = p[0,0] + int(bo[0])
+                    p[0,1] = p[0,1] + int(bo[1])
+                cv2.drawContours(hsv, [bigContour], 0, (0,255,0), 3)
+
         hsv = cv2.cvtColor(hsv, cv2.COLOR_HSV2RGB)
         hsv_body = cv2.cvtColor(hsv_body, cv2.COLOR_HSV2RGB)
 
@@ -247,8 +261,8 @@ def draw_human_body_parts(step, image, name='', image_height=1, image_width=1, b
             #hsv = cv2.putText(hsv,text+' '+str(i),(2+int(bo[0]),2+int(bo[1])), cv2.FONT_HERSHEY_SIMPLEX,0.5, color =(255,255,255))
             cv2.putText(hsv,text+' '+str(i),(2+int(bo[0]),2+int(bo[1])), cv2.FONT_HERSHEY_SIMPLEX,0.5, color =(255,255,255))
             cv2.putText(hsv_body,text+' '+str(i),(2+int(bo[0]),2+int(bo[1])), cv2.FONT_HERSHEY_SIMPLEX,0.5, color =(255,255,255))
-    #return hsv
-    return hsv_body
+    return hsv
+    #return hsv_body
 
 def train():
 
