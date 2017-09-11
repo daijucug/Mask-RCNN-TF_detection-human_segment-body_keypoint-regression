@@ -7,17 +7,9 @@ A practical usage for this kind of model would be to a fashion application that 
 Here are some results from the training set.
 
 ![demo](media/testseg57_1.jpg)
-
-![demo](media/testseg70_1.jpg)
-
 ![demo](media/testseg122_1.jpg)
-
 ![demo](media/testseg226_1.jpg)
-
 ![demo](media/testseg255_1.jpg)
-
 ![demo](media/testseg293_1.jpg)
-
 ![demo](media/testseg296_1.jpg)
-
 ![demo](media/testseg305_1.jpg)
