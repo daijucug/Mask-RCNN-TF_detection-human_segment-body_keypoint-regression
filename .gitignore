@@ -1,0 +1,8 @@
+data/pretrained_models/
+data/coco/
+output/mask_rcnn/
+convert_data/data/
+learn_to_draw/data/
+learn_to_draw/output_seg/
+
+
