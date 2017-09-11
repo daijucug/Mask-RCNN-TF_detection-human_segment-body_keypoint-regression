@@ -213,11 +213,12 @@ def draw_human_body_parts(step, image, name='', image_height=1, image_width=1, b
                     if mask[ym,xm,0] >0: #draw segmentation of the body
                         hsv_body[y,x,0] = 120
                         hsv_body[y,x,1] = 190
-                    if max_indices[ym,xm] not in [4,6] and mask[ym,xm,max_indices[ym,xm]] >0 :#draw segmentation of the parts
+                    if max_indices[ym,xm] not in [0,4,6] and mask[ym,xm,max_indices[ym,xm]] >0 :#draw segmentation of the parts
                         hsv[y,x,0] = colors[max_indices[ym,xm]][0]
                         hsv[y,x,1] = 255
 
             contours,_ = cv2.findContours(mask[...,0].copy().astype(np.uint8), 1, 2)
+            print (mask[...,0].shape())
             bigContour = None
             area = 0
             for c in contours:
@@ -232,6 +233,7 @@ def draw_human_body_parts(step, image, name='', image_height=1, image_width=1, b
 
             for x in [1,2,3,5]:
                 contoursB,_ = cv2.findContours(mask[...,x].copy().astype(np.uint8), 1, 2)
+                print (mask[...,1].shape())
                 bigContourB = None
                 areaB = 0
 
