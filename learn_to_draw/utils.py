@@ -40,18 +40,6 @@ def draw_human_body_parts(step, image, name='', bbox=None, label=None, gt_label=
 
         for key,i in zip(sorted_keys,range(len(sorted_keys))):
             bo, lab,gt_lab,_,mask,col= dictinary[key]
-            max_indices = np.argmax(mask,axis=2)
-
-            # for x in range(int(bo[0]),int(bo[2])):
-            #     for y in range(int(bo[1]),int(bo[3])):
-            #
-            #         xm = x-(int(bo[0]))
-            #         ym = y-(int(bo[1]))
-            #         if(max_indices[ym,xm]==0):
-            #             continue
-            #         if mask[ym,xm,max_indices[ym,xm]] >0:
-            #             hsv[y,x,0] = colors[max_indices[ym,xm]][0]
-            #             hsv[y,x,1] = 255
 
             for x in range(int(bo[0]),int(bo[2])):
                 for y in range(int(bo[1]),int(bo[3])):
