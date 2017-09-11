@@ -2,126 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93e0640d-27a3-4380-82eb-91c33145ff66" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Documentation.odt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/boxes/profile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/boxes/profile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/datasets/pycocotools/_mask.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/testseg122_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/testseg226_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/testseg255_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/testseg293_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/testseg296_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/testseg305_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/testseg35_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/testseg57_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/testseg70_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/prezentare.odp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/print.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/MaskRCNN_body.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/convert_data/ChalearnLAPEvaluation.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/convert_data/ChalearnLAPSample.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/convert_data/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/convert_data/convert_ADE20k_human_body_parts.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/convert_data/convert_CHALEARN_human_body_parts.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/convert_data/convert_VOC_human_body_parts.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/convert_data/convert_jhmdb.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/convert_data/download_and_convert_data.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/convert_data/human_body_parts.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/convert_data/read_my_data_keypoints.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/convert_data/visualize_records_human_body_parts.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crontab.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/draw/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/draw/draw.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/draw/metric.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/draw/utils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/boxes/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/boxes/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/boxes/anchor.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/boxes/bbox.pyx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/boxes/bbox_transform.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/boxes/blob.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/boxes/cython_anchor.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/boxes/cython_anchor.pyx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/boxes/cython_bbox.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/boxes/cython_bbox_transform.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/boxes/cython_bbox_transform.pyx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/boxes/cython_nms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/boxes/gprof2dot.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/boxes/nms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/boxes/nms.pyx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/boxes/nms_wrapper.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/boxes/roi.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/boxes/timer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/configs/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/configs/config_v1.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/datasets/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/datasets/coco.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/datasets/dataset_factory.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/datasets/download_and_convert_coco.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/datasets/pycocotools/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/datasets/pycocotools/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/datasets/pycocotools/_mask.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/datasets/pycocotools/_mask.pyx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/datasets/pycocotools/coco.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/datasets/pycocotools/cocoeval.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/datasets/pycocotools/common/gason.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/datasets/pycocotools/common/gason.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/datasets/pycocotools/common/maskApi.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/datasets/pycocotools/common/maskApi.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/datasets/pycocotools/mask.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/datasets/pycocotools/setup.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/layers/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/layers/anchor.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/layers/assign.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/layers/crop.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/layers/mask.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/layers/roi.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/layers/sample.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/layers/wrapper.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/logs/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/logs/log.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/make.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/memory_util.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/nets/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/nets/nets_factory.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/nets/pyramid_network.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/nets/resnet_utils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/nets/resnet_v1.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/nets/train_utils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/nms/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/nms/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/nms/cpu_nms.pyx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/nms/gpu_nms.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/nms/gpu_nms.pyx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/nms/nms_kernel.cu" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/nms/py_cpu_nms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/preprocessings/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/preprocessings/coco_v1.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/preprocessings/utils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/setup.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/visualization/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/visualization/pil_utils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/visualization/summary_utils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mask_rcnn_final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/file.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/train/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/train/train.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/train/train_utils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unit_test/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unit_test/data_test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unit_test/layer_test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unit_test/preprocessing_test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unit_test/resnet50_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/train.py" afterPath="$PROJECT_DIR$/train/train.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -158,7 +40,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="read_my_data_keypoints.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="read_my_data_keypoints.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/convert_data/read_my_data_keypoints.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="71">
@@ -173,7 +55,7 @@
       <file leaf-file-name="convert_ADE20k_human_body_parts.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/convert_data/convert_ADE20k_human_body_parts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
+            <state relative-caret-position="510">
               <caret line="34" column="11" lean-forward="false" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -185,7 +67,7 @@
       <file leaf-file-name="convert_jhmdb.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/convert_data/convert_jhmdb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="360">
               <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="35" selection-end-column="1" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -197,7 +79,7 @@
       <file leaf-file-name="convert_VOC_human_body_parts.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/convert_data/convert_VOC_human_body_parts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
+            <state relative-caret-position="870">
               <caret line="58" column="14" lean-forward="false" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
@@ -209,7 +91,7 @@
       <file leaf-file-name="convert_jhmdb.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/convert_data/data/jhmdb/convert_jhmdb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
+            <state relative-caret-position="435">
               <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -230,11 +112,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="train.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/train/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2610">
-              <caret line="184" column="119" lean-forward="false" selection-start-line="184" selection-start-column="109" selection-end-line="184" selection-end-column="119" />
+            <state relative-caret-position="-120">
+              <caret line="170" column="58" lean-forward="false" selection-start-line="170" selection-start-column="58" selection-end-line="170" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -283,7 +165,6 @@
         <option value="$PROJECT_DIR$/learn_to_draw/metric.py" />
         <option value="$PROJECT_DIR$/train/evaluate.py" />
         <option value="$PROJECT_DIR$/libs/layers/sample.py" />
-        <option value="$PROJECT_DIR$/train/train.py" />
         <option value="$PROJECT_DIR$/convert_data/visualize_records_human_body_parts.py" />
         <option value="$PROJECT_DIR$/convert_data/data/coco/convert_coco2.py" />
         <option value="$PROJECT_DIR$/convert_data/data/freiburg/convert_freiburg.py" />
@@ -294,6 +175,7 @@
         <option value="$PROJECT_DIR$/draw/draw.py" />
         <option value="$PROJECT_DIR$/draw/utils.py" />
         <option value="$PROJECT_DIR$/convert_data/read_my_data_keypoints.py" />
+        <option value="$PROJECT_DIR$/train/train.py" />
       </list>
     </option>
   </component>
@@ -318,7 +200,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -415,6 +296,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -675,9 +557,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29748908" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29748908" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -923,17 +805,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2610">
-          <caret line="184" column="119" lean-forward="false" selection-start-line="184" selection-start-column="109" selection-end-line="184" selection-end-column="119" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/convert_data/convert_VOC_human_body_parts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
+        <state relative-caret-position="870">
           <caret line="58" column="14" lean-forward="false" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
@@ -943,7 +817,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/convert_data/convert_jhmdb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="360">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="35" selection-end-column="1" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -953,7 +827,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/convert_data/data/jhmdb/convert_jhmdb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
+        <state relative-caret-position="435">
           <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -963,7 +837,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/convert_data/convert_ADE20k_human_body_parts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
+        <state relative-caret-position="510">
           <caret line="34" column="11" lean-forward="false" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -996,6 +870,14 @@
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-120">
+          <caret line="170" column="58" lean-forward="false" selection-start-line="170" selection-start-column="58" selection-end-line="170" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -13,23 +13,15 @@ import tensorflow.contrib.slim as slim
 from time import gmtime, strftime
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
-import libs.configs.config_v1 as cfg
 import libs.datasets.dataset_factory as datasets
-import libs.nets.nets_factory as network 
-
-import libs.preprocessings.coco_v1 as coco_preprocess
+import libs.nets.nets_factory as network
 import libs.nets.pyramid_network as pyramid_network
 import libs.nets.resnet_v1 as resnet_v1
 import sys
-import draw.utils
 
 from train.train_utils import _configure_learning_rate, _configure_optimizer, \
-  _get_variables_to_train, _get_init_fn, get_var_list_to_restore
+  _get_variables_to_train, get_var_list_to_restore
 
-from PIL import Image, ImageFont, ImageDraw, ImageEnhance
-from libs.datasets import download_and_convert_coco
-#from libs.datasets.download_and_convert_coco import _cat_id_to_cls_name
-#from libs.visualization.pil_utils import cat_id_to_cls_name, draw_img, draw_bbox,draw_bbox_better#,draw_segmentation
 from draw.utils import draw_human_body_parts
 FLAGS = tf.app.flags.FLAGS
 resnet50 = resnet_v1.resnet_v1_50
@@ -92,61 +84,6 @@ def restore(sess):
                     if var_shape == saved_shapes[saved_var_name]:
                         restore_vars.append(curr_var)
             restorer = tf.train.Saver(restore_vars)
-            #saver.restore(session, save_file)
-            restorer = tf.train.Saver(restore_vars)
-            ###########
-            # restorer = tf.train.Saver()
-            ###########
-
-            ###########
-            # not_restore = [ 'pyramid/fully_connected/weights:0', 
-            #                 'pyramid/fully_connected/biases:0',
-            #                 'pyramid/fully_connected/weights:0', 
-            #                 'pyramid/fully_connected_1/biases:0',
-            #                 'pyramid/fully_connected_1/weights:0', 
-            #                 'pyramid/fully_connected_2/weights:0', 
-            #                 'pyramid/fully_connected_2/biases:0',
-            #                 'pyramid/fully_connected_3/weights:0', 
-            #                 'pyramid/fully_connected_3/biases:0',
-            #                 'pyramid/Conv/weights:0', 
-            #                 'pyramid/Conv/biases:0',
-            #                 'pyramid/Conv_1/weights:0', 
-            #                 'pyramid/Conv_1/biases:0', 
-            #                 'pyramid/Conv_2/weights:0', 
-            #                 'pyramid/Conv_2/biases:0', 
-            #                 'pyramid/Conv_3/weights:0', 
-            #                 'pyramid/Conv_3/biases:0',
-            #                 'pyramid/Conv2d_transpose/weights:0', 
-            #                 'pyramid/Conv2d_transpose/biases:0', 
-            #                 'pyramid/Conv_4/weights:0',
-            #                 'pyramid/Conv_4/biases:0',
-            #                 'pyramid/fully_connected/weights/Momentum:0', 
-            #                 'pyramid/fully_connected/biases/Momentum:0',
-            #                 'pyramid/fully_connected/weights/Momentum:0', 
-            #                 'pyramid/fully_connected_1/biases/Momentum:0',
-            #                 'pyramid/fully_connected_1/weights/Momentum:0', 
-            #                 'pyramid/fully_connected_2/weights/Momentum:0', 
-            #                 'pyramid/fully_connected_2/biases/Momentum:0',
-            #                 'pyramid/fully_connected_3/weights/Momentum:0', 
-            #                 'pyramid/fully_connected_3/biases/Momentum:0',
-            #                 'pyramid/Conv/weights/Momentum:0', 
-            #                 'pyramid/Conv/biases/Momentum:0',
-            #                 'pyramid/Conv_1/weights/Momentum:0', 
-            #                 'pyramid/Conv_1/biases/Momentum:0', 
-            #                 'pyramid/Conv_2/weights/Momentum:0', 
-            #                 'pyramid/Conv_2/biases/Momentum:0', 
-            #                 'pyramid/Conv_3/weights/Momentum:0', 
-            #                 'pyramid/Conv_3/biases/Momentum:0',
-            #                 'pyramid/Conv2d_transpose/weights/Momentum:0', 
-            #                 'pyramid/Conv2d_transpose/biases/Momentum:0', 
-            #                 'pyramid/Conv_4/weights/Momentum:0',
-            #                 'pyramid/Conv_4/biases/Momentum:0',]
-            # vars_to_restore = [v for v in  tf.all_variables()if v.name not in not_restore]
-            # restorer = tf.train.Saver(vars_to_restore)
-            # for var in vars_to_restore:
-            #     print ('restoring ', var.name)
-            ############
-
             restorer.restore(sess, checkpoint_path)
             print ('restored previous model %s from %s'\
                     %(checkpoint_path, FLAGS.train_dir))
@@ -197,19 +134,11 @@ def save(step,input_imagenp,final_boxnp,gt_boxesnp,final_clsnp,final_probnp,fina
 
 def train():
     """The main function that runs training"""
-
     ## data
-    image, ih, iw, gt_boxes, gt_masks, num_instances, img_id = \
-        datasets.get_dataset(FLAGS.dataset_name, 
-                             FLAGS.dataset_split_name, 
-                             FLAGS.dataset_dir, 
-                             FLAGS.im_batch,
-                             is_training=True)
-    ####o chestie importanta e ca le face resize la a.i. o latura sa nu fie mai mica de 640 pixeli
+    #this will return the placeholders from tfrecords
+    image, ih, iw, gt_boxes, gt_masks, num_instances, img_id = datasets.get_dataset(FLAGS.dataset_name,  FLAGS.dataset_split_name, FLAGS.dataset_dir, FLAGS.im_batch,is_training=True)
 
-
-    data_queue = tf.RandomShuffleQueue(capacity=32, min_after_dequeue=16,
-            dtypes=(
+    data_queue = tf.RandomShuffleQueue(capacity=32, min_after_dequeue=16,dtypes=(
                 image.dtype, ih.dtype, iw.dtype, 
                 gt_boxes.dtype, gt_masks.dtype, 
                 num_instances.dtype, img_id.dtype)) 
@@ -221,15 +150,8 @@ def train():
     image = tf.reshape(image, (im_shape[0], im_shape[1], im_shape[2], 3))
 
     ## network
-    logits, end_points, pyramid_map = network.get_network(FLAGS.network, image,
-            weight_decay=FLAGS.weight_decay, is_training=True)
-    outputs = pyramid_network.build(end_points, im_shape[1], im_shape[2], pyramid_map,
-            num_classes=2,
-            base_anchors=9,
-            is_training=True,
-            gt_boxes=gt_boxes, gt_masks=gt_masks,
-            #loss_weights=[0.2, 0.2, 1.0, 0.2, 1.0]
-            loss_weights=[1.0, 1.0, 1.0, 1.0, 1.0])
+    logits, end_points, pyramid_map = network.get_network(FLAGS.network, image,weight_decay=FLAGS.weight_decay, is_training=True)
+    outputs = pyramid_network.build(end_points, im_shape[1], im_shape[2], pyramid_map,num_classes=2, base_anchors=9,is_training=True, gt_boxes=gt_boxes, gt_masks=gt_masks,loss_weights=[1.0, 1.0, 1.0, 1.0, 1.0])
 
 
     total_loss = outputs['total_loss']
@@ -242,6 +164,12 @@ def train():
     final_cls = outputs['final_boxes']['cls']
     final_prob = outputs['final_boxes']['prob']
     final_gt_cls = outputs['final_boxes']['gt_cls']
+
+    #this flag is used for including the mask or not. initally I trained the network without the mask branch, because I wanted to train better the region proposal network
+    # so that the network proposes better boxes. If the boxes are better proposed, the branch network will learn easier. Initially I thought that this is the problem
+    # for the model memory issue. The idea is that at some point the network was proposing too many regions, like 120, and the Tensor for the mask branch would cause an out of memory error
+    # because the shape of tensor would be [120,112,112,7]
+    print ("FLAGS INCLUDE MASK IS ",FLAGS.INCLUDE_MASK)
     if FLAGS.INCLUDE_MASK:
         final_mask = outputs['mask']['final_mask_for_drawing']
     gt = outputs['gt']
@@ -252,12 +180,6 @@ def train():
     tmp_0 = outputs['losses']
     tmp_1 = outputs['losses']
     tmp_2 = outputs['losses']
-    tmp_3 = outputs['losses']
-    tmp_4 = outputs['losses']
-
-    # tmp_0 = outputs['tmp_0']
-    # tmp_1 = outputs['tmp_1']
-    # tmp_2 = outputs['tmp_2']
     tmp_3 = outputs['tmp_3']
     tmp_4 = outputs['tmp_4']
     ############################
@@ -269,9 +191,6 @@ def train():
     
     gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.95)
     sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
-    #sess = tf.Session()
-    #from tensorflow.python import debug as tf_debug
-    #sess = tf_debug.LocalCLIDebugWrapperSession(sess)
     init_op = tf.group(
             tf.global_variables_initializer(),
             tf.local_variables_initializer()
@@ -297,15 +216,12 @@ def train():
     tf.train.start_queue_runners(sess=sess, coord=coord)
     saver = tf.train.Saver(max_to_keep=20)
 
-    print ("FLAGS INCLUDE MASK IS ",FLAGS.INCLUDE_MASK)
-
     for step in range(FLAGS.max_iters):
         
         start_time = time.time()
         if FLAGS.INCLUDE_MASK:
             s_, tot_loss, reg_lossnp, img_id_str, rpn_box_loss, rpn_cls_loss, refined_box_loss, refined_cls_loss,mask_loss, gt_boxesnp, input_imagenp, final_boxnp, final_clsnp, final_probnp, final_gt_clsnp, gtnp, tmp_0np, tmp_1np, tmp_2np, tmp_3np, tmp_4np, final_masknp,gt_masksnp= sess.run([update_op, total_loss, regular_loss, img_id] + losses + [gt_boxes] + [input_image] + [final_box] + [final_cls] + [final_prob] + [final_gt_cls] + [gt] + [tmp_0] + [tmp_1] + [tmp_2] + [tmp_3] + [tmp_4]+[final_mask]+[gt_masks])
         else:
-            #print(type(update_op),type(total_loss),type(regular_loss),type(img_id),type(losses),type(gt_boxes),type(input_image),type(final_box),type(gt_boxes),type(final_cls), type(final_prob) ,type(final_gt_cls), type(gt))
             s_, tot_loss, reg_lossnp, img_id_str,\
             rpn_box_loss, rpn_cls_loss,refined_box_loss, refined_cls_loss,\
             gt_boxesnp, input_imagenp, final_boxnp,\
