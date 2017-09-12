@@ -44,7 +44,7 @@ def metric_for_image(pindex=-1, bbox=None,gt_bbox=None,label=None, gt_label=None
     overlaps = bbox_overlaps(np.ascontiguousarray(bbox[:, :4], dtype=np.float),np.ascontiguousarray(gt_bbox[:, :4], dtype=np.float))
     gt_assignment = overlaps.argmax(axis=1)  #multiple bboxes may have a single GT
 
-    max_overlaps = overlaps[np.arange(bbox.shape[0]), gt_assignment]
+    max_overlaps = overlaps[np.arange(bbox.shape[0]), gt_assignment] #if there are 3 proposal assigned for a single box, get the one that has the maximum overlap
 
     good = 0
     total_boxes = 0
@@ -75,6 +75,8 @@ def metric_for_image(pindex=-1, bbox=None,gt_bbox=None,label=None, gt_label=None
                         part = np.ma.filled(part, 0)
                         output_mask[...,x] = part
 
+                    output_mask[...,4] = np.zeros((112,112),np.uint8)
+                    output_mask[...,6] = np.zeros((112,112),np.uint8)
                     if pindex==-1:iou = IOU_mask(output_mask,gt_maskii)
                     else: iou = IOU_mask(output_mask[...,pindex],gt_maskii[...,pindex])
                     IOU_instances.append(iou)
@@ -84,31 +86,3 @@ def metric_for_image(pindex=-1, bbox=None,gt_bbox=None,label=None, gt_label=None
     precision_over_image = float(good)/(float(total_boxes)+np.finfo(np.float32).eps)
     return precision_over_image
 
-# metrics = []
-# for i in range(1,109):
-#     array = np.load("/home/alex/PycharmProjects/data/array"+str(i)+".npy")
-#     image = array[0]
-#     bbox = array[1]
-#     label =array[2]
-#     prob = array[3]
-#     gt_bbox = array[4]
-#     gt_label  = array[5]
-#     final_mask = array[6]
-#     gt_mask = array[7]
-#     # keyp = array[8]
-#     # gt_keyp = array[9]
-#
-#     # bbox = np.load('data/bbox'+str(i)+'.npy')
-#     # gt_bbox = np.load('data/gt_boxes'+str(i)+'.npy')
-#     # final_mask = np.load('data/final_mask'+str(i)+'.npy')
-#     # gt_label = np.load('data/gt_label'+str(i)+'.npy')
-#     # image = np.load('data/image'+str(i)+'.npy')
-#     # label = np.load('data/label'+str(i)+'.npy')
-#     # prob = np.load('data/prob'+str(i)+'.npy')
-#     # gt_mask = np.load('data/gt_mask'+str(i)+'.npy')
-#     metrics.append(metric_for_image(bbox,gt_bbox,label,gt_label,prob,final_mask,gt_mask))
-#     print (reduce(lambda x, y: x + y, metrics) / len(metrics))
-#     draw_human_body_parts(1,image,name="seg"+str(i),bbox=bbox,label=label,gt_label=gt_label,prob=prob,final_mask=final_mask)
-# #
-#
-# print reduce(lambda x, y: x + y, metrics) / len(metrics)
