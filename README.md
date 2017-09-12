@@ -20,6 +20,10 @@ The model output has been modified to have 2 classes for detection (human, non-h
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=kcdhp1rE4Y4" target="_blank"><img src="http://img.youtube.com/vi/kcdhp1rE4Y4/0.jpg" alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=qwtCRHeERCo" target="_blank"><img src="http://img.youtube.com/vi/qwtCRHeERCo/0.jpg" alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
+The following videos shows the results of the same model, but this time are drawn the body parts.
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=6KEgvAE0wZ0" target="_blank"><img src="http://img.youtube.com/vi/6KEgvAE0wZ0/0.jpg" alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
 # Installation
 ```
 git clone https://github.com/Iftimie/MaskRCNN_body.git
