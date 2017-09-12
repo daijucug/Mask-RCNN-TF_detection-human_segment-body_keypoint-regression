@@ -32,8 +32,8 @@ video_capture = cv2.VideoCapture(0)
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
 out = cv2.VideoWriter('/home/alex/PycharmProjects/youtube/output3.avi',fourcc, 20.0, (640,360))
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect(('10.12.5.208', 5555))
-#s.connect(('10.20.5.205', 5555))
+#s.connect(('10.12.5.208', 5555))
+s.connect(('10.20.5.205', 5555))
 i =0
 while True:
     ret,image = video_capture.read()
