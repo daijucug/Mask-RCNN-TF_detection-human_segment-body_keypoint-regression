@@ -37,7 +37,8 @@ s.connect(('10.20.5.205', 5555))
 i =0
 while True:
     ret,image = video_capture.read()
-    # i = i+1
+    i = i+1
+    if i == 300:break
     # if i%5 != 0:
     #     ret,image = video_capture.read()
     if ret==True:

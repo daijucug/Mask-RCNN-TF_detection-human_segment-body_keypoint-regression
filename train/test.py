@@ -17,6 +17,7 @@ import numpy as np
 import tensorflow as tf
 import scipy.misc
 import cv2
+import numpy.ma as ma
 
 #os.environ["CUDA_VISIBLE_DEVICES"] = '1'
 
@@ -188,10 +189,10 @@ def draw_human_body_parts(step, image, name='', image_height=1, image_width=1, b
                 masks[...,0] = scipy.misc.imresize(body_mask2,(height,width))
                 for x in range(1,7):
                     maska = mask[...,x] > 0.6
-                    # maska = np.logical_and(maska,body_mask)
-                    # maska = ma.masked_array(mask[...,x], mask=np.logical_not(maska))
-                    # maska = np.ma.filled(maska, 0)
-                    #maska = maska >0
+                    maska = np.logical_and(maska,body_mask)
+                    maska = ma.masked_array(mask[...,x], mask=np.logical_not(maska))
+                    maska = np.ma.filled(maska, 0)
+                    maska = maska >0
                     maska = scipy.misc.imresize(maska,(height,width))
                     masks[...,x] = maska
                 dictinary[round(area,4)]=(box,label[i],1,prob[i,label[i]],masks,colors_for_boxes[i])
@@ -235,7 +236,7 @@ def draw_human_body_parts(step, image, name='', image_height=1, image_width=1, b
                 erosion = cv2.erode(mask[...,x].copy().astype(np.uint8),kernel,iterations = 1)
                 dilation = cv2.dilate(erosion,kernel,iterations = 1)
                 contoursB,_ = cv2.findContours(dilation,1,2)
-                if len(contoursB > 2):
+                if len(contoursB) > 2:
                     break
                 # bigContourB = None
                 # areaB = 0

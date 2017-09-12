@@ -4,6 +4,7 @@
     <list default="true" id="93e0640d-27a3-4380-82eb-91c33145ff66" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/client.py" afterPath="$PROJECT_DIR$/train/client.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train/test.py" afterPath="$PROJECT_DIR$/train/test.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,8 +56,8 @@
       <file leaf-file-name="client.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train/client.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="36" column="4" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+            <state relative-caret-position="344">
+              <caret line="46" column="33" lean-forward="true" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -65,8 +66,8 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/train/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="251" column="102" lean-forward="true" selection-start-line="232" selection-start-column="12" selection-end-line="251" selection-end-column="102" />
+            <state relative-caret-position="-2966">
+              <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -129,12 +130,12 @@
         <option value="$PROJECT_DIR$/convert_data/read_my_data_human_body_parts.py" />
         <option value="$PROJECT_DIR$/libs/nets/resnet_v1.py" />
         <option value="$PROJECT_DIR$/libs/configs/config_v1.py" />
-        <option value="$PROJECT_DIR$/train/test.py" />
         <option value="$PROJECT_DIR$/train/evaluate.py" />
         <option value="$PROJECT_DIR$/learn_to_draw/utils.py" />
         <option value="$PROJECT_DIR$/learn_to_draw/metric.py" />
         <option value="$PROJECT_DIR$/libs/nets/pyramid_network.py" />
         <option value="$PROJECT_DIR$/train/client.py" />
+        <option value="$PROJECT_DIR$/train/test.py" />
       </list>
     </option>
   </component>
@@ -845,16 +846,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/train/client.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="36" column="4" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+        <state relative-caret-position="344">
+          <caret line="46" column="33" lean-forward="true" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/train/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="251" column="102" lean-forward="true" selection-start-line="232" selection-start-column="12" selection-end-line="251" selection-end-column="102" />
+        <state relative-caret-position="-2966">
+          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
           <folding />
         </state>
       </provider>
