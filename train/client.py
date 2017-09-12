@@ -30,15 +30,13 @@ def getImageFromSocket(s):
 video_capture = cv2.VideoCapture(0)
 #video_capture = cv2.VideoCapture('/home/alex/PycharmProjects/youtube/fail.mkv')
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter('/home/alex/PycharmProjects/youtube/output3.avi',fourcc, 20.0, (640,360))
+out = cv2.VideoWriter('/home/alex/PycharmProjects/youtube/output4.avi',fourcc, 20.0, (640,360))
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #s.connect(('10.12.5.208', 5555))
 s.connect(('10.20.5.205', 5555))
 i =0
 while True:
     ret,image = video_capture.read()
-    i = i+1
-    if i == 300:break
     # if i%5 != 0:
     #     ret,image = video_capture.read()
     if ret==True:
